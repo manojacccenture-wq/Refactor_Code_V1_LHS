@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+/* BASE */
+@import "./base/index.css";
+
+/* TOKENS */
+@import "./tokens/index.css";
+
+/* SEMANTIC */
+@import "./semantic/index.css";
+
+/* COMPONENTS */
+@import "./components/index.css";
+
+@import "./tokens//typography.css"

@@ -1,0 +1,52 @@
+:root {
+  --font-heading-xl: var(--text-h1);
+  --font-heading-lg: var(--text-h2);
+  --font-heading-md: var(--text-h3);
+  --font-heading-sm: var(--text-h4);
+
+  --font-body-lg: var(--text-body-lg);
+  --font-body-md: var(--text-body-md);
+  --font-body-sm: var(--text-body-sm);
+}
+
+/* Tailwind v4 utilities */
+@layer utilities {
+  .text-heading-xl {
+    font-size: var(--font-heading-xl);
+    line-height: var(--leading-h1);
+    font-weight: var(--font-bold);
+  }
+
+  .text-heading-lg {
+    font-size: var(--font-heading-lg);
+    line-height: var(--leading-h2);
+    font-weight: var(--font-bold);
+  }
+
+  .text-heading-md {
+    font-size: var(--font-heading-md);
+    line-height: var(--leading-h3);
+    font-weight: var(--font-medium);
+  }
+
+  .text-heading-sm {
+    font-size: var(--font-heading-sm);
+    line-height: var(--leading-h4);
+    font-weight: var(--font-medium);
+  }
+
+  .text-body-lg {
+    font-size: var(--font-body-lg);
+    line-height: var(--leading-body-lg);
+  }
+
+  .text-body-md {
+    font-size: var(--font-body-md);
+    line-height: var(--leading-body-md);
+  }
+
+  .text-body-sm {
+    font-size: var(--font-body-sm);
+    line-height: var(--leading-body-sm);
+  }
+}

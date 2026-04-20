@@ -1,0 +1,151 @@
+/* ================= HERO BACKGROUND ================= */
+
+.hero-bg {
+  position: relative;
+  /* background: var(--color-bg-page); */
+  /* background: bg-white; */
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ================= GRID LAYER ================= */
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    /* GRID */
+    linear-gradient(
+      to right,
+      rgb(var(--color-neutral-800-rgb), 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgb(var(--color-neutral-800-rgb), 0.06) 1px,
+      transparent 1px
+    ),
+
+    /* FILLED CELLS */
+    linear-gradient(
+      rgb(var(--color-neutral-300-rgb) / 0.5),
+      rgb(var(--color-neutral-300-rgb) / 0.5)
+    ),
+    
+    
+    linear-gradient(
+      rgb(var(--color-neutral-300-rgb) / 0.5),
+      rgb(var(--color-neutral-300-rgb) / 0.5)
+    ),
+    linear-gradient(
+      rgb(var(--color-neutral-300-rgb) / 0.5),
+      rgb(var(--color-neutral-300-rgb) / 0.5)
+    );
+
+  background-size:
+    112px 112px,
+    112px 112px,
+    112px 112px,
+    112px 112px,
+    112px 112px;
+
+  background-position:
+    0 0,
+    0 0,
+    449px 335px,
+    449px 0,
+    113px 224px;
+
+  background-repeat:
+    repeat,
+    repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+  z-index: 1;
+}
+
+/* ================= GRADIENT OVERLAY ================= */
+
+/* .hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("/left_side.svg") left center no-repeat opacity(0.5),
+    url("/rightSide.svg") right center no-repeat opacity(0.5);
+
+  background-size:
+    40% auto,
+    40% auto;
+
+  z-index: 1;
+} */
+
+
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+background:
+  url("/BG Details.png") top left no-repeat,
+  url("/BG Details.png") top right no-repeat;
+    
+
+
+  mix-blend-mode: multiply;
+    pointer-events: none;
+background-size: cover, cover;
+  z-index: 2;
+}
+/* ================= FLOATING BLOCKS ================= */
+
+.hero-block {
+  position: absolute;
+  background: rgb(var(--color-neutral-300-rgb), 0.6);
+  /* soft grey */
+  border-radius: var(--radius-md);
+  z-index: 2;
+}
+
+/* positions (based on your image layout) */
+
+.block-1 {
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: 15%;
+}
+
+.block-2 {
+  width: 140px;
+  height: 140px;
+  top: 30%;
+  right: 20%;
+}
+
+.block-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 25%;
+  left: 30%;
+}
+
+.block-4 {
+  width: 160px;
+  height: 160px;
+  bottom: 20%;
+  right: 15%;
+}
+
+.block-5 {
+  width: 90px;
+  height: 90px;
+  top: 60%;
+  left: 5%;
+}

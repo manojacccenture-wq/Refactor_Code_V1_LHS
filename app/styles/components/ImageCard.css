@@ -1,0 +1,75 @@
+@layer components {
+
+  /* ================= BASE CARD ================= */
+  .card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    padding: 20px;
+    transition: all 0.3s ease;
+
+    /* default shadow */
+    box-shadow: var(--shadow-card-sm);
+  }
+
+  /* ================= SIZE-AWARE SHADOW ================= */
+
+  /* medium & large cards get stronger base shadow */
+  .card-medium,
+  .card-long {
+    box-shadow: var(--shadow-card-md);
+  }
+
+  /* ================= HOVER ================= */
+  .card:hover {
+    box-shadow: var(--shadow-card-lg);
+    transform: translateY(-4px);
+  }
+
+  /* ================= TECH CARD ================= */
+.card-tech {
+  width: 72px;
+  height: 64px;
+}
+
+@media (min-width: 768px) {
+  .card-tech {
+    width: 88px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-tech {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+  .card-tech:hover {
+    transform: translateY(-3px) scale(1.04);
+  }
+
+  /* ================= IMAGE CARD ================= */
+  .card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  /* ================= HEIGHT VARIANTS ================= */
+  .card-short {
+    height: 180px;
+  }
+
+  .card-medium {
+    height: 220px;
+  }
+
+  .card-long {
+    height: 260px;
+  }
+
+}

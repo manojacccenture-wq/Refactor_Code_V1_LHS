@@ -1,0 +1,50 @@
+@layer components {
+  .header {
+    @apply w-full flex justify-center fixed top-1 left-0 z-50;
+  
+  }
+
+  .nav-container {
+    @apply w-full max-w-7xl px-4;
+  }
+
+  /* .navbar {
+    @apply flex items-center justify-between px-8 py-4 rounded-full;
+    background: var(--header-bg);
+  } */
+
+    .navbar {
+    @apply flex items-center justify-between px-6 ;
+
+    background: rgb(var(--color-primary-rgb) / 0.16);
+    backdrop-filter: blur(12px);
+
+    /* border: 1px solid var(--color-border); */
+    border-radius: var(--radius-full);
+
+    box-shadow: 0 4px 20px rgb(0 0 0 / 0.04);
+  }
+
+  .nav-logo {
+    @apply flex items-center gap-2 font-semibold;
+    color: var(--nav-logo-text);
+  }
+
+  .nav-link {
+    @apply text-sm font-medium transition-colors duration-200;
+    color: var(--nav-link-text);
+  }
+
+  .nav-link:hover {
+    color: var(--nav-link-hover);
+  }
+
+  .nav-link-active {
+    color: var(--nav-link-active);
+  }
+
+  /* REMOVE border effect */
+  .header-bordered {
+    border: none;
+  }
+}

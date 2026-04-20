@@ -1,0 +1,63 @@
+:root {
+  /* TEXT */
+  --color-text-title: var(--color-neutral-800);
+  --color-text-body: var(--color-neutral-600);
+
+  /* BACKGROUNDS */
+  --color-bg-page: var(--color-neutral-200);
+  --color-bg-card: var(--color-white);
+
+  /* BORDER */
+  --color-border: var(--color-neutral-300);
+
+  /* BRAND */
+  --color-brand: var(--color-primary-1);
+
+  /* BUTTON TOKENS */
+  --btn-primary-bg: var(--color-primary-1);
+  --btn-primary-text: var(--color-white);
+
+  --btn-secondary-bg: var(--color-neutral-200);
+  --btn-secondary-text: var(--color-neutral-800);
+
+  --btn-outline-border: var(--color-neutral-400);
+  --btn-outline-text: var(--color-neutral-800);
+
+  --btn-ghost-text: var(--color-neutral-800);
+
+  /* STATES */
+  --btn-hover-opacity: 0.9;
+  --btn-disabled-opacity: 0.6;
+
+
+  /* HEADER */
+  --header-bg:rgb(var(--color-primary-rgb)/ 0.12);
+  /* soft teal/grey */
+  --header-border: var(--color-neutral-200);
+
+  /* NAV LINK */
+  --nav-link-text: var(--color-neutral-700);
+  --nav-link-hover: var(--color-neutral-900);
+  --nav-link-active: var(--color-primary-1);
+
+  /* LOGO */
+  --nav-logo-text: var(--color-neutral-900);
+
+
+
+
+    --color-header-title: var(--color-neutral-800);
+  --color-header-body: var(--color-neutral-600);
+
+  --color-text-title: var(--color-neutral-800);
+  --color-text-body: var(--color-neutral-600);
+
+  --color-bg-page: var(--color-neutral-200);
+  --color-bg-card: var(--color-white);
+
+  --color-border: var(--color-neutral-300);
+
+  --color-brand-primary: var(--color-primary-1);
+
+  --header-bg: rgb(var(--color-primary-rgb) / 0.12);
+}

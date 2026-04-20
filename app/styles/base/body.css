@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-afacad);
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  font-family: var(--font-afacad);
+}
+

@@ -1,0 +1,8 @@
+:root {
+  --shadow-card: 0px 10px 34px rgba(20, 20, 43, 0.14);
+  --shadow-card-hover: 0px 16px 48px rgba(20, 20, 43, 0.18);
+
+  --shadow-card-sm: 0px 6px 18px rgba(20, 20, 43, 0.08);
+  --shadow-card-md: 0px 12px 30px rgba(20, 20, 43, 0.12);
+  --shadow-card-lg: 0px 20px 50px rgba(20, 20, 43, 0.16);
+}
