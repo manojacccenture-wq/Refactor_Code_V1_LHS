@@ -40,6 +40,8 @@
 
   /* LOGO */
   --nav-logo-text: var(--color-neutral-900);
+
+  --timeline-line-color: var(--color-primary-1);
 }
 
 @layer utilities {
@@ -69,10 +71,16 @@
   }
 
 
-    .bg-primary-gradient {
+  .bg-primary-gradient {
     background: linear-gradient(to right,
         rgb(var(--color-primary-rgb) / 0.99),
         rgb(var(--color-primary-rgb) / 0.99));
+  }
+
+  .timeline-line {
+    background: linear-gradient(to bottom,
+        var(--timeline-line-color),
+        var(--timeline-line-color));
   }
 
 }

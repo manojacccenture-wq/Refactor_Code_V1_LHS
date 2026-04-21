@@ -44,10 +44,13 @@ export default function WhyChooseUs() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-primary font-bold uppercase mx-auto">
+
+          <p className="text-primary font-bold uppercase mx-auto tracking-widest">
             {"We don't just meet expectations—we exceed them. Here's what sets us apart:"}
           </p>
-          <h2 className="text-2xl md:text-4xl font-bold" style={{ color: "var(--color-neutral-800)" }}>
+
+          <h2>
+
             Why Choose Us?
           </h2>
         </div>
@@ -55,10 +58,11 @@ export default function WhyChooseUs() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line - hidden on mobile, positioned left on desktop */}
-          <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5" style={{ backgroundImage: "linear-gradient(to bottom, var(--color-primary-1), var(--color-primary-1))" }} />
-          
+<div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 timeline-line" />
+
+
           {/* Mobile vertical line - positioned on left */}
-          <div className="md:hidden absolute left-2 top-0 bottom-0 w-0.5" style={{ backgroundImage: "linear-gradient(to bottom, var(--color-primary-1), var(--color-primary-1))" }} />
+<div className="md:hidden absolute left-2 top-0 bottom-0 w-0.5 timeline-line" />
 
           {/* Timeline Items */}
           <div className="space-y-6 md:space-y-12">
@@ -80,9 +84,9 @@ export default function WhyChooseUs() {
                   {/* MOBILE VIEW */}
                   <div className="flex flex-col md:hidden mt-0">
                     {/* PERIOD */}
-                    <span className="px-3 py-2 rounded-md text-xs font-bold text-white mb-1" style={{ background: "linear-gradient(135deg, var(--color-primary-1), #005c50)" }}>
+                    <p className="px-2 py-1 font-bold rounded-md  text-white bg-primary-gradient">
                       {item.period}
-                    </span>
+                    </p>
 
                     {/* YEAR */}
                     <p className="text-lg font-bold mb-3" style={{ color: "var(--color-primary-1)" }}>
@@ -92,41 +96,39 @@ export default function WhyChooseUs() {
 
                   {/* LEFT SIDE (Period OR Year) - Desktop only */}
                   <div
-                    className={`hidden md:block absolute top-2 text-sm md:text-base ${
-                      isLeft ? "left-0 md:left-[calc(50%-24px)] md:-translate-x-full text-right pr-4" : "left-0 md:left-[calc(50%-24px)] md:-translate-x-full text-right pr-4"
-                    }`}
+                    className={`hidden md:block absolute top-2 text-sm md:text-base ${isLeft ? "left-0 md:left-[calc(50%-24px)] md:-translate-x-full text-right pr-4" : "left-0 md:left-[calc(50%-24px)] md:-translate-x-full text-right pr-4"
+                      }`}
                   >
                     {isLeft ? (
-                      <span className="px-4 py-2 rounded-md text-xs font-bold text-white" style={{ background: "linear-gradient(135deg, var(--color-primary-1), #005c50)" }}>
+                      <p className="px-6 py-1 font-bold rounded-md  text-white bg-primary-gradient">
                         {item.period}
-                      </span>
+                      </p>
                     ) : (
-                      <span className="font-bold" style={{ color: "var(--color-primary-1)" }}>{item.year}</span>
+                      <h3 className="font-bold text-primary" >{item.year}</h3>
                     )}
                   </div>
 
                   {/* RIGHT SIDE (Year OR Period) - Desktop only */}
                   <div
-                    className={`hidden md:block absolute top-2 text-sm md:text-base ${
-                      isLeft ? "left-0 md:left-[calc(50%+24px)] pl-4" : "left-0 md:left-[calc(50%+24px)] pl-4"
-                    }`}
+                    className={`hidden md:block absolute top-2 text-sm md:text-base ${isLeft ? "left-0 md:left-[calc(50%+24px)] pl-4" : "left-0 md:left-[calc(50%+24px)] pl-4"
+                      }`}
                   >
                     {isLeft ? (
-                      <span className="font-bold" style={{ color: "var(--color-primary-1)" }}>{item.year}</span>
+                      <h3 className="font-bold text-primary" >{item.year}</h3>
                     ) : (
-                      <span className="px-4 py-2 rounded-md text-xs font-bold text-white" style={{ background: "linear-gradient(135deg, var(--color-primary-1), #005c50)" }}>
+                      <p className="px-4 py-2 rounded-md  font-bold text-white bg-primary-gradient">
                         {item.period}
-                      </span>
+                      </p>
                     )}
                   </div>
 
                   {/* CARD - Mobile: full width, Desktop: offset */}
-                  <div className={`w-full md:w-5/12 ${cardLeft ? "md:ml-auto" : "md:mr-auto"} pt-2 md:pt-12`}>
-                    <div className="p-4 md:p-6 rounded-2xl md:rounded-xl bg-white border shadow-sm" style={{ borderColor: "var(--color-neutral-300)" }}>
-                      <h3 className="font-bold text-base md:text-xl mb-2" style={{ color: "var(--color-neutral-800)" }}>
+                  <div className={`w-full md:w-5/12 ${cardLeft ? "md:ml-auto" : "md:mr-auto"} pt-2 md:pt-12 `}>
+                    <div className=" mt-[0%] sm:mt-[0%] md:mt-[2%] lg:mt-[4%] p-4 md:p-6 rounded-2xl md:rounded-xl bg-white border shadow-sm  border-[var(--color-border)]" >
+                      <h4 >
                         {item.title}
-                      </h3>
-                      <p className="text-xs md:text-base leading-relaxed" style={{ color: "var(--color-neutral-600)" }}>
+                      </h4>
+                      <p className="mt-[2%]">
                         {item.description}
                       </p>
                     </div>

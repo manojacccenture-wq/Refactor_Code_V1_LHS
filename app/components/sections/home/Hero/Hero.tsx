@@ -9,9 +9,9 @@ export default function Hero() {
 
           {/* Badge */}
           <div className="inline-block mb-4 md:mb-6">
-            <h5 className="text-heading-sm font-semibold uppercase tracking-wide px-3 py-1.5 md:px-4 md:py-2 rounded-full text-primary">
+            <h6 className=" font-semibold uppercase tracking-widest px-3 py-1.5 md:px-4 md:py-2 rounded-full text-primary">
               From Concept to Scalable Code
-            </h5>
+            </h6>
           </div>
 
           {/* Main Title */}

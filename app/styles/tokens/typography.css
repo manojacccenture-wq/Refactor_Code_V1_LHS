@@ -22,7 +22,7 @@
   --leading-h6: 1.4;
 
   /* BODY */
-  --text-body-lg: clamp(18px, 2vw, 24px);
+  --text-body-lg: clamp(18px, 2vw, 18px);
   --text-body-md: clamp(14px, 1.5vw, 16px);
   --text-body-sm: clamp(13px, 1.2vw, 14px);
 

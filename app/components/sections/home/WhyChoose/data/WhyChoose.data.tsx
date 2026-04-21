@@ -7,7 +7,7 @@ export const whyChooseItems= [
         <h5 className="text-primary font-medium">
           Built Around Your Operations, Not Just Requirements
         </h5>
-        <p className="text-sm  mt-2">
+        <p className="  mt-2">
           We study how your business actually runs before writing a single line of code, ensuring solutions fit real workflows, not assumptions.
         </p>
 

@@ -1,6 +1,6 @@
 import Button from "@/app/components/ui/Button";
 import HeroWrapper from "@/app/components/shared/ui/HeroWrapper/HeroWrapper";
-import AboutCards from "@/app/components/sections/about/AboutCards";
+import AboutCards from "@/app/components/sections/_about/AboutHero/components/AboutCards/AboutCards";
 
 export default function AboutHero() {
   return (
@@ -19,7 +19,7 @@ export default function AboutHero() {
           </h1>
 
           {/* Description */}
-          <p className="mx-auto mb-[2%]">
+          <p className="text-body-lg mx-auto mb-[2%]">
             From ground-level execution to large-scale systems, built to perform.
           </p>
 
