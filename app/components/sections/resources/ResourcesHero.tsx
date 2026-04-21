@@ -1,4 +1,4 @@
-import HeroWrapper from "../Home/HeroWrapper";
+import HeroWrapper from "@/app/components/shared/ui/HeroWrapper/HeroWrapper";
 
 export default function ResourcesHero() {
   return (

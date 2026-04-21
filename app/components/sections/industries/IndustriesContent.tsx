@@ -1,6 +1,6 @@
 'use client';
 
-import IndustryCard from "../../common/ui/IndustryCard";
+import IndustryCard from "@/app/components/shared/ui/IndustryCard";
 
 const manufacturingImage = "/Industries/Image_1.svg";
 
