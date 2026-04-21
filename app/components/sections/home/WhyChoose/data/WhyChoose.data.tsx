@@ -4,17 +4,17 @@ export const whyChooseItems= [
     icon: "/WhyChooseUs_1.svg",
     content: (
       <>
-        <p className="text-primary font-medium">
+        <h5 className="text-primary font-medium">
           Built Around Your Operations, Not Just Requirements
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className="text-sm  mt-2">
           We study how your business actually runs before writing a single line of code, ensuring solutions fit real workflows, not assumptions.
         </p>
 
-        <p className="text-primary font-medium mt-4">
+        <h5 className="text-primary font-medium mt-4">
           Single Ownership, Zero Confusion
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className="  mt-2">
           A dedicated point of contact ensures faster decisions, fewer delays, and seamless execution across teams.
 
         </p>
@@ -26,17 +26,17 @@ export const whyChooseItems= [
     icon: "/Insights_Two.svg",
     content: (
       <>
-        <p className="text-primary font-medium">
+        <h5 className="text-primary font-medium">
           Engineers Who Think Beyond Code
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className="  mt-2">
           Our team focuses on solving business problems, not just delivering features, bringing both technical depth and operational understanding.
         </p>
 
-        <p className="text-primary font-medium mt-4">
+        <h5 className="text-primary font-medium mt-4">
           Experience Across Real-World Systems
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className="  mt-2">
           From enterprise tools to scalable platforms, we’ve built systems that run daily operations, not just prototypes.
 
         </p>
@@ -49,17 +49,17 @@ export const whyChooseItems= [
     icon: "/WhyChooseUs_3.svg",
     content: (
       <>
-        <p className="text-primary font-medium">
+        <h5 className="text-primary font-medium">
           Clarity at Every Stage
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className="    mt-2">
           From planning to delivery, you always know what’s happening, what’s next, and why decisions are made.
         </p>
 
-        <p className="text-primary font-medium mt-4">
+        <h5 className="text-primary font-medium mt-4">
           No Hidden Dependencies or Delays
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className="  mt-2">
           We communicate risks early and solve them proactively, ensuring smoother project execution.
 
 
@@ -72,17 +72,17 @@ export const whyChooseItems= [
     icon: "/WhyChooseUs_4.svg",
     content: (
       <>
-        <p className="text-primary font-medium">
+        <h5 className="text-primary font-medium">
           Optimized for Long-Term ROI, Not Short-Term Savings
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className="  mt-2">
           We design systems that reduce operational costs over time, avoiding frequent rebuilds and maintenance overhead.
         </p>
 
-        <p className="text-primary font-medium mt-4">
+        <h5 className="text-primary font-medium mt-4">
           Right-Sized Technology Choices
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className="  mt-2">
           No overengineering, no unnecessary tools — just what your business actually needs to scale efficiently.
 
 
@@ -96,17 +96,17 @@ export const whyChooseItems= [
     icon: "/WhyChooseUs_5.svg",
     content: (
       <>
-        <p className="text-primary font-medium">
+        <h5 className="text-primary font-medium">
           Process-Driven Execution
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className=" mt-2">
           Structured workflows and clear milestones ensure predictable delivery timelines.
         </p>
 
-        <p className="text-primary font-medium mt-4">
+        <h5 className="text-primary font-medium mt-4">
           Built for Continuity, Not Chaos
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className=" mt-2">
           Even with evolving requirements, we maintain delivery discipline without compromising quality.
         </p>
       </>
@@ -117,17 +117,17 @@ export const whyChooseItems= [
     icon: "/WhyChooseUs_6.svg",
     content: (
       <>
-        <p className="text-primary font-medium">
+        <h5 className="text-primary font-medium">
           From Idea to Deployment and Beyond
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className=" mt-2">
           We handle architecture, development, deployment, and ongoing support — all under one roof.
         </p>
 
-        <p className="text-primary font-medium mt-4">
+        <h5 className="text-primary font-medium mt-4">
           Systems That Scale With You
-        </p>
-        <p className="text-sm text-neutral-600 mt-2">
+        </h5>
+        <p className=" mt-2">
           Designed to grow from initial implementation to enterprise-level operations without rework.
         </p>
       </>

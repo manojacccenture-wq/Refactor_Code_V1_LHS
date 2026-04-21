@@ -36,7 +36,7 @@ export default function AccordionItem({
             <Image src={icon} alt="icon" width={65} height={44} />
           </div>
 
-          <h4 className="text-sm md:text-base font-semibold">{title}</h4>
+          <h4 className=" font-semibold">{title}</h4>
         </div>
 
         {/* ARROW */}

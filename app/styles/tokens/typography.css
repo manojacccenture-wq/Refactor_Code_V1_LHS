@@ -6,7 +6,7 @@
   --font-bold: 700;
 
   /* HEADINGS */
-  --text-h1: clamp(32px, 4vw, 60px);
+  --text-h1: clamp(36px, 4vw, 60px);
   --text-h2: clamp(28px, 3.5vw, 36px);
   --text-h3: clamp(20px, 2.5vw, 24px);
   --text-h4: clamp(18px, 2vw, 22px);

@@ -8,13 +8,17 @@ import Button from "../ui/Button";
 import clsx from "clsx";
 import "@/app/styles/components/dropdown.css";
 
+type NavItem =
+  | { name: string; href: string }
+  | { name: string; type: "dropdown" };
 
-const nav = [
+const nav: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Products", href: "/products" },
   { name: "Industries we serve", href: "/industries" },
+  { name: "Resources", type: "dropdown" }, // ✅ clean integration
   { name: "Career", href: "/career" },
   { name: "Contact us", href: "/contact" },
 ];
@@ -35,7 +39,7 @@ export default function Header() {
       <div className="nav-container">
         <div className="navbar">
 
-          {/* Logo */}
+          {/* LOGO */}
           <Link href="/" className="nav-logo flex items-center">
             <Image
               src="/logo.svg"
@@ -47,89 +51,84 @@ export default function Header() {
             />
           </Link>
 
-          {/* Navigation */}
+          {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-8">
             {nav.map((item) => {
-              const isActive = pathname === item.href;
+
+              // ✅ HANDLE DROPDOWN FIRST
+              if ("type" in item && item.type === "dropdown") {
+                return (
+                  <div
+                    key="resources"
+                    className="relative"
+                    onMouseEnter={() => setIsResourcesOpen(true)}
+                    onMouseLeave={() => setIsResourcesOpen(false)}
+                  >
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className={clsx(
+                        "nav-link flex items-center gap-1",
+                        (pathname?.includes("/resources") || isResourcesOpen) &&
+                        "nav-link-active"
+                      )}
+                    >
+                      Resources
+                    </Button>
+
+                    <div
+                      className={clsx(
+                        "dropdown-menu",
+                        isResourcesOpen && "dropdown-open"
+                      )}
+                    >
+                      {resourcesDropdown.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
+                          className={clsx(
+                            "dropdown-item",
+                            pathname === sub.href && "dropdown-item-active"
+                          )}
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
+              // ✅ NOW TYPESCRIPT KNOWS: item HAS href
+              if (!("href" in item)) return null;
+              const isActive =
+                "href" in item && pathname === item.href;
 
               return (
-                <React.Fragment key={item.name}>
-                  {/* Normal Nav Item */}
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={clsx(
-                      "nav-link",
-                      isActive && "nav-link-active"
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-
-                  {/* 👉 Inject Resources AFTER Industries */}
-                  {item.name === "Industries we serve" && (
-                    <div
-                      key="resources"
-                      className="relative group"
-                    >
-                      <button
-                        onClick={() => setIsResourcesOpen(!isResourcesOpen)}
-                        onMouseEnter={() => setIsResourcesOpen(true)}
-                        onMouseLeave={() => setIsResourcesOpen(false)}
-                        className={clsx(
-                          "nav-link flex items-center gap-1",
-                          (pathname?.includes("/resources") || isResourcesOpen) &&
-                          "text-primary-1"
-                        )}
-                      >
-                        Resources
-                      </button>
-
-                      {/* Dropdown Menu */}
-                      <div
-                        className={clsx(
-                          "dropdown-menu",
-                          isResourcesOpen ? "dropdown-open" : ""
-                        )}
-                        onMouseEnter={() => setIsResourcesOpen(true)}
-                        onMouseLeave={() => setIsResourcesOpen(false)}
-                      >
-                        {resourcesDropdown.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className={clsx(
-                              "dropdown-item",
-                              pathname === item.href && "dropdown-item-active"
-                            )}
-                            onClick={() => setIsResourcesOpen(false)}
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={clsx(
+                    "nav-link",
+                    isActive && "nav-link-active"
                   )}
-                </React.Fragment>
+                >
+                  {item.name}
+                </Link>
               );
             })}
-
           </nav>
-
-
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button
-              variant="primary"
-              size="sm"
-            >
+            <Button variant="primary" size="sm">
               Log In
             </Button>
           </div>
 
+          {/* MOBILE MENU BUTTON */}
           <Button
-            variant="outline"
+            variant="ghost"
             className="md:hidden flex items-center justify-center w-10 h-10"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -149,35 +148,43 @@ export default function Header() {
 
         </div>
 
-        {/* Mobile Device Navigation */}
+        {/* MOBILE NAV */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-[80px] left-0 right-0 mx-4 bg-white rounded-2xl shadow-lg p-6 space-y-4 z-50">
-            {nav.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block text-base font-medium text-neutral-800"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="md:hidden absolute top-[80px] left-0 right-0 mx-4 bg-[var(--color-bg-card)] rounded-2xl shadow-lg p-6 space-y-4 z-50">
 
-            {/* Resources */}
-            <div className="pt-2 border-t">
-              <p className="text-sm font-semibold text-neutral-500 mb-2">Resources</p>
+            {nav
+            .filter((item): item is { name: string; href: string } => !("type" in item))
+              .map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block text-body-md text-neutral-800"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+            {/* RESOURCES */}
+            <div className="pt-2 border-t border-[var(--color-border)]">
+              <p className="text-heading-sm text-neutral-500 mb-2">
+                Resources
+              </p>
+
               {resourcesDropdown.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block text-base text-neutral-800"
+                  className="block text-body-md text-neutral-800"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
-            <div className="pt-4 border-t">
+
+            {/* CTA */}
+            <div className="pt-4 border-t border-[var(--color-border)]">
               <Button
                 variant="primary"
                 size="sm"
@@ -187,6 +194,7 @@ export default function Header() {
                 Log In
               </Button>
             </div>
+
           </div>
         )}
       </div>
