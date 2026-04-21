@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { cards } from "@/app/components/sections/_about/AboutHero/data/About.data";
-import { AboutCardProps } from "@/app/components/sections/_about/AboutHero/components/AboutCards/AboutCards.types";
+import { cards } from "@/app/components/sections/about/AboutHero/data/About.data";
+import { AboutCardProps } from "@/app/components/sections/about/AboutHero/components/AboutCards/AboutCards.types";
 
 
 

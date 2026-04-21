@@ -58,6 +58,10 @@
     color: var(--color-neutral-800);
   }
 
+  .font-semibold-token {
+  font-weight: var(--font-semi-bold);
+}
+
   .text-quote {
     font-size: var(--font-quote);
     line-height: 1.4;
@@ -82,5 +86,6 @@
         var(--timeline-line-color),
         var(--timeline-line-color));
   }
+
 
 }

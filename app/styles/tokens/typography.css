@@ -4,6 +4,7 @@
   --font-regular: 400;
   --font-medium: 500;
   --font-bold: 700;
+  --font-semi-bold: 600;
 
   /* HEADINGS */
   --text-h1: clamp(36px, 4vw, 60px);

@@ -10,26 +10,26 @@ export default function ServicesHero() {
         <div className="max-w-3xl mx-auto">
           {/* Badge */}
           <div className="flex justify-center mb-7 text-center">
-            <p 
+            <p
               className="text-primary uppercase mx-auto tracking-widest font-semibold-token"
-              
+
             >
               APPROACH BASED ON FIRST PRINCIPLE
             </p>
           </div>
 
           {/* Main Title */}
-          <h1 
+          <h1
             className="mx-auto"
-            
+
           >
             Enterprise Technology Services Built for Operational Reality
           </h1>
 
           {/* Subtitle */}
-          <p 
+          <p
             className="text-body-lg text-center mt-[2%] mb-12 leading-relaxed mx-auto"
-            
+
           >
             {`We don't deliver theoretical frameworks. We deliver running systems — staffed, maintained, and accountable to defined outcomes`}
           </p>
@@ -39,7 +39,7 @@ export default function ServicesHero() {
             <Button variant="primary">
               Get started
             </Button>
-            <Button 
+            <Button
               variant="outline"
             >
               Learn more →

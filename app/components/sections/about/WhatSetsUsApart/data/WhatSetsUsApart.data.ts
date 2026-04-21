@@ -1,4 +1,4 @@
-import { FeatureCard } from "@/app/components/sections/_about/WhatSetsUsApart/components/FeatureCardComponent/FeatureCardComponent.type";
+import { FeatureCard } from "@/app/components/sections/about/WhatSetsUsApart/components/FeatureCardComponent/FeatureCardComponent.type";
 
   const imgIcon4 = "/about/gem.svg";
 

@@ -1,5 +1,5 @@
-import { FeatureCardComponent } from "@/app/components/sections/_about/WhatSetsUsApart/components/FeatureCardComponent/FeatureCardComponent";
-import { features } from "@/app/components/sections/_about/WhatSetsUsApart/data/WhatSetsUsApart.data";
+import { FeatureCardComponent } from "@/app/components/sections/about/WhatSetsUsApart/components/FeatureCardComponent/FeatureCardComponent";
+import { features } from "@/app/components/sections/about/WhatSetsUsApart/data/WhatSetsUsApart.data";
 
 
 

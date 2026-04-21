@@ -1,4 +1,4 @@
-import { AboutCardProps } from "@/app/components/sections/_about/AboutHero/components/AboutCards/AboutCards.types";
+import { AboutCardProps } from "@/app/components/sections/about/AboutHero/components/AboutCards/AboutCards.types";
 
 const testImage1 = "/about/Title_1.svg"
 const testImage2 = "/about/Title_2.svg"

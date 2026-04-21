@@ -1,6 +1,6 @@
 import Button from "@/app/components/ui/Button";
 import HeroWrapper from "@/app/components/shared/ui/HeroWrapper/HeroWrapper";
-import AboutCards from "@/app/components/sections/_about/AboutHero/components/AboutCards/AboutCards";
+import AboutCards from "@/app/components/sections/about/AboutHero/components/AboutCards/AboutCards";
 
 export default function AboutHero() {
   return (

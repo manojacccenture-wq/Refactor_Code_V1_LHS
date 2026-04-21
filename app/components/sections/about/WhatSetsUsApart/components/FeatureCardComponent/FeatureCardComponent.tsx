@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FeatureCard } from "@/app/components/sections/_about/WhatSetsUsApart/components/FeatureCardComponent/FeatureCardComponent.type";
+import { FeatureCard } from "@/app/components/sections/about/WhatSetsUsApart/components/FeatureCardComponent/FeatureCardComponent.type";
 
 export function FeatureCardComponent({ title, description, icon, highlighted = false }: FeatureCard) {
   return (
