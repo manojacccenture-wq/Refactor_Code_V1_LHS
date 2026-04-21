@@ -7,12 +7,12 @@ import ServicesTestimonials from "@/app/components/sections/services/ServicesTes
 
 export default function ServicesPage() {
   return (
-    <>
+    <section className="relative w-full min-h-screen ">
       <ServicesHero />
       <PowerfulFeatures />
       <ServicesOverview />
       <ServicesCTA />
       <ServicesTestimonials />
-    </>
+    </section>
   );
 }

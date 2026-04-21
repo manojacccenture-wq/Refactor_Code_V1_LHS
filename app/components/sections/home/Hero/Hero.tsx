@@ -4,7 +4,7 @@ import Button from "@/app/components/ui/Button";
 export default function Hero() {
   return (
     <HeroWrapper>
-      <section className="relative w-full py-16 md:py-32 px-4 md:px-6">
+      <section className="relative w-full ">
         <div className="max-w-5xl mx-auto text-center">
 
           {/* Badge */}

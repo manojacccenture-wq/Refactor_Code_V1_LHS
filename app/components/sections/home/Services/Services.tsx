@@ -6,7 +6,7 @@ import {ServiceCard} from "@/app/components/sections/home/Services/component/Ser
 
 export default function Services() {
   return (
-    <section className="max-w-7xl mx-auto py-16 md:py-20 px-4 md:px-6">
+    <section >
 
       {/* HEADER */}
       <div className="text-center mb-12 md:mb-16">

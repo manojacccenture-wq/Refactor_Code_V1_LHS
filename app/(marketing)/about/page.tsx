@@ -6,11 +6,11 @@ import Leadership from "@/app/components/sections/about/Leadership/Leadership";
 
 export default function AboutPage() {
   return (
-    <>
+    <section className="relative w-full min-h-screen ">
       <AboutHero />
       <WhyChooseUs />
       <WhatSetsUsApart />
       <Leadership />
-    </>
+    </section>
   );
 }

@@ -5,7 +5,7 @@ import AboutCards from "@/app/components/sections/about/AboutHero/components/Abo
 export default function AboutHero() {
   return (
     <HeroWrapper>
-      <section className="relative w-full py-16 md:py-32 px-4 md:px-6 overflow-hidden mx-auto">
+      <section >
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           {/* Subtitle */}

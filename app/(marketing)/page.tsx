@@ -11,7 +11,7 @@ import Contact from "@/app/components/sections/home/Contact_Us/Contact";
 
 export default function HomePage() {
   return (
-    <>
+    <section className="relative w-full min-h-screen ">
       <Hero />
       <GalleryModal/>
       <Trusted />
@@ -22,6 +22,6 @@ export default function HomePage() {
       <TechStack />
       <Testimonial />
       <Contact />
-    </>
+    </section>
   );
 }
