@@ -58,9 +58,26 @@
     color: var(--color-neutral-800);
   }
 
+    .text-neutral-200 {
+    color: var(--color-neutral-200);
+  }
+
+
   .font-semibold-token {
-  font-weight: var(--font-semi-bold);
-}
+    font-weight: var(--font-semi-bold);
+  }
+
+  .font-bold-token {
+    font-weight: var(--font-bold);
+  }
+
+   .font-medium-token {
+    font-weight: var(--font-medium);
+  }
+
+   .font-regular-token {
+    font-weight: var(--font-regular);
+  }
 
   .text-quote {
     font-size: var(--font-quote);

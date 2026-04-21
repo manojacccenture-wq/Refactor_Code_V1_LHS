@@ -11,9 +11,9 @@ export default function ProductsSplitSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h2 className="font-bold leading-tight">
             <span style={{ color: "var(--color-neutral-800)" }}>
-              "Simplify{' '}
+              &quot;Simplify{' '}
             </span>
             <span style={{ color: "var(--color-primary-1)" }}>
               Workflows
@@ -25,7 +25,7 @@ export default function ProductsSplitSection() {
               {" "}Productivity
             </span>
             <span style={{ color: "var(--color-neutral-800)" }}>
-              ."
+              .&quot;
             </span>
           </h2>
         </div>
@@ -40,7 +40,7 @@ export default function ProductsSplitSection() {
             }}
           >
             <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8 text-center">
-              <h3 className="text-lg sm:text-2xl font-bold mb-4" style={{ color: "var(--color-neutral-800)" }}>
+              <h3 className="font-bold mb-4" style={{ color: "var(--color-neutral-800)" }}>
                 Spend by Category
               </h3>
 
@@ -48,13 +48,13 @@ export default function ProductsSplitSection() {
               <div className="w-32 sm:w-40 h-32 sm:h-40 rounded-full mx-auto mb-6 sm:mb-8 flex items-center justify-center border-6 sm:border-8"
                 style={{ borderColor: "var(--color-primary-1)", backgroundColor: "var(--color-neutral-300)" }}>
                 <div className="text-center">
-                  <p className="text-2xl sm:text-3xl font-bold" style={{ color: "var(--color-neutral-800)" }}>$85k</p>
-                  <p className="text-xs text-neutral-600">Total</p>
+                  <p className="font-bold" style={{ color: "var(--color-neutral-800)" }}>$85k</p>
+                  <p style={{ color: "var(--color-neutral-600)" }}>Total</p>
                 </div>
               </div>
 
               {/* Category List */}
-              <div className="space-y-2 sm:space-y-3 text-left text-sm sm:text-base">
+              <div className="space-y-2 sm:space-y-3 text-left">
                 <div className="flex items-center gap-2 sm:gap-3">
                   <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full" style={{ backgroundColor: "var(--color-primary-1)" }}></span>
                   <span style={{ color: "var(--color-neutral-800)" }}>Dairy</span>
@@ -72,7 +72,7 @@ export default function ProductsSplitSection() {
                 </div>
               </div>
 
-              <button className="w-full mt-6 sm:mt-8 py-2 text-neutral-600 text-xs sm:text-sm font-semibold hover:text-neutral-800 transition">
+              <button className="w-full mt-6 sm:mt-8 py-2 font-semibold hover:text-neutral-800 transition" style={{ color: "var(--color-neutral-600)" }}>
                 Download Category Report
               </button>
             </div>
@@ -82,19 +82,19 @@ export default function ProductsSplitSection() {
           <div className="space-y-4 sm:space-y-6 text-center">
             <div>
               <span
-                className="text-xs uppercase font-semibold tracking-wide"
+                className="uppercase font-semibold tracking-wide"
                 style={{ color: "var(--color-neutral-600)" }}
               >
                 IMPROVE PRODUCTIVITY
               </span>
               <h3
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-3 sm:mt-4 mb-3 sm:mb-4"
+                className="font-bold mt-3 sm:mt-4 mb-3 sm:mb-4"
                 style={{ color: "var(--color-neutral-800)" }}
               >
                 Proof statement
               </h3>
               <p
-                className="text-sm sm:text-base md:text-lg leading-relaxed"
+                className="leading-relaxed"
                 style={{ color: "var(--color-neutral-600)" }}
               >
                 Get rid of endless spreadsheets and binders collecting dust, or hours wasted on searching and emailing.
@@ -122,7 +122,7 @@ export default function ProductsSplitSection() {
                     />
                   </div>
                   <p
-                    className="text-sm sm:text-base md:text-lg font-normal leading-relaxed"
+                    className="font-normal leading-relaxed"
                     style={{ color: "var(--color-neutral-600)" }}
                   >
                     {item}

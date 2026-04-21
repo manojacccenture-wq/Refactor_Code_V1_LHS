@@ -1,4 +1,5 @@
 'use client';
+
 import Image from "next/image";
 
 const deploymentIcon = "/products/terminal-pc.svg";
@@ -23,7 +24,7 @@ export default function ProductsDeployment() {
 
           <div className="relative z-10">
             {/* Title */}
-            <h2 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 md:mb-16 leading-tight">
+            <h2 className="text-center font-bold mb-8 sm:mb-12 md:mb-16 leading-tight">
               <span style={{ color: "var(--color-neutral-800)" }}>Deployment </span>
               <span style={{ color: "var(--color-primary-1)" }}>options</span>
             </h2>
@@ -50,23 +51,17 @@ export default function ProductsDeployment() {
 
                   {/* Label */}
                   <h3
-                    className="text-lg sm:text-xl md:text-2xl font-bold text-center"
+                    className="font-bold text-center"
                     style={{ color: "var(--color-neutral-800)" }}
                   >
                     {option.label}
                   </h3>
                 </div>
               ))}
-
-            </div> {/* Deployment Cards */}
-          </div> {/* relative z-10 */}
-        </div> {/* card container */}
-      </div> {/* max-w */}
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
-
-
-
-
-

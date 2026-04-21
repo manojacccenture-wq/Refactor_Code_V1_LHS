@@ -1,3 +1,4 @@
+
 import Button from "@/app/components/ui/Button";
 import clsx from "clsx";
 
@@ -25,30 +26,21 @@ export default function CTASection({
           flex flex-col md:flex-row
           items-start md:items-center
           justify-between gap-6
-          bg-gradient-to-r
-          from-[rgb(var(--color-primary-rgb)/0.95)]
-          to-[#0E6F5C]
-          text-white
+        bg-primary-gradient
+
           shadow-lg
         "
       >
-        {/* ✅ TEXT */}
-        <h2 className="text-heading-lg max-w-2xl text-white">
+        {/* TEXT */}
+        <h2 className="max-w-2xl text-neutral-200 leading-tight  font-bold">
           {title}
         </h2>
 
-        {/* ✅ BUTTON */}
+        {/* BUTTON */}
         <Button
           variant="secondary"
           onClick={onClick}
-          className="
-            !rounded-full 
-            !px-6 md:!px-8 !py-2.5 md:!py-4
-            !bg-white 
-            !text-[var(--color-primary-1)]
-            hover:opacity-90
-            mx-auto text-body-md whitespace-nowrap
-          "
+     
         >
           {buttonText}
         </Button>

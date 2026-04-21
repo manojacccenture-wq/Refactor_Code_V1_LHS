@@ -10,26 +10,26 @@ export default function ProductsHero() {
         <div className="max-w-3xl mx-auto">
           {/* Badge */}
           <div className="flex justify-center mb-4 sm:mb-7">
-            <span 
-              className="text-xs sm:text-sm font-semibold uppercase tracking-[1.6px] sm:tracking-[2.24px]"
-              style={{ color: "var(--color-primary-1)" }}
+
+            <p
+              className="text-primary uppercase mx-auto tracking-widest font-semibold-token"
+
             >
-              From Concept to Scalable Code
-            </span>
+             From Concept to Scalable Code
+            </p>
+ 
           </div>
 
           {/* Main Title */}
-          <h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 sm:mb-7 leading-tight"
-            style={{ color: "var(--color-neutral-800)" }}
+          <h1
+            
           >
             The Only ERP Built for How Indian Food Operations Actually Work
           </h1>
 
           {/* Subtitle */}
-          <p 
-            className="text-base sm:text-lg md:text-xl text-center mb-8 sm:mb-12 leading-relaxed"
-            style={{ color: "var(--color-neutral-600)" }}
+          <p
+            className="text-center mb-8 sm:mb-12 leading-relaxed mt-[5%]"
           >
             designed from the ground up for multi-outlet F&B operators, not adapted from generic ERP templates.
           </p>
@@ -39,8 +39,8 @@ export default function ProductsHero() {
             <Button variant="primary">
               Get started
             </Button>
-            <button 
-              className="font-semibold text-base transition-opacity hover:opacity-70 flex items-center gap-2"
+            <button
+              className="font-semibold transition-opacity hover:opacity-70 flex items-center gap-2"
               style={{ color: "var(--color-neutral-800)" }}
             >
               Learn more →

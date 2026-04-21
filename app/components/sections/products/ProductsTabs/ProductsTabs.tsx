@@ -1,59 +1,56 @@
 'use client';
 
 import { useState } from 'react';
-import Button from '../../ui/Button';
+import Button from '@/app/components/ui/Button';
 import Image from 'next/image';
 import clsx from 'clsx';
 
 interface Tab {
   id: string;
   label: string;
-  icon:string;
+  icon: string;
 }
 
 interface TabContent {
   title: string;
   icon: string;
   description: string;
+  image: string;
 }
 
 const tabs: Tab[] = [
-  { id: 'enterprise-pos', label: 'Enterprise POS' ,icon: '/products/Enterpise_POS_Icon.svg'},
-  { id: 'franchise-mgmt', label: 'franchise management',icon: '/products/Enterpise_POS_Icon.svg' },
-  { id: 'central-kitchen', label: 'central kitchen' ,icon: '/products/Enterpise_POS_Icon.svg'},
-  { id: 'vendor-settlement', label: 'vendor settlement' ,icon: '/products/Enterpise_POS_Icon.svg'},
-  { id: 'bi-reporting', label: 'BI reporting',icon: '/products/Enterpise_POS_Icon.svg' },
+  { id: 'enterprise-pos', label: 'Enterprise POS', icon: '/products/Enterpise_POS_Icon.svg' },
+  { id: 'franchise-mgmt', label: 'franchise management', icon: '/products/Enterpise_POS_Icon.svg' },
+  { id: 'central-kitchen', label: 'central kitchen', icon: '/products/Enterpise_POS_Icon.svg' },
+  { id: 'vendor-settlement', label: 'vendor settlement', icon: '/products/Enterpise_POS_Icon.svg' },
+  { id: 'bi-reporting', label: 'BI reporting', icon: '/products/Enterpise_POS_Icon.svg' },
 ];
 
-const tabContents: Record<string, any> = {
+const tabContents: Record<string, TabContent> = {
   'enterprise-pos': {
     title: 'Enterprise POS',
     icon: '/products/Enterpise_POS_Icon.svg',
     description: 'Real-time order management',
     image: '/products/Enterprise POS.svg',
   },
-
   'franchise-mgmt': {
     title: 'Franchise Management',
     icon: '/products/Enterpise_POS_Icon.svg',
     description: 'Centralized control',
     image: '/products/Enterprise POS.svg',
   },
-
   'central-kitchen': {
     title: 'Central Kitchen Operations',
     icon: '/products/Enterpise_POS_Icon.svg',
     description: 'Production planning and ingredient management at scale',
     image: '/products/Enterprise POS.svg',
   },
-
   'vendor-settlement': {
     title: 'Vendor Settlement',
     icon: '/products/Enterpise_POS_Icon.svg',
     description: 'Automated accounting for supplier payments',
     image: '/products/Enterprise POS.svg',
   },
-
   'bi-reporting': {
     title: 'BI & Analytics',
     icon: '/products/Enterpise_POS_Icon.svg',
@@ -79,7 +76,7 @@ export default function ProductsTabs() {
                 onClick={() => setActiveTab(tab.id)}
                 variant="ghost"
                 className={clsx(
-                  "px-4 sm:px-7 py-3 sm:py-5 rounded-2xl text-left w-full justify-start text-sm sm:text-base",
+                  "px-4 sm:px-7 py-3 sm:py-5 rounded-2xl text-left w-full justify-start",
                   activeTab === tab.id
                     ? "border-2 bg-white border-[var(--color-primary-1)] text-primary"
                     : "border border-neutral-300 bg-white text-[var(--color-text-subtitle)]"
@@ -94,7 +91,7 @@ export default function ProductsTabs() {
                   />
                 </div>
 
-                <span className="font-semibold text-sm">
+                <span className="font-semibold">
                   {tab.label}
                 </span>
               </Button>

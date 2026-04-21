@@ -1,10 +1,10 @@
 
-import ProductsHero from "@/app/components/sections/products/ProductsHero";
-import ProductsTabs from "@/app/components/sections/products/ProductsTabs";
-import ProductsSplitSection from "@/app/components/sections/products/ProductsSplitSection";
-import ProductsDeployment from "@/app/components/sections/products/ProductsDeployment";
-import ProductsDifferentiators from "@/app/components/sections/products/ProductsDifferentiators";
-import ProductsCTA from "@/app/components/sections/products/ProductsCTA";
+import ProductsHero from "@/app/components/sections/products/ProductsHero/ProductsHero";
+import ProductsTabs from "@/app/components/sections/products/ProductsTabs/ProductsTabs";
+import ProductsSplitSection from "@/app/components/sections/products/ProductsSplitSection/ProductsSplitSection";
+import ProductsDeployment from "@/app/components/sections/products/ProductsDeployment/ProductsDeployment";
+import ProductsDifferentiators from "@/app/components/sections/products/ProductsDifferentiators/ProductsDifferentiators";
+import ProductsCTA from "@/app/components/sections/products/ProductsCTA/ProductsCTA";
 
 export default function ProductsPage() {
   return (

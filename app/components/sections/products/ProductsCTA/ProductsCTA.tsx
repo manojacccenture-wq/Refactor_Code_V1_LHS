@@ -1,6 +1,6 @@
 'use client';
 
-import CTASection from "../../ui/CTASection";
+import CTASection from "@/app/components/shared/ui/CTA/CTASection";
 
 export default function ProductsCTA() {
   return (
@@ -8,9 +8,8 @@ export default function ProductsCTA() {
       <CTASection
         title="So, Are You Ready to Streamline Your Food Chain Operations?"
         buttonText="Book a Demo"
-        className="text-center mx-auto"
+        // className="text-center mx-auto"
       />
-
     </section>
   );
 }

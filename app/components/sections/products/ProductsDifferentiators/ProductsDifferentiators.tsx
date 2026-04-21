@@ -19,15 +19,15 @@ export default function ProductsDifferentiators() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h2 className="font-bold leading-tight">
             <span style={{ color: "var(--color-neutral-800)" }}>
-              "Key{' '}
+              &quot;Key{' '}
             </span>
             <span style={{ color: "var(--color-primary-1)" }}>
               Differentiation
             </span>
             <span style={{ color: "var(--color-neutral-800)" }}>
-              ."
+              .&quot;
             </span>
           </h2>
         </div>
@@ -38,19 +38,19 @@ export default function ProductsDifferentiators() {
           <div className="space-y-4 sm:space-y-6 order-2 lg:order-1 text-center">
             <div>
               <span
-                className="text-xs uppercase font-semibold tracking-wide"
+                className="uppercase font-semibold tracking-wide"
                 style={{ color: "var(--color-neutral-600)" }}
               >
                 KEY FEATURES
               </span>
               <h3
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-3 sm:mt-4 mb-3 sm:mb-4"
+                className="font-bold mt-3 sm:mt-4 mb-3 sm:mb-4"
                 style={{ color: "var(--color-neutral-800)" }}
               >
                 What makes us different
               </h3>
               <p
-                className="text-sm sm:text-base md:text-lg leading-relaxed"
+                className="leading-relaxed"
                 style={{ color: "var(--color-neutral-600)" }}
               >
                 Purpose-built for Indian food operations with compliance, regional expertise, and seamless integration capabilities.
@@ -79,7 +79,7 @@ export default function ProductsDifferentiators() {
                     />
                   </div>
                   <p
-                    className="text-sm sm:text-base md:text-lg font-normal leading-relaxed"
+                    className="font-normal leading-relaxed"
                     style={{ color: "var(--color-neutral-600)" }}
                   >
                     {item}
@@ -104,7 +104,7 @@ export default function ProductsDifferentiators() {
             }}
           >
             <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-8">
-              <h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6" style={{ color: "var(--color-neutral-800)" }}>
+              <h3 className="font-bold mb-4 sm:mb-6" style={{ color: "var(--color-neutral-800)" }}>
                 Recent Indents
               </h3>
 
@@ -129,13 +129,10 @@ export default function ProductsDifferentiators() {
 
                     {/* Indent Info */}
                     <div className="flex-1 min-w-0">
-                      <p style={{ color: "var(--color-neutral-800)" }} className="font-semibold text-xs sm:text-sm">
+                      <p style={{ color: "var(--color-neutral-800)" }} className="font-semibold">
                         {indent.title}
                       </p>
-                      <p
-                        className="text-xs sm:text-sm"
-                        style={{ color: "var(--color-neutral-600)" }}
-                      >
+                      <p style={{ color: "var(--color-neutral-600)" }}>
                         {indent.status}
                       </p>
                     </div>
@@ -143,7 +140,7 @@ export default function ProductsDifferentiators() {
                 ))}
               </div>
 
-              <button className="w-full mt-6 sm:mt-8 py-2 text-neutral-600 text-xs sm:text-sm font-semibold hover:text-neutral-800 transition">
+              <button className="w-full mt-6 sm:mt-8 py-2 font-semibold hover:text-neutral-800 transition" style={{ color: "var(--color-neutral-600)" }}>
                 View All Indents
               </button>
             </div>
@@ -153,4 +150,3 @@ export default function ProductsDifferentiators() {
     </section>
   );
 }
-
