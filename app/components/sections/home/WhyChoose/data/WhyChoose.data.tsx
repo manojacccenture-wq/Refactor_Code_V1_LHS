@@ -1,9 +1,4 @@
-"use client";
-
-import { useState } from "react";
-import AccordionItem from "../../ui/AccordionItem";
-
-const items = [
+export const whyChooseItems= [
   {
     title: "Client-First Approach",
     icon: "/WhyChooseUs_1.svg",
@@ -139,39 +134,3 @@ const items = [
     ),
   },
 ];
-
-export default function WhyChoose() {
-  const [activeIndex, setActiveIndex] = useState(0); // ✅ first open
-
-  return (
-    <section className="mx-auto max-w-6xl py-16 md:py-20 px-4 md:px-6">
-
-      {/* HEADER */}
-      <h2 className="text-center max-w-4xl text-sm md:text-lg mx-auto mb-4 md:mb-8 text-primary" >
-        &ldquo;WE DON&rsquo;T JUST MEET EXPECTATIONS—WE EXCEED THEM. HERE&rsquo;S WHAT SETS US APART:&rdquo;
-      </h2>
-      <h2 className="text-center text-xl md:text-2xl mb-8 md:mb-12 font-bold" style={{ color: "var(--color-neutral-800)" }}>
-        Why Choose Us?
-      </h2>
-
-      {/* GRID */}
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
-
-        {items.map((item, i) => {
-          return (
-            <AccordionItem
-              key={i}
-              title={item.title}
-              icon={item.icon}
-              isOpen={activeIndex === i}
-         onClick={() => setActiveIndex(activeIndex === i ? -1 : i)}
-            >
-              {item.content}
-            </AccordionItem>
-          );
-        })}
-
-      </div>
-    </section>
-  );
-}

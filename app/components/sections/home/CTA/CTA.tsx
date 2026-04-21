@@ -1,4 +1,4 @@
-import CTASection from "../../ui/CTASection";
+import CTASection from "@/app/components/ui/CTASection";
 
 export default function CTA() {
   return (

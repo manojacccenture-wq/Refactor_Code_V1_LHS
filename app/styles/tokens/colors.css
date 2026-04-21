@@ -22,9 +22,10 @@
   --color-black: #000000;
 
   /* RGB */
-  --color-neutral-800-rgb: 23, 15, 73;
-  --color-neutral-300-rgb: 239, 240, 246;
-  --color-primary-rgb: 0, 194, 168;
+ --color-neutral-800-rgb: 23, 15, 73;
+  --color-neutral-300-rgb: 239 240 246;   /* for hero block bg */
+  --color-primary-rgb: 0 194 168;        /* for header bg and gradients */
+
 
   /* GRADIENT TOKENS */
   --color-green-400: #2dd4bf;

@@ -29,10 +29,8 @@
   --btn-hover-opacity: 0.9;
   --btn-disabled-opacity: 0.6;
 
-
   /* HEADER */
-  --header-bg:rgb(var(--color-primary-rgb)/ 0.12);
-  /* soft teal/grey */
+  --header-bg: rgb(var(--color-primary-rgb) / 0.12);
   --header-border: var(--color-neutral-200);
 
   /* NAV LINK */
@@ -42,22 +40,39 @@
 
   /* LOGO */
   --nav-logo-text: var(--color-neutral-900);
+}
+
+@layer utilities {
+
+  .text-primary {
+    color: var(--color-brand);
+  }
+
+  .text-neutral-500 {
+    color: var(--color-neutral-500);
+  }
+
+  .text-neutral-800 {
+    color: var(--color-neutral-800);
+  }
+
+  .text-quote {
+    font-size: var(--font-quote);
+    line-height: 1.4;
+  }
+
+  .bg-primary-soft-gradient {
+    background: linear-gradient(to bottom,
+        transparent,
+        rgb(var(--color-primary-rgb) / 0.07),
+        rgb(var(--color-primary-rgb) / 0.12));
+  }
 
 
+    .bg-primary-gradient {
+    background: linear-gradient(to right,
+        rgb(var(--color-primary-rgb) / 0.99),
+        rgb(var(--color-primary-rgb) / 0.99));
+  }
 
-
-    --color-header-title: var(--color-neutral-800);
-  --color-header-body: var(--color-neutral-600);
-
-  --color-text-title: var(--color-neutral-800);
-  --color-text-body: var(--color-neutral-600);
-
-  --color-bg-page: var(--color-neutral-200);
-  --color-bg-card: var(--color-white);
-
-  --color-border: var(--color-neutral-300);
-
-  --color-brand-primary: var(--color-primary-1);
-
-  --header-bg: rgb(var(--color-primary-rgb) / 0.12);
 }

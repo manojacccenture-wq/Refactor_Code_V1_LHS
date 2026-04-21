@@ -17,14 +17,16 @@ function TestimonialCard({
     <div
       className="
         card
+        bg-primary-soft-gradient
         relative
         p-8 md:p-36
         rounded-[32px]
+
       "
-      style={{
-        background:
-          "linear-gradient(135deg, rgba(0,194,168,0.08), rgba(0,194,168,0.02))",
-      }}
+    // style={{
+    //   background:
+    //     "linear-gradient(135deg, rgba(0,194,168,0.08), rgba(0,194,168,0.02))",
+    // }}
     >
       {/* TOP PROFILE */}
       <div className="flex items-center gap-4 mb-8">
@@ -39,8 +41,15 @@ function TestimonialCard({
         </div>
 
         <div className="text-left">
-          <p className="font-semibold" style={{ color: "var(--color-neutral-800)" }}>{name}</p>
-          <p className="text-sm" style={{ color: "var(--color-neutral-600)" }}>{role}</p>
+          {/* ✅ NAME */}
+          <h6 className="text-heading-sm text-neutral-800">
+            {name}
+          </h6>
+
+          {/* ✅ ROLE */}
+          <p className="text-body-sm text-neutral-500">
+            {role}
+          </p>
         </div>
       </div>
 
@@ -49,10 +58,10 @@ function TestimonialCard({
         “
       </div>
 
-      {/* QUOTE */}
-      <h2 className="text-neutral-500 text-2xl" >
+      {/* ✅ QUOTE */}
+      <h3 className="text-quote text-neutral-500">
         {quote}
-      </h2>
+      </h3>
     </div>
   );
 }

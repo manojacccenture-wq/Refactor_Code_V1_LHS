@@ -67,23 +67,6 @@
   z-index: 1;
 }
 
-/* ================= GRADIENT OVERLAY ================= */
-
-/* .hero-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    url("/left_side.svg") left center no-repeat opacity(0.5),
-    url("/rightSide.svg") right center no-repeat opacity(0.5);
-
-  background-size:
-    40% auto,
-    40% auto;
-
-  z-index: 1;
-} */
 
 
 
@@ -113,39 +96,6 @@ background-size: cover, cover;
   z-index: 2;
 }
 
-/* positions (based on your image layout) */
 
-.block-1 {
-  width: 120px;
-  height: 120px;
-  top: 20%;
-  left: 15%;
-}
 
-.block-2 {
-  width: 140px;
-  height: 140px;
-  top: 30%;
-  right: 20%;
-}
-
-.block-3 {
-  width: 100px;
-  height: 100px;
-  bottom: 25%;
-  left: 30%;
-}
-
-.block-4 {
-  width: 160px;
-  height: 160px;
-  bottom: 20%;
-  right: 15%;
-}
-
-.block-5 {
-  width: 90px;
-  height: 90px;
-  top: 60%;
-  left: 5%;
-}
+ 

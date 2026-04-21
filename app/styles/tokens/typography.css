@@ -29,4 +29,9 @@
   --leading-body-lg: 1.5;
   --leading-body-md: 1.6;
   --leading-body-sm: 1.6;
+
+
+  /* --font-quote */
+
+  --font-quote: clamp(18px, 2.5vw, 34px);
 }

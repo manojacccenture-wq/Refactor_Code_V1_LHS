@@ -27,7 +27,7 @@ export default function AccordionItem({
       )}
     >
       {/* HEADER */}
-<button
+      <button
         onClick={onClick}
         className="w-full flex items-center justify-between p-3 md:p-5 text-left bg-transparent border-none cursor-pointer outline-none"
       >

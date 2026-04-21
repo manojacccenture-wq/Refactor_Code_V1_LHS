@@ -3,7 +3,7 @@ type FeatureCardProps = {
   description: string;
   icon?: React.ReactNode;
   children?: React.ReactNode;
-  variant?: "green" | "blue" | "yellow"|"purple"; // 👈 NEW
+  variant?: "green" | "blue" | "yellow" | "purple";
 };
 
 export default function FeatureCard({
@@ -33,11 +33,25 @@ export default function FeatureCard({
 
       {/* BOTTOM */}
       <div className="grid grid-cols-[auto_1fr] gap-3 md:gap-4 items-start bg-white p-4 md:p-6 rounded-b-2xl md:rounded-b-3xl">
-        <div className="w-8 md:w-10 flex-shrink-0">{icon}</div>
 
+        {/* ICON */}
+        <div className="w-8 md:w-10 flex-shrink-0">
+          {icon}
+        </div>
+
+        {/* TEXT */}
         <div className="text-left">
-          <h3 className="text-base md:text-lg font-bold">{title}</h3>
-          <p className="text-sm md:text-base">{description}</p>
+
+          {/* 🔥 uses global h3 typography */}
+          <h4 className="font-semibold">
+            {title}
+          </h4>
+
+          {/* 🔥 uses global paragraph typography */}
+          <p>
+            {description}
+          </p>
+
         </div>
       </div>
     </div>
