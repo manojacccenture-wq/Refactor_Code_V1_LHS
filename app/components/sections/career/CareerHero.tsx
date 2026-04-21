@@ -5,7 +5,7 @@ import HeroWrapper from "@/app/components/shared/ui/HeroWrapper/HeroWrapper";
 export default function CareerHero() {
   return (
     <HeroWrapper>
-      <section className="relative w-full md:py-32 overflow-hidden mx-auto">
+      <section className="relative w-full overflow-hidden mx-auto">
         {/* Content */}
         <div className="relative z-10 max-w-2xl mx-auto text-center">
           {/* Subtitle */}

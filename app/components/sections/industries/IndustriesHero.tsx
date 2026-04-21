@@ -17,7 +17,7 @@ export default function IndustriesHero() {
   return (
     <section className="hero-bg w-full relative overflow-hidden">
       {/* Hero text content */}
-      <div className="relative z-10 max-w-2xl mx-auto px-6 text-center pt-16 md:pt-32 pb-8 md:pb-10">
+      <div className="relative z-10 max-w-2xl mx-auto px-6 text-center pt-[var(--hero-offset)] pb-8 md:pb-10">
         {/* Subtitle */}
         <p
           className="text-xs md:text-sm font-semibold uppercase tracking-[2.24px] mb-5 md:mb-7 text-primary"

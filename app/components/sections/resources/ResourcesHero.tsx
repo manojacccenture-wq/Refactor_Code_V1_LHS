@@ -3,7 +3,7 @@ import HeroWrapper from "@/app/components/shared/ui/HeroWrapper/HeroWrapper";
 export default function ResourcesHero() {
   return (
     <HeroWrapper>
-      <section className="relative w-full md:py-20 overflow-hidden mx-auto">
+      <section className="relative w-full overflow-hidden mx-auto">
         {/* Content */}
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           {/* Subtitle */}

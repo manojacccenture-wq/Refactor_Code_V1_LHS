@@ -4,7 +4,7 @@ import Button from "../../ui/Button";
 
 export default function DeliveryHero() {
   return (
-    <section className="w-full py-24 px-6 relative bg-gradient-to-b from-primary/5 to-transparent">
+    <section className="w-full pb-24 px-6 relative bg-gradient-to-b from-primary/5 to-transparent pt-[var(--hero-offset)]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-6 items-center text-center">
           {/* Subtitle */}

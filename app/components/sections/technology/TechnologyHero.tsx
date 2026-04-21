@@ -5,7 +5,7 @@ import Button from "../../ui/Button";
 
 export default function TechnologyHero() {
   return (
-    <section className="w-full py-24 px-6 relative bg-gradient-to-b from-primary/5 to-transparent mt-[5%]">
+    <section className="w-full pb-24 px-6 relative bg-gradient-to-b from-primary/5 to-transparent pt-[var(--hero-offset)]">
       <div className="max-w-7xl mx-auto">
 
         {/* TEXT ROW */}

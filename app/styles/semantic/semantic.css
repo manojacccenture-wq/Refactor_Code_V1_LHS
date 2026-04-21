@@ -42,6 +42,9 @@
   --nav-logo-text: var(--color-neutral-900);
 
   --timeline-line-color: var(--color-primary-1);
+
+  /* HERO LAYOUT */
+  --hero-offset: clamp(80px, 10vh, 140px);
 }
 
 @layer utilities {
