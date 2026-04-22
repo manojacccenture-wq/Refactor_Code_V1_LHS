@@ -32,7 +32,7 @@ export default function Input({
     <div>
       {/* LABEL */}
       {label && (
-        <label className="block text-heading-sm text-neutral-800 mb-2">
+        <label className="block   mb-2">
           {label}
         </label>
       )}

@@ -51,7 +51,7 @@ export default function IndustriesHeroVisual() {
         {/* Top */}
         <div className="absolute left-1/2 top-[8%] -translate-x-1/2">
           <Image
-            src="/about/Leader_Icon.svg"
+            src="/Industries/Avatar Image3.svg"
             alt=""
             width={48}
             height={48}
@@ -63,7 +63,7 @@ export default function IndustriesHeroVisual() {
         {/* Left */}
         <div className="absolute left-[12%] top-[35%]">
           <Image
-            src="/about/Leader_Icon.svg"
+            src="/Industries/AvatarImage_Icon_2.svg"
             alt=""
             width={48}
             height={48}
@@ -75,7 +75,7 @@ export default function IndustriesHeroVisual() {
         {/* Right */}
         <div className="absolute right-[12%] top-[35%]">
           <Image
-            src="/about/Leader_Icon.svg"
+            src="/Industries/AvatarImage_Icon.svg"
             alt=""
             width={48}
             height={48}
@@ -94,7 +94,22 @@ export default function IndustriesHeroVisual() {
           }}
         >
           <Image
-            src="/about/Leader_Icon.svg"
+            src="/Industries/proccessor.svg"
+            alt=""
+            width={48}
+            height={48}
+            className="md:w-12 md:h-12 object-cover"
+            style={{ width: "auto", height: "auto" }}
+          />
+        </div>
+           <div
+          className="absolute right-[47%] top-[40%] w-10 h-10 md:w-13 md:h-13 rounded-xl flex items-center justify-center"
+          style={{
+            background: 'linear-gradient(180deg, #0f62fe, #093b98)',
+          }}
+        >
+          <Image
+            src="/Industries/shield.svg"
             alt=""
             width={48}
             height={48}
@@ -111,7 +126,7 @@ export default function IndustriesHeroVisual() {
           }}
         >
           <Image
-            src="/about/Leader_Icon.svg"
+            src="/Industries/shield.svg"
             alt=""
             width={48}
             height={48}
@@ -121,9 +136,9 @@ export default function IndustriesHeroVisual() {
         </div>
 
         {/* Center */}
-        <div className="absolute left-1/2 top-[75%] -translate-x-1/2 w-10 h-10 md:w-13 md:h-13 rounded-xl bg-purple-600 flex items-center justify-center text-white">
+        {/* <div className="absolute left-1/2 top-[75%] -translate-x-1/2 w-10 h-10 md:w-13 md:h-13 rounded-xl bg-purple-600 flex items-center justify-center text-white">
           +
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: "testimonial1",
-    header:`Speedy Developer Turnaround` ,
+    header: `Speedy Developer Turnaround`,
     quote: "I found the perfect developer in hours, and the turnaround was fast and exceeded expectations!",
     role: "UI/UX Designer",
     name: "Sakthi Narayanan K",
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
 
 export default function CareerTestimonials() {
   return (
-    <section className="py-20 px-4 md:px-16">
+    <section className="py-12 px-4 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -51,12 +51,12 @@ export default function CareerTestimonials() {
               className="bg-white border border-neutral-300 rounded-2xl shadow-sm p-6 flex flex-col justify-between h-80"
             >
               {/* Quote Preview */}
-              <h4 className="text-neutral-800 font-bold text-base line-clamp-2 mb-4">
-                "{testimonial.header}"
+              <h4 className="font-bold-token   mb-4">
+                &quot;{testimonial.header}&quot;
               </h4>
 
               {/* Full Quote */}
-              <p className="text-neutral-600 text-base font-normal mb-6 line-clamp-3">
+              <p className=" font-normal-token mb-6 line-clamp-3">
                 {testimonial.quote}
               </p>
 
@@ -64,12 +64,13 @@ export default function CareerTestimonials() {
               <div className="flex items-center gap-3 pt-2">
                 <div className="w-12 h-12 rounded-full bg-linear-to-br from-primary to-blue-400 shrink-0" />
                 <div className="flex-1 min-w-0">
-                  <p className="text-neutral-600 text-sm font-normal truncate">
-                    {testimonial.role}
-                  </p>
-                  <p className="text-primary text-sm font-bold truncate">
+                  <p className="text-primary  font-bold truncate">
                     {testimonial.name}
                   </p>
+                  <p className=" font-normal-token truncate">
+                    {testimonial.role}
+                  </p>
+
                 </div>
               </div>
             </div>

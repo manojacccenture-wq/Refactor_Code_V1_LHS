@@ -22,7 +22,7 @@ export const resourcesData: DetailContent[] = [
     description: "Domain depth, not breadth. We deliver in environments where operational failure is not an option.",
     author: "Janaki Raman",
     authorTitle: "Head of Operations, Livelihood systems",
-    authorImage: "/about/Leader_Image.svg",
+    authorImage: "/Janakai_Ramana.png",
     client: "Mid-sized Integrated Steel Manufacturing Unit",
     challenge: "Disconnected production systems, manual reporting, and lack of real-time visibility across blast furnace, rolling mill, and logistics operations.",
     objective: "Build a centralized monitoring and analytics platform to reduce downtime and improve production efficiency.",

@@ -1,16 +1,9 @@
-'use client';
 
-import Image from 'next/image';
+
 import Button from '@/app/components/ui/Button';
+import LogoMarquee from '@/app/components/shared/ui/LogoMarquee/LogoMarquee';
+import { logos } from '../../home/Trusted/data/Trusted.data';
 
-const logos = [
-  '/TICL_Company.svg',
-  '/TCS-logo-black-CMYK.svg',
-  '/TICL_Company.svg',
-  '/TCS-logo-black-CMYK.svg',
-  '/TICL_Company.svg',
-  '/TCS-logo-black-CMYK.svg',
-];
 
 export default function IndustriesHero() {
   return (
@@ -39,24 +32,16 @@ export default function IndustriesHero() {
         </div>
       </div>
 
-      {/* Logo Strip */}
-      <div className="relative z-10 overflow-hidden py-6 md:py-10 mb-6 md:mb-10">
-        <div className="pointer-events-none absolute left-0 top-0 h-full w-20 md:w-40 bg-linear-to-r from-white to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 h-full w-20 md:w-40 bg-linear-to-l from-white to-transparent z-10" />
-        <div className="flex w-max animate-marquee gap-12 md:gap-20 opacity-50 mx-auto">
-          {[...logos, ...logos].map((src, i) => (
-            <div key={i} className="shrink-0 flex items-center h-10 md:h-14">
-              <Image
-                src={src}
-                alt="partner logo"
-                width={128}
-                height={56}
-                className="w-auto h-28 object-contain grayscale"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      <LogoMarquee
+        // badge="— Trusted By"
+        // title="Don't take our word for it"
+        items={logos}
+        // You can inject custom classes here if needed:
+        className="bg-transparent max-w-7xl mx-auto"
+        marqueeClassName="mt-0"
+      />
+
+  
     </section>
   );
 }

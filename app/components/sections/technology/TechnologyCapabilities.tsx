@@ -44,8 +44,8 @@ function CapabilityCard({ title, description,image }: CapabilityCard) {
   return (
     <div className="bg-white border border-neutral-300 rounded-3xl p-8 shadow-sm flex flex-col gap-8 h-full">
       <div className="flex flex-col gap-3">
-        <h3 className="text-neutral-800 text-2xl font-bold leading-[35px]">{title}</h3>
-        <p className="text-neutral-600 text-sm leading-6">{description}</p>
+        <h3 className=" font-bold-token leading-[35px]">{title}</h3>
+        <p className="  leading-6">{description}</p>
       </div>
       <div className="relative w-full h-[160px] rounded-2xl overflow-hidden">
         <Image
@@ -66,7 +66,7 @@ export default function TechnologyCapabilities() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-neutral-800 text-4xl font-bold leading-[46px]">
+          <h2 className="  font-bold-token leading-[46px]">
             INTEGRATION <span className="text-primary">CAPABILITIES</span>
           </h2>
         </div>

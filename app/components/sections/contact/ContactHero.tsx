@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "../../ui/Button";
+import Input from "../../ui/Input"; // Imporing the reusable Input
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -24,8 +25,9 @@ interface ContactInfoCardProps {
 function ContactInfoCard({ title, description }: ContactInfoCardProps) {
   return (
     <div className="flex flex-col gap-3 w-full max-w-xs">
-      <h3 className="text-black font-bold text-2xl leading-[35px]">{title}</h3>
-      <p className="text-neutral-600 text-base leading-[28.916px]">{description}</p>
+      <h3 className=" leading-[35px]">{title}</h3>
+          <h5 className="text-neutral-600 leading-7 max-w-md">
+        {description}</h5>
     </div>
   );
 }
@@ -53,27 +55,27 @@ export default function ContactHero() {
   };
 
   return (
-    <section className="w-full pb-20 px-6 relative bg-gradient-to-b from-primary/5 to-transparent pt-[var(--hero-offset)]">
+    <section className="w-full pb-20 px-6 py-28 relative bg-gradient-to-b from-primary/5 to-transparent ">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
+
           {/* LEFT COLUMN */}
           <div className="flex flex-col gap-12">
             <div className="flex flex-col gap-6">
-              <h1 className="text-primary text-4xl font-bold leading-[46px]">Contact US</h1>
-              <p className="text-neutral-600 text-lg leading-7 max-w-md">
-                We'd love to hear from you. Whether you have a question, need support, or want to discuss a project, feel free to reach out to us anytime.
-              </p>
+              <h2 className="text-primary  font-bold-token leading-[46px]">Contact US</h2>
+              <h5 className="text-neutral-600 leading-7 max-w-md">
+                We&apos;d love to hear from you. Whether you have a question, need support, or want to discuss a project, feel free to reach out to us anytime.
+              </h5>
             </div>
 
             <div className="flex flex-col gap-5">
               <div className="flex gap-3 items-start">
                 <div className="w-6 h-6 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 mt-1">
                   <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
                 </div>
-                <p className="text-neutral-600 text-lg leading-7">LHS@india.com</p>
+                <p className=" leading-7">LHS@india.com</p>
               </div>
               <div className="flex gap-3 items-start">
                 <div className="w-6 h-6 bg-primary/10 rounded flex items-center justify-center flex-shrink-0 mt-1">
@@ -81,14 +83,14 @@ export default function ContactHero() {
                     <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <p className="text-neutral-600 text-lg leading-7">9098789045</p>
+                <p className="  leading-7">9098789045</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <ContactInfoCard
                 title="Reach out"
-                description="We're here to connect. Reach out to us for inquiries, collaborations, or support — and we'll respond promptly."
+                description="We&apos;re here to connect. Reach out to us for inquiries, collaborations, or support — and we&apos;ll respond promptly."
               />
               <ContactInfoCard
                 title="Needs assistance"
@@ -105,66 +107,48 @@ export default function ContactHero() {
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              
+
               {/* Name */}
-              <div className="flex flex-col gap-3">
-                <label className="text-neutral-800 text-sm font-normal">Name</label>
-                <input
-                  type="text"
-                  placeholder="John Carter"
-                  {...register("name")}
-                  className="border border-neutral-300 rounded-2xl px-4 py-3 text-base placeholder-neutral-500 focus:outline-none focus:border-primary transition-colors"
-                />
-                {errors.name?.message && (
-                  <p className="text-red-500 text-xs">{String(errors.name.message)}</p>
-                )}
-              </div>
+              <Input
+                label="Name"
+                type="text"
+                placeholder="John Carter"
+                error={errors.name?.message as string}
+                {...register("name")}
+              />
 
               {/* Email */}
-              <div className="flex flex-col gap-3">
-                <label className="text-neutral-800 text-sm font-normal">Email</label>
-                <input
-                  type="email"
-                  placeholder="john@example.com"
-                  {...register("email")}
-                  className="border border-neutral-300 rounded-2xl px-4 py-3 text-base placeholder-neutral-500 focus:outline-none focus:border-primary transition-colors"
-                />
-                {errors.email?.message && (
-                  <p className="text-red-500 text-xs">{String(errors.email.message)}</p>
-                )}
-              </div>
+              <Input
+                label="Email"
+                type="email"
+                placeholder="john@example.com"
+                error={errors.email?.message as string}
+                {...register("email")}
+              />
 
               {/* Phone */}
-              <div className="flex flex-col gap-3">
-                <label className="text-neutral-800 text-sm font-normal">Phone Number</label>
-                <input
-                  type="tel"
-                  placeholder="+1 (555) 000-0000"
-                  {...register("phone")}
-                  className="border border-neutral-300 rounded-2xl px-4 py-3 text-base placeholder-neutral-500 focus:outline-none focus:border-primary transition-colors"
-                />
-                {errors.phone?.message && (
-                  <p className="text-red-500 text-xs">{String(errors.phone.message)}</p>
-                )}
-              </div>
+              <Input
+                label="Phone Number"
+                type="tel"
+                placeholder="+1 (555) 000-0000"
+                error={errors.phone?.message as string}
+                {...register("phone")}
+              />
 
               {/* Message */}
-              <div className="flex flex-col gap-3">
-                <label className="text-neutral-800 text-sm font-normal">Message</label>
-                <textarea
-                  placeholder="Tell us about your project..."
-                  rows={3}
-                  {...register("message")}
-                  className="border border-neutral-300 rounded-2xl px-4 py-3 text-base placeholder-neutral-500 focus:outline-none focus:border-primary transition-colors resize-none"
-                />
-                {errors.message?.message && (
-                  <p className="text-red-500 text-xs">{String(errors.message.message)}</p>
-                )}
-              </div>
+              <Input
+                label="Message"
+                textarea
+                rows={3}
+                placeholder="Tell us about your project..."
+                error={errors.message?.message as string}
+                {...register("message")}
+              />
 
               {/* Button */}
               <Button
                 type="submit"
+                variant="primary" // Assuming your Button component has a variant prop
                 disabled={isSubmitting}
                 className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-full transition-colors text-lg"
               >

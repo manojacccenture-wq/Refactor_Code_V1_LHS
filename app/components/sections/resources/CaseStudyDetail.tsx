@@ -9,12 +9,12 @@ interface CaseStudyDetailProps {
 }
 
 export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
-  
+
   return (
     <>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-3 to-white py-16 md:py-24 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           {/* Back Button */}
           <Link
             href="/resources/case-studies"
@@ -24,26 +24,25 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
           </Link>
 
           {/* Category */}
-          <p className="text-primary-1 font-semibold text-base tracking-[2.24px] uppercase mb-7 mx-auto">
+          <h5 className="text-primary font-semibold-token  tracking-[2.24px] uppercase mb-7 mx-auto">
             {data.category}
-          </p>
+          </h5>
 
           {/* Title */}
-          <h1 className="text-neutral-800 text-4xl md:text-[42px] font-bold leading-tight mb-7">
+          <h1 className=" font-bold-token leading-tight mb-7">
             {data.title}
           </h1>
 
           {/* Description */}
-          <p className="text-neutral-600 text-lg leading-relaxed mb-12">
+          <p className="leading-relaxed mb-12">
             {data.description}
           </p>
 
           {/* Author Section */}
-          <div className="flex items-center gap-4 mx-auto text-center">
+          <div className="flex items-center justify-center gap-4 mt-8">
             {data.authorImage && (
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image
-                  // src={null}
                   src={data.authorImage}
                   alt={data.author}
                   fill
@@ -51,11 +50,11 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
                 />
               </div>
             )}
-            <div>
-              <p className="font-bold text-primary-1 text-sm mx-auto">
+            <div className="text-left">
+              <p className="font-bold-token text-primary">
                 {data.author}
               </p>
-              <p className="text-neutral-600 text-base">
+              <p className="text-neutral-600">
                 {data.authorTitle}
               </p>
             </div>
@@ -64,7 +63,7 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-12 px-6">
+      <section className="py-16 md:py-0 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-[25px] shadow-[0px_4px_30px_0px_rgba(45,30,133,0.1)] p-8 md:p-12">
             <div className="space-y-8">

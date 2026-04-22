@@ -25,7 +25,7 @@ const mockResources = [
     image: "/Resources/Case_Studies/Image_1.svg",
     date: "Oct 13, 2025",
     type: "video" as const,
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    videoUrl: "https://youtube.com/shorts/nwvJ45ReFY8?si=ruc4FliXBPFC5pG3",
   },
   {
     id: "4",
@@ -47,7 +47,7 @@ const mockResources = [
     image: "/Resources/Case_Studies/Image_2.svg",
     date: "Oct 13, 2025",
     type: "video" as const,
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    videoUrl: "https://youtube.com/shorts/5a-3YjpvHvc?si=zCdNOu2eE545jiSv",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function ResourcesCards({ type }: ResourcesCardsProps) {
   };
 
   return (
-    <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto">
+    <section className="py-16 md:py-0 px-6 max-w-7xl mx-auto">
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
         {visibleResources.map((resource) => (

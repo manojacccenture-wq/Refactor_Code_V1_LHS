@@ -23,16 +23,16 @@ export default function CareerCard({
     <div className="bg-white border border-neutral-300 rounded-2xl shadow-sm p-6 flex flex-col gap-5 w-full">
       {/* Experience & Title */}
       <div className="flex flex-col gap-1">
-        <h4 className="text-primary uppercase text-sm font-semibold tracking-widest">
+        <h5 className="text-primary   font-semibold-token ">
           {experience}
-        </h4>
-        <h3 className="text-neutral-800 font-bold">
+        </h5>
+        <h4 className=" font-bold-token">
           {title}
-        </h3>
+        </h4>
       </div>
 
       {/* Description */}
-      <p className="text-neutral-600 text-base font-normal">
+      <p className="  font-normal-token">
         {description}
       </p>
 
@@ -40,7 +40,7 @@ export default function CareerCard({
       <div className="flex flex-col gap-4 pt-2">
         <Button
           href={`/career/${jobSlug}`}
-          className="bg-primary text-white px-6 py-4 rounded-full font-medium text-base hover:opacity-90 transition-opacity w-full"
+          className="bg-primary text-white px-6 py-4 rounded-full font-medium-token  hover:opacity-90 transition-opacity w-full"
         >
           Apply now
         </Button>

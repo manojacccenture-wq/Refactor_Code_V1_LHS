@@ -15,7 +15,7 @@ const jobOpenings: JobOpening[] = [
   {
     id: "full-stack",
     slug: "full-stack-developer",
-    experience: "2 years Experience",
+    experience: "2 years experience",
     title: "Full-Stack Developer",
     description: "Discover top remote tech opportunities and land your next role with ease.",
     postedDate: "Nov 26, 2024",
@@ -40,17 +40,17 @@ const jobOpenings: JobOpening[] = [
 
 export default function CareerOpenings() {
   return (
-    <section className="py-20 px-4 md:px-8">
+    <section className="py-0 px-4 md:px-8 mb-[2%]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h4 className="text-primary uppercase text-sm font-semibold tracking-widest mb-2">
+          <h4 className="text-primary uppercase  font-semibold-token tracking-widest mb-2">
             Process
           </h4>
-          <h2 className="mb-4">
+          <h1 className="mb-4">
             Your path to the perfect remote tech job.
-          </h2>
-          <p className="text-neutral-600">
+          </h1>
+          <p className="">
             Discover top remote tech opportunities and land your next role with ease, through our streamlined process.
           </p>
         </div>

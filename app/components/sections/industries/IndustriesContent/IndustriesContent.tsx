@@ -55,6 +55,7 @@ export default function IndustriesContent() {
     return (
         <section className="w-full py-12 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
+                
                 <div className="space-y-24">
                     {industries.map((industry) => (
                         <IndustryCard key={industry.id} industry={industry} />

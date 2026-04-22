@@ -77,7 +77,7 @@ function StepCard({ step, isActive }: StepCardProps) {
     >
       {/* HEADER */}
       <div className="flex items-center justify-between mb-5">
-        <h3 className="text-xl md:text-2xl font-semibold text-neutral-800">
+        <h3 className="  font-semibold-token ">
           {step.title}
         </h3>
 
@@ -92,20 +92,20 @@ function StepCard({ step, isActive }: StepCardProps) {
 
       {/* WHAT HAPPENS */}
       <div className="mb-5">
-        <p className="text-sm font-semibold text-neutral-800 mb-2">
+        <h4 className=" font-semibold-token  mb-2">
           What Happens
-        </p>
-        <p className="text-sm text-neutral-600 leading-6">
+        </h4>
+        <p className=" leading-6">
           {step.whatHappens}
         </p>
       </div>
 
       {/* OUTPUT */}
       <div>
-        <p className="text-sm font-semibold text-neutral-800 mb-2">
+        <h4 className=" font-semibold-token  mb-2">
           Output
-        </p>
-        <p className="text-sm text-neutral-600 leading-6">
+        </h4>
+        <p className=" leading-6">
           {step.output}
         </p>
       </div>
@@ -146,10 +146,11 @@ const StepRow = React.forwardRef<HTMLDivElement, StepRowProps>(
               : "opacity-60 translate-y-5"
               }`}>
               {/* Phase number */}
-              <p className={`text-5xl font-bold leading-none mb-4 transition-colors duration-300 ${isActive ? "text-neutral-200" : "text-neutral-300"
+              
+              <h1 className={` font-bold-token leading-none mb-4 transition-colors duration-300  ${isActive ? "text-neutral-200" : "text-neutral-300"
                 }`}>
                 Phase {String(step.phase).padStart(2, "0")}
-              </p>
+              </h1>
 
               {/* Card */}
               <StepCard step={step} isActive={isActive} />
@@ -169,10 +170,10 @@ const StepRow = React.forwardRef<HTMLDivElement, StepRowProps>(
             : "opacity-60 translate-y-5"
             }`}>
             {/* Phase number */}
-            <p className={`text-5xl font-bold leading-none mb-4 transition-colors duration-300 ${isActive ? "text-neutral-200" : "text-neutral-300"
+            <h1 className={`font-bold-token leading-none mb-4 transition-colors duration-300 ${isActive ? "text-neutral-200" : "text-neutral-300"
               }`}>
               Phase {String(step.phase).padStart(2, "0")}
-            </p>
+            </h1>
 
             {/* Card */}
             <StepCard step={step} isActive={isActive} />

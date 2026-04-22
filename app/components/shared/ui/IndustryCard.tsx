@@ -38,7 +38,7 @@ export default function IndustryCard({ industry }: { industry: Industry }) {
 
             {/* Title + Description */}
             <div className="mt-6">
-              <h3 className="font-bold text-primary mb-3">
+              <h3 className="font-bold-token text-primary mb-3">
                 {industry.name}
               </h3>
               <p>

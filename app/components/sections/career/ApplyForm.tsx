@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "../../ui/Button";
+import Input from "../../ui/Input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { applySchema } from "@/lib/validations/apply";
@@ -37,105 +38,73 @@ export default function ApplyForm({ jobTitle = "Position" }: ApplyFormProps) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-8 w-full">
-      <h2 className="text-neutral-800 font-bold mb-2">Apply Here</h2>
-      <p className="text-neutral-600 mb-8">
+    <div className="bg-white rounded-2xl shadow-sm p-6 md:p-8 lg:p-10 w-full max-w-3xl mx-auto transition-all px-2">
+      <h2 >
+        Apply Here
+      </h2>
+      <p className="mt-[3%] mb-[3%]">
         Discover top remote tech opportunities and land your next role with ease, through our streamlined process.
       </p>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 md:space-y-6">
         {/* Name */}
-        <div className="flex flex-col gap-2">
-          <label className="text-neutral-700 text-sm font-medium">Name</label>
-          <input
-            type="text"
-            placeholder="John Carter"
-            {...register("name")}
-            className="border border-neutral-300 rounded-lg px-4 py-3 text-base placeholder-neutral-500 focus:outline-none focus:border-primary"
-          />
-          {errors.name?.message && (
-            <p className="text-red-500 text-xs">
-              {String(errors.name.message)}
-            </p>
-          )}
-        </div>
+        <Input
+          label="Name"
+          type="text"
+          placeholder="John Carter"
+          error={errors.name?.message as string}
+          {...register("name")}
+        />
 
         {/* Email */}
-        <div className="flex flex-col gap-2">
-          <label className="text-neutral-700 text-sm font-medium">Email</label>
-          <input
-            type="email"
-            placeholder="John Carter"
-            {...register("email")}
-            className="border border-neutral-300 rounded-lg px-4 py-3 text-base placeholder-neutral-500 focus:outline-none focus:border-primary"
-          />
-          {errors.email?.message && (
-            <p className="text-red-500 text-xs">
-              {String(errors.email.message)}
-            </p>
-          )}
-        </div>
+        <Input
+          label="Email"
+          type="email"
+          placeholder="John Carter"
+          error={errors.email?.message as string}
+          {...register("email")}
+        />
 
         {/* Phone Number */}
-        <div className="flex flex-col gap-2">
-          <label className="text-neutral-700 text-sm font-medium">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            placeholder="John Carter"
-            {...register("phone")}
-            className="border border-neutral-300 rounded-lg px-4 py-3 text-base placeholder-neutral-500 focus:outline-none focus:border-primary"
-          />
-          {errors.phone?.message && (
-            <p className="text-red-500 text-xs">
-              {String(errors.phone.message)}
-            </p>
-          )}
-        </div>
+        <Input
+          label="Phone Number"
+          type="tel"
+          placeholder="John Carter"
+          error={errors.phone?.message as string}
+          {...register("phone")}
+        />
 
         {/* Upload Resume */}
-        <div className="flex flex-col gap-2">
-          <label className="text-neutral-700 text-sm font-medium">
-            Upload your resume
-          </label>
-          <input
-            type="file"
-            accept=".pdf,.doc,.docx"
-            onChange={(e) => {
-              const file = e.target.files?.[0];
-              setValue("resume", file);
-            }}
-            className="border border-neutral-300 rounded-lg px-4 py-3 text-base file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-primary file:text-white cursor-pointer"
-          />
-          {errors.resume?.message && (
-            <p className="text-red-500 text-xs">
-              {String(errors.resume.message)}
-            </p>
-          )}
-          <span className="text-neutral-500 text-xs">No file chosen</span>
-        </div>
+        <Input
+          label="Upload your resume"
+          type="file"
+          accept=".pdf,.doc,.docx"
+          error={errors.resume?.message as string}
+          onChange={(e) => {
+            const target = e.target as HTMLInputElement;
+            const file = target.files?.[0];
+            setValue("resume", file);
+          }}
+          className="file:mr-4 file:py-2 md:file:py-3 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-primary file:text-white cursor-pointer"
+        />
 
         {/* Cover Letter */}
-        <div className="flex flex-col gap-2">
-          <label className="text-neutral-700 text-sm font-medium">
-            Cover Letter
-          </label>
-          <textarea
-            placeholder="Enter your message"
-            rows={5}
-            {...register("coverLetter")}
-            className="border border-neutral-300 rounded-lg px-4 py-3 text-base placeholder-neutral-500 focus:outline-none focus:border-primary resize-none"
-          />
-        </div>
+        <Input
+          label="Cover Letter"
+          textarea
+          rows={5}
+          placeholder="Enter your message"
+          error={errors.coverLetter?.message as string}
+          {...register("coverLetter")}
+        />
 
         {/* Submit Button */}
-        <div className="pt-4">
+        <div className="pt-2 md:pt-4">
           <Button
             type="submit"
             variant="primary"
             disabled={isSubmitting}
-            className="w-full bg-primary text-white px-6 py-4 rounded-full font-medium text-base hover:opacity-90 transition-opacity"
+            className="w-full bg-primary text-white px-6 py-3 md:py-4 rounded-full font-medium text-sm md:text-base hover:opacity-90 transition-opacity"
           >
             {isSubmitting ? "Submitting..." : "Apply now"}
           </Button>

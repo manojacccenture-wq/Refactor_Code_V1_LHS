@@ -4,10 +4,10 @@ import HeroWrapper from "@/app/components/shared/ui/HeroWrapper/HeroWrapper";
 
 export default function CareerHero() {
   return (
-    <HeroWrapper>
-      <section className="relative w-full overflow-hidden mx-auto">
+    // <HeroWrapper>
+      <section className="relative w-full overflow-hidden mx-auto mt-[7%] ml-[2%]">
         {/* Content */}
-        <div className="relative z-10 max-w-2xl mx-auto text-center">
+        <div className="relative  max-w-7xl mx-auto text-left">
           {/* Subtitle */}
           <h4 className="text-primary mx-auto mb-[2%]">
             Career
@@ -23,7 +23,8 @@ export default function CareerHero() {
             Domain depth, not breadth. We deliver in environments where operational failure is not an option.
           </p>
         </div>
+       
       </section>
-    </HeroWrapper>
+    // </HeroWrapper>
   );
 }
