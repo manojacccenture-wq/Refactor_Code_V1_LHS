@@ -6,7 +6,7 @@ import { InsightCard } from "@/app/components/sections/home/Insights/components/
 
 export default function Insights() {
   return (
-    <section className="py-16 md:py-20 px-4 md:px-6 relative">
+    <section className="py-0 md:py-20 px-4 md:px-6 relative">
 
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(0,194,168,0.1),transparent_70%)]" />

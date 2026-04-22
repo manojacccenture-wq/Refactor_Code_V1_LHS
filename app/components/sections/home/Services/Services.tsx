@@ -41,7 +41,7 @@ export default function Services() {
 
         <div className="grid grid-cols-3 gap-6">
           {services.slice(2, 5).map((item, i) => (
-            <ServiceCard key={i} {...item} />
+            <ServiceCard key={i} {...item}  />
           ))}
         </div>
 

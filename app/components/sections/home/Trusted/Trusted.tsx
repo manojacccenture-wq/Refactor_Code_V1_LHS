@@ -28,16 +28,16 @@ export default function Trusted() {
         <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
         <div className="relative mt-12 pause-on-hover">
-          <div className="flex w-max scroll-left gap-12 opacity-100 py-6">
+          <div className="flex w-max scroll-left gap-14 opacity-100 py-6">
             {[...logos, ...logos].map((logo, i) => (
               <div key={i} className="flex-shrink-0 flex items-center h-16">
                 <Image
                   src={logo.src}
                   alt={logo.name}
-                  width={160}
+                  width={280}
                   height={64}
                   className="
-                    h-12 md:h-13 lg:h-13 w-auto
+                    h-28 md:h-13 lg:h-28 w-auto
                     opacity-40 grayscale
                     hover:opacity-100 hover:grayscale-0 hover:scale-105
                     transition-all duration-700 ease-in-out

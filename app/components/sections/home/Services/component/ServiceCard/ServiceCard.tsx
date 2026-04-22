@@ -6,6 +6,8 @@ export function ServiceCard({
   description,
   icon,
   image,
+
+
 }: ServiceCardProps) {
   return (
     <div className="group rounded-2xl bg-white shadow-md hover:shadow-xl transition flex flex-col">
@@ -25,7 +27,7 @@ export function ServiceCard({
 
       {/* CONTENT - GRID LAYOUT */}
       {/* 2 Columns: Auto width for the icon, 1fr (remaining space) for the text */}
-      <div className="grid grid-cols-[auto_1fr] gap-3 items-center py-4 px-4">
+      <div className="grid grid-cols-[auto_1fr] gap-3 items-center py-2 px-4">
 
         {/* COLUMN 1: ICON */}
         <div className="w-12 h-10 rounded-lg flex items-center justify-center shrink-0">
@@ -40,15 +42,16 @@ export function ServiceCard({
 
         {/* COLUMN 2: TEXT */}
         {/* 2 Rows: Auto height for header, Auto height for description */}
-        <div className="grid grid-rows-[auto_auto] gap-1">
+        <div className="grid grid-rows-[auto_auto] gap-1 px-5 py-4">
           
           {/* ROW 1: HEADER TEXT */}
-          <h3 className="text-heading-md font-semibold">
+          <h4 className=" font-semibold-token inline">
             {title}
-          </h3>
+          </h4>
           
+    
           {/* ROW 2: DESCRIPTION */}
-          <p className="text-body-sm text-gray-600">
+          <p >
             {description}
           </p>
           

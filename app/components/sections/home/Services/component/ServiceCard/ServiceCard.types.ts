@@ -3,4 +3,5 @@ export type ServiceCardProps = {
   description: string;
   icon: string;
   image: string;
+
 };

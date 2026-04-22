@@ -26,17 +26,20 @@ export default function AccordionItem({
         isOpen ? "btn-accordion-active" : "btn-accordion"
       )}
     >
+
       {/* HEADER */}
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between p-3 md:p-5 text-left bg-transparent border-none cursor-pointer outline-none"
+        className="w-full flex items-center justify-between  py-7 px-3  md:py-7 md:px-6  text-left bg-transparent border-none cursor-pointer outline-none"
       >
         <div className="flex items-center gap-2 md:gap-4">
           <div className="w-10 md:w-12 h-10 md:h-12 rounded-lg md:rounded-xl bg-neutral-200 flex items-center justify-center flex-shrink-0">
             <Image src={icon} alt="icon" width={65} height={44} />
           </div>
 
-          <h4 className=" font-semibold">{title}</h4>
+          <h4 className={clsx(isOpen ? "font-bold-token" : "font-medium-token text-neutral-600")}>
+            {title}
+          </h4>
         </div>
 
         {/* ARROW */}
@@ -54,7 +57,7 @@ export default function AccordionItem({
       <div
         className={clsx(
           "transition-all duration-300 overflow-hidden px-3 md:px-5 text-xs md:text-sm",
-          isOpen ? "max-h-[300px] pb-3 md:pb-5" : "max-h-0"
+          isOpen ? " pb-3 md:pb-5" : "max-h-0"
         )}
       >
         {children}

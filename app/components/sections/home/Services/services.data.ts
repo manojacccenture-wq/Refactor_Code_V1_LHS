@@ -18,13 +18,15 @@ export const services = [
     icon: "/Home_Service_Card_Icon_3.svg",
   },
   {
-    title: "Innovation & Emerging Technologies",
+    // title: "Innovation & Emerging Technologies",
+    title: "Innovation & Tech",
     description: "Adoption of new technologies to solve real-world business and operational challenges.",
     image: "/Home_Service_Card_4.svg",
     icon: "/Home_Service_Card_Icon_4.svg",
   },
   {
-    title: "Process Automation & Digitization",
+    // title: "Process Automation & Digitization",
+    title: "Process Automations",
     description: "Transforming manual workflows into efficient, trackable, and automated systems.",
     image: "/Home_Service_Card_5.svg",
     icon: "/Home_Service_Card_Icon_5.svg",

@@ -61,6 +61,11 @@
     color: var(--color-neutral-800);
   }
 
+  .text-neutral-600 {
+    color: var(--color-neutral-600);
+  }
+
+
   .text-neutral-200 {
     color: var(--color-neutral-200);
   }
