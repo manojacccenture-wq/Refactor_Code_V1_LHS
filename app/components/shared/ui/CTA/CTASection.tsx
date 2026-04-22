@@ -16,7 +16,7 @@ export default function CTASection({
   className,
 }: CTASectionProps) {
   return (
-    <section className={clsx("w-full px-4 md:px-6", className)}>
+    <section className={clsx("w-full px-4 py-8 md:px-6", className)}>
       
       <div
         className="
