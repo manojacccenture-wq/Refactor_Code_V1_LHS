@@ -15,7 +15,7 @@ export default function ProductsDifferentiators() {
   ];
 
   return (
-    <section className="w-full py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-white">
+    <section className="w-full py-12 sm:py-16 md:py-0 px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
