@@ -23,7 +23,7 @@ export default function IndustryCard({ industry }: { industry: Industry }) {
           {/* Image Section */}
           <div className={`flex-1 ${isImageLeft ? "md:order-1" : "md:order-2"}`}>
             <div
-              className="relative w-full h-[300px] rounded-3xl"
+              className="relative w-full h-75 rounded-3xl"
               style={{
                 background: "linear-gradient(180deg, #FDF9FF 0%, rgba(253,249,255,0) 100%)"
               }}
@@ -38,10 +38,10 @@ export default function IndustryCard({ industry }: { industry: Industry }) {
 
             {/* Title + Description */}
             <div className="mt-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3">
+              <h3 className="font-bold text-primary mb-3">
                 {industry.name}
               </h3>
-              <p className="text-base md:text-lg">
+              <p>
                 {industry.description}
               </p>
             </div>
@@ -50,22 +50,22 @@ export default function IndustryCard({ industry }: { industry: Industry }) {
           {/* Content Section */}
           <div className={`flex-1 flex flex-col gap-6 ${isImageLeft ? "md:order-2" : "md:order-1"}`}>
 
-            <div className="inline-block w-fit px-4 py-2 border rounded-2xl text-xs font-semibold">
+            <p className="inline-block w-fit px-4 py-2 border rounded-2xl font-semibold">
               IMPROVE PRODUCTIVITY
-            </div>
+            </p>
 
-            <h2 className="text-2xl md:text-4xl font-bold">
+            <h2 className="font-bold">
               What we deliver
             </h2>
 
-            <p className="text-base md:text-lg">
+            <p>
               Get rid of endless spreadsheets and binders collecting dust.
             </p>
 
             <div className="space-y-5">
               {industry.deliverables.map((item, idx) => (
                 <div key={idx} className="flex gap-4">
-                  <span className="font-bold text-2xl text-primary">
+                  <span className="font-bold text-primary">
                     {String(idx + 1).padStart(2, '0')}
                   </span>
                   <p>{item}</p>
@@ -80,7 +80,7 @@ export default function IndustryCard({ industry }: { industry: Industry }) {
       {/* OPTIONAL Divider */}
       {industry.showDivider && (
         <div className="my-16 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold">
+          <h2>
             Less paper work, more{" "}
             <span className="text-primary">people work!</span>
           </h2>

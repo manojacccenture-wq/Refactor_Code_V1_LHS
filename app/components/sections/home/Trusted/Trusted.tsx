@@ -4,7 +4,7 @@ import { logos } from "@/app/components/sections/home/Trusted/data/Trusted.data"
 
 export default function Trusted() {
   return (
-    <section className="text-center py-12 md:py-20 overflow-hidden">
+    <section className="text-center py-12 md:py-20 overflow-hidden max-w-7xl mx-auto">
 
       {/* HEADER */}
       <div className="mb-8 md:mb-12">
