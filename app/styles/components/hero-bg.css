@@ -74,11 +74,11 @@
   bottom: 0;
   height: 120px;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0),
     var(--color-bg-page) 20%
-  );
+  ); */
 
   z-index: 3;
   pointer-events: none;

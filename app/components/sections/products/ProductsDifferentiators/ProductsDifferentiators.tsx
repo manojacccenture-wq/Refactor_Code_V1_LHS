@@ -19,14 +19,14 @@ export default function ProductsDifferentiators() {
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="font-bold leading-tight">
-            <span style={{ color: "var(--color-neutral-800)" }}>
+          <h2 className="font-bold-token leading-tight">
+            <span >
               &quot;Key{' '}
             </span>
-            <span style={{ color: "var(--color-primary-1)" }}>
+            <span className="text-primary">
               Differentiation
             </span>
-            <span style={{ color: "var(--color-neutral-800)" }}>
+            <span className="text-neutral-800">
               .&quot;
             </span>
           </h2>
@@ -35,23 +35,23 @@ export default function ProductsDifferentiators() {
         {/* Split Content - Reversed (Content Left, Card Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           {/* Left - Content */}
-          <div className="space-y-4 sm:space-y-6 order-2 lg:order-1 text-center">
+          <div className="space-y-4 sm:space-y-6 order-2 lg:order-1 text-left">
             <div>
               <span
                 className="uppercase font-semibold tracking-wide"
-                style={{ color: "var(--color-neutral-600)" }}
+                
               >
                 KEY FEATURES
               </span>
               <h3
-                className="font-bold mt-3 sm:mt-4 mb-3 sm:mb-4"
-                style={{ color: "var(--color-neutral-800)" }}
+                className="font-bold-token mt-3 sm:mt-4 mb-3 sm:mb-4"
+                // style={{ color: "var(--color-neutral-800)" }}
               >
                 What makes us different
               </h3>
               <p
-                className="leading-relaxed"
-                style={{ color: "var(--color-neutral-600)" }}
+                className="leading-relaxed "
+                // style={{ color: "var(--color-neutral-600)" }}
               >
                 Purpose-built for Indian food operations with compliance, regional expertise, and seamless integration capabilities.
               </p>
@@ -80,7 +80,7 @@ export default function ProductsDifferentiators() {
                   </div>
                   <p
                     className="font-normal leading-relaxed"
-                    style={{ color: "var(--color-neutral-600)" }}
+                    // style={{ color: "var(--color-neutral-600)" }}
                   >
                     {item}
                   </p>

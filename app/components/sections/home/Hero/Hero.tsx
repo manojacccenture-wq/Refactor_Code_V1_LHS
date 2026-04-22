@@ -27,8 +27,8 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
-            <Button variant="primary">Get Started</Button>
-            <Button variant="outline">Learn More →</Button>
+         <Button variant="primary" href="/contact">Let’s Discuss</Button>
+            <Button variant="outline" href="/services">Learn More →</Button>
           </div>
 
         </div>

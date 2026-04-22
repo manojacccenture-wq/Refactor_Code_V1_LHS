@@ -24,9 +24,9 @@ export default function ProductsDeployment() {
 
           <div className="relative z-10">
             {/* Title */}
-            <h2 className="text-center font-bold mb-8 sm:mb-12 md:mb-16 leading-tight">
-              <span style={{ color: "var(--color-neutral-800)" }}>Deployment </span>
-              <span style={{ color: "var(--color-primary-1)" }}>options</span>
+            <h2 className="text-center font-bold-token mb-8 sm:mb-12 md:mb-16 leading-tight">
+              <span >Deployment </span>
+              <span className="text-primary">options</span>
             </h2>
 
             {/* Deployment Cards */}
@@ -51,8 +51,8 @@ export default function ProductsDeployment() {
 
                   {/* Label */}
                   <h3
-                    className="font-bold text-center"
-                    style={{ color: "var(--color-neutral-800)" }}
+                    className="font-bold-token text-center"
+                    // style={{ color: "var(--color-neutral-800)" }}
                   >
                     {option.label}
                   </h3>

@@ -129,14 +129,14 @@ export default function Footer() {
               </div>
 
               {/* Phone */}
-              <div className="flex gap-3 items-start text-neutral-600">
+              {/* <div className="flex gap-3 items-start text-neutral-600">
                 <svg className="w-5 h-5 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <a href="tel:+414687-5892" className="hover:text-primary transition-colors text-lg leading-relaxed">
                   (414) 687 - 5892
                 </a>
-              </div>
+              </div> */}
 
               {/* Address */}
               <div className="flex gap-3 items-start text-neutral-600">
@@ -145,7 +145,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <p className="text-lg leading-relaxed">
-                  NO-12, Ranapratap Path, Behind ICICI Bank, Kadma, Jamshedpur, Jharkhand, 831005
+                  W/15, N Main Rd, C-Sector, Anna Nagar West Extension, Chennai, Tamil Nadu 600101
                 </p>
               </div>
             </div>

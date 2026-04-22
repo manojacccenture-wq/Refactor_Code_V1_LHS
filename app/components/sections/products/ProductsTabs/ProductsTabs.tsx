@@ -63,49 +63,54 @@ export default function ProductsTabs() {
   const [activeTab, setActiveTab] = useState<string>('enterprise-pos');
   const content = tabContents[activeTab];
 
-  return (
-    <section className="py-10 sm:py-16 md:py-24 px-4 sm:px-6">
+return (
+    <section className="py-10 sm:py-16 md:py-0 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 sm:gap-8 md:gap-12 items-start">
 
-          {/* Left Column - Vertical Tabs */}
-          <div className="flex flex-col gap-2 sm:gap-4 w-full md:w-64 shrink-0">
+          {/* LEFT COLUMN - Horizontal Scroll on Mobile, Vertical on Desktop */}
+          {/* 🔥 ADDED: flex-row, overflow-x-auto, and hidden scrollbars for mobile */}
+          <div className="flex flex-row md:flex-col gap-3 sm:gap-4 w-full md:w-64 shrink-0 overflow-x-auto pb-4 md:pb-0 scrollbar-hide snap-x">
             {tabs.map((tab) => (
               <Button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 variant="ghost"
                 className={clsx(
-                  "px-4 sm:px-7 py-3 sm:py-5 rounded-2xl text-left w-full justify-start",
+                  // 🔥 ADDED: whitespace-nowrap and w-auto for mobile, w-full for desktop
+                  "px-4 sm:px-6 py-3 sm:py-4 rounded-2xl text-left justify-start flex-shrink-0 w-auto md:w-full snap-start flex items-center gap-3 transition-colors",
                   activeTab === tab.id
-                    ? "border-2 bg-white border-[var(--color-primary-1)] text-primary"
-                    : "border border-neutral-300 bg-white text-[var(--color-text-subtitle)]"
+                    ? "border-2 bg-white border-[var(--color-primary-1)] text-primary shadow-sm"
+                    : "border border-neutral-300 bg-white text-[var(--color-text-subtitle)] hover:bg-neutral-50"
                 )}
               >
-                <div className="relative w-8 h-8 rounded-lg shrink-0">
+                <div className="relative w-6 h-6 sm:w-8 sm:h-8 rounded-lg shrink-0 flex items-center justify-center">
                   <Image
                     src={tab.icon}
                     alt={tab.label}
-                    width={20}
-                    height={20}
+                    width={24}
+                    height={24}
+                    className="object-contain"
                   />
                 </div>
 
-                <span className="font-semibold">
+                <h6 className="font-semibold-token   capitalize">
                   {tab.label}
-                </span>
+                </h6>
               </Button>
             ))}
           </div>
 
-          {/* Right Column - Content */}
-          <div className="w-full h-full">
-            <div className="relative w-full aspect-[15/9]">
+          {/* RIGHT COLUMN - Image Content */}
+          <div className="w-full h-full flex flex-col pt-2 md:pt-0">
+            <div className="relative w-full aspect-[4/3] md:aspect-[15/9] rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100">
               <Image
                 src={content.image}
                 alt={content.title}
                 fill
-                className="object-none"
+                // 🔥 CRITICAL FIX: Changed object-none to object-contain so it fits the mobile screen
+                className="object-contain p-4 md:p-8"
+                priority
               />
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function PowerfulFeatures() {
   const activeContent = tabContentMap[activeTab];
 
   return (
-    <section className="py-16 md:py-10 px-6">
+    <section className="py-16 md:py-0 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">

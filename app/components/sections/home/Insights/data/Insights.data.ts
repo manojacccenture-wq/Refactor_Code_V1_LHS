@@ -4,7 +4,7 @@ export const insights = [
     label: "Avg. Team Age",
     value: "35 Years",
     description:
-      "Experienced workforce with deep understanding of field operations, municipal systems, and long-term project execution.",
+      "Experienced workforce with deep understanding of field operations, Latest Technology, and long-term project execution.",
   },
   {
     icon: "/Insights_Two.svg",
@@ -16,7 +16,7 @@ export const insights = [
   {
     icon: "/Insights_Three.svg",
     label: "Years of experience",
-    value: "14+ Years",
+    value: " 19+ Yrs",
     description:
       "Proven track record in building and maintaining reliable, scalable systems for real-world operational challenges.",
   },
@@ -30,9 +30,9 @@ export const insights = [
   {
     icon: "/Insights_Five.svg",
     label: "Industry Verticals Served",
-    value: "20 +",
+    value: "“10+”",
     description:
-      "Experience across diverse sectors, enabling adaptable solutions for complex operational environments like municipal systems.",
+      "Experience across diverse sectors, enabling adaptable solutions for complex operational environments like Latest Technology.",
   },
   {
     icon: "/Insights_Six.svg",

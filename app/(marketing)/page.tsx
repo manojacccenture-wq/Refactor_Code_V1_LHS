@@ -11,7 +11,7 @@ import Contact from "@/app/components/sections/home/Contact_Us/Contact";
 
 export default function HomePage() {
   return (
-    <section className="relative w-full min-h-screen ">
+    <section className="relative w-full min-h-screen  mx-auto">
       <Hero />
       <GalleryModal/>
       <Trusted />
