@@ -26,7 +26,7 @@ export default function Footer() {
             </Link>
 
             {/* Description */}
-            <p className="text-neutral-600 text-lg leading-relaxed max-w-xs">
+            <p className="text-neutral-600  leading-relaxed max-w-xs">
               Building practical systems that work in the real world.
             </p>
 
@@ -68,7 +68,7 @@ export default function Footer() {
 
           {/* RESOURCES COLUMN */}
           <div className="flex flex-col gap-10">
-            <h3 className="text-xl font-bold text-neutral-800">Resources</h3>
+            <h3 className=" font-bold-token text-neutral-800">Resources</h3>
             <nav className="flex flex-col gap-5 text-neutral-600">
               <Link href="/resources/blogs" className="hover:text-primary transition-colors text-lg">
                 Blogs
@@ -84,7 +84,7 @@ export default function Footer() {
 
           {/* COMPANY COLUMN */}
           <div className="flex flex-col gap-10">
-            <h3 className="text-xl font-bold text-neutral-800">Company</h3>
+            <h3 className=" font-bold-token text-neutral-800">Company</h3>
             <nav className="flex flex-col gap-5 text-neutral-600">
               <a href="/technology" className="hover:text-primary transition-colors text-lg">
                 Technology
@@ -115,8 +115,8 @@ export default function Footer() {
           </div> */}
 
           {/* CONTACTS COLUMN */}
-          <div className="flex flex-col gap-10">
-            <h3 className="text-xl font-bold text-neutral-800">Contact us</h3>
+          <div className="flex flex-col gap-10 lg:col-span-2">
+            <h3 className=" font-bold-token text-neutral-800">Contact us</h3>
             <div className="flex flex-col gap-5">
               {/* Email */}
               <div className="flex gap-3 items-start text-neutral-600">
@@ -145,8 +145,20 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <p className="text-lg leading-relaxed">
+                  NO-12, Ranapratap Path, Behind ICICI Bank, Kadma, Jamshedpur, Jharkhand, 831005
+                </p>
+                
+              </div>
+
+              <div className="flex gap-3 items-start text-neutral-600">
+                <svg className="w-5 h-5 mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <p className="text-lg leading-relaxed">
                   W/15, N Main Rd, C-Sector, Anna Nagar West Extension, Chennai, Tamil Nadu 600101
                 </p>
+                
               </div>
             </div>
           </div>
