@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import heroScreen from "@/app/components/sections/technology/assets/Hero_Screeen.svg";
 
 import Button from "../../ui/Button";
 
@@ -32,7 +33,7 @@ export default function TechnologyHero() {
 
         <div className="relative w-full h-[400px] md:h-[500px]">
           <Image
-            src="/technology/Hero_Screeen.svg"
+            src={heroScreen}
             alt="Technology Hero"
             fill
             priority

@@ -1,3 +1,6 @@
+import janakaiRamana from "@/app/components/shared/assets/Janakai_Ramana.png";
+import leaderImage from "@/app/components/sections/about/assets/Leader_Image.svg";
+
 export interface DetailContent {
   id: string;
   title: string;
@@ -22,7 +25,7 @@ export const resourcesData: DetailContent[] = [
     description: "Domain depth, not breadth. We deliver in environments where operational failure is not an option.",
     author: "Janaki Raman",
     authorTitle: "Head of Operations, Livelihood systems",
-    authorImage: "/Janakai_Ramana.png",
+    authorImage: janakaiRamana.src,
     client: "Mid-sized Integrated Steel Manufacturing Unit",
     challenge: "Disconnected production systems, manual reporting, and lack of real-time visibility across blast furnace, rolling mill, and logistics operations.",
     objective: "Build a centralized monitoring and analytics platform to reduce downtime and improve production efficiency.",
@@ -52,7 +55,7 @@ export const resourcesData: DetailContent[] = [
     description: "Domain depth, not breadth. We deliver in environments where operational failure is not an option.",
     author: "Janaki Raman",
     authorTitle: "Head of Operations, Livelihood systems",
-    authorImage: "/about/Leader_Image.svg",
+    authorImage: leaderImage.src,
     client: "Manufacturing Corporation",
     challenge: "Complex product communication and unclear value proposition.",
     objective: "Develop compelling visual narratives for product features.",
@@ -79,7 +82,7 @@ export const resourcesData: DetailContent[] = [
     description: "Enhancing user engagement through thoughtful micro-interactions.",
     author: "Janaki Raman",
     authorTitle: "Head of Operations, Livelihood systems",
-    authorImage: "/about/Leader_Image.svg",
+    authorImage: leaderImage.src,
   },
   {
     id: "4",
@@ -88,7 +91,7 @@ export const resourcesData: DetailContent[] = [
     description: "Building inclusive and fast applications.",
     author: "Janaki Raman",
     authorTitle: "Head of Operations, Livelihood systems",
-    authorImage: "/about/Leader_Image.svg",
+    authorImage: leaderImage.src,
     client: "Enterprise Software Company",
     challenge: "Slow application performance and accessibility concerns.",
     objective: "Optimize performance metrics and ensure WCAG compliance.",
@@ -115,7 +118,7 @@ export const resourcesData: DetailContent[] = [
     description: "A comprehensive guide to building SaaS applications.",
     author: "Janaki Raman",
     authorTitle: "Head of Operations, Livelihood systems",
-    authorImage: "/about/Leader_Image.svg",
+    authorImage: leaderImage.src,
   },
   {
     id: "6",
@@ -124,7 +127,7 @@ export const resourcesData: DetailContent[] = [
     description: "Optimizing user flows to increase conversion rates.",
     author: "Janaki Raman",
     authorTitle: "Head of Operations, Livelihood systems",
-    authorImage: "/about/Leader_Image.svg",
+    authorImage: leaderImage.src,
     client: "SaaS Startup",
     challenge: "High bounce rates and low conversion on signup flow.",
     objective: "Simplify and streamline user registration process.",

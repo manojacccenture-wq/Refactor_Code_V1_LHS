@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Button from "@/app/components/ui/Button";
+import checkIcon from "@/app/components/sections/products/assets/Check_Icon.svg";
 
-const checkIcon = "/products/Check_Icon.svg";
+const checkIconSrc = checkIcon.src;
 
 export default function ProductsSplitSection() {
   return (
@@ -116,7 +117,7 @@ export default function ProductsSplitSection() {
                     style={{ backgroundColor: "rgba(0, 194, 168, 0.1)" }}
                   >
                     <Image
-                      src={checkIcon}
+                      src={checkIconSrc}
                       alt="check"
                       width={16}
                       height={16}

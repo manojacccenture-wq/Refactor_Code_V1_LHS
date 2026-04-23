@@ -1,9 +1,11 @@
 
 import Image from "next/image";
+import janakaiRamana from "@/app/components/shared/assets/Janakai_Ramana.png";
+import leaderIcon from "@/app/components/sections/about/assets/Leader_Icon.svg";
 
 export default function Leadership() {
-  const imgImage4 = "/Janakai_Ramana.png";
-  const imgReport = "/about/Leader_Icon.svg";
+  const imgImage4 = janakaiRamana.src;
+  const imgReport = leaderIcon.src;
 
   return (
     <section className="py-16 md:py-20 px-4 md:px-6">

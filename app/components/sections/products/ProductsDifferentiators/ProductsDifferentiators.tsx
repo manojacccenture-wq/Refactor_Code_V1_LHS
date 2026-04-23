@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Button from "@/app/components/ui/Button";
+import checkIconImg from "@/app/components/sections/products/assets/Check_Icon.svg";
 
-const checkIcon = "/products/Check_Icon.svg";
+const checkIcon = checkIconImg.src;
 const indentIcon = "http://localhost:3845/assets/282a175057cd1f1ad97227ebeaa15996aa2b02a4.svg";
 
 export default function ProductsDifferentiators() {

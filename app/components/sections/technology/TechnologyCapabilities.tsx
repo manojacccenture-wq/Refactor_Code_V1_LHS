@@ -1,5 +1,9 @@
 "use client";
 import Image from "next/image";
+import erpEnterprise from "@/app/components/sections/technology/assets/ERP_Enterprise.svg";
+import roundIcon from "@/app/components/sections/technology/assets/Round_Icon.svg";
+import infrastructure from "@/app/components/sections/technology/assets/Infrastrcuture.svg";
+import platforms from "@/app/components/sections/technology/assets/Platforms.svg";
 
 interface CapabilityCard {
   title: string;
@@ -11,32 +15,32 @@ const capabilities: CapabilityCard[] = [
   {
     title: "ERP & Enterprise",
     description: "SAP R3 (deep integration), Oracle Databases, Enterprise SQL Server",
-    image:"/technology/ERP_Enterprise.svg"
+    image: erpEnterprise.src
   },
   {
     title: "App Development",
     description: "SAP R3 (deep integration), Oracle Databases, Enterprise SQL Server",
-    image:"/technology/Round_Icon.svg"
+    image: roundIcon.src
   },
   {
     title: "ERP & Enterprise",
     description: "SAP R3 (deep integration), Oracle Databases, Enterprise SQL Server",
-    image:"/technology/Infrastrcuture.svg"
+    image: infrastructure.src
   },
   {
     title: "Field & IoT",
     description: "SAP R3 (deep integration), Oracle Databases, Enterprise SQL Server",
-    image:"/technology/ERP_Enterprise.svg"
+    image: erpEnterprise.src
   },
   {
     title: "Infrastructure",
     description: "SAP R3 (deep integration), Oracle Databases, Enterprise SQL Server",
-    image:"/technology/Infrastrcuture.svg"
+    image: infrastructure.src
   },
   {
     title: "Platform",
     description: "SAP R3 (deep integration), Oracle Databases, Enterprise SQL Server",
-    image:"/technology/Platforms.svg"
+    image: platforms.src
   },
 ];
 

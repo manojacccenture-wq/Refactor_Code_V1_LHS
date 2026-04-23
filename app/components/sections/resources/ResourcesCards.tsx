@@ -3,26 +3,28 @@
 import { useState } from "react";
 import ResourceCard from "./ResourceCard";
 import Button from "@/app/components/ui/Button";
+import caseStudyImg1 from "@/app/components/sections/resources/assets/Image_1.svg";
+import caseStudyImg2 from "@/app/components/sections/resources/assets/Image_2.svg";
 
 const mockResources = [
   {
     id: "1",
     title: "Best practices for showcasing features",
-    image: "/Resources/Case_Studies/Image_1.svg",
+    image: caseStudyImg1.src,
     date: "Oct 13, 2025",
     type: "case-study" as const,
   },
   {
     id: "2",
     title: "Visual storytelling for complex products",
-    image: "/Resources/Case_Studies/Image_2.svg",
+    image: caseStudyImg2.src,
     date: "Oct 13, 2025",
     type: "blog" as const,
   },
   {
     id: "3",
     title: "How microinteractions boost user experience",
-    image: "/Resources/Case_Studies/Image_1.svg",
+    image: caseStudyImg1.src,
     date: "Oct 13, 2025",
     type: "video" as const,
     videoUrl: "https://youtube.com/shorts/nwvJ45ReFY8?si=ruc4FliXBPFC5pG3",
@@ -30,21 +32,21 @@ const mockResources = [
   {
     id: "4",
     title: "Why performance and accessibility matter",
-    image: "/Resources/Case_Studies/Image_2.svg",
+    image: caseStudyImg2.src,
     date: "Oct 13, 2025",
     type: "case-study" as const,
   },
   {
     id: "5",
     title: "From idea to launch: SaaS UI/UX guide",
-    image: "/Resources/Case_Studies/Image_1.svg",
+    image: caseStudyImg1.src,
     date: "Oct 13, 2025",
     type: "blog" as const,
   },
   {
     id: "6",
     title: "Simplifying user journeys for more signups",
-    image: "/Resources/Case_Studies/Image_2.svg",
+    image: caseStudyImg2.src,
     date: "Oct 13, 2025",
     type: "video" as const,
     videoUrl: "https://youtube.com/shorts/5a-3YjpvHvc?si=zCdNOu2eE545jiSv",

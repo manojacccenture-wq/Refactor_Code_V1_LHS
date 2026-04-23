@@ -1,3 +1,6 @@
+import ipad from "@/app/components/sections/home/assets/Ipad.svg";
+import ipad2 from "@/app/components/sections/home/assets/Ipad2.svg";
+
 export type SlideType = "phones" | "ipad";
 
 export const slides = [
@@ -14,7 +17,7 @@ export const slides = [
     description:
       "Enable seamless operations across security, utilities, complaints, and facility management through a unified smart platform.",
     type: "ipad",
-    image: "/Ipad.svg",
+    image: ipad.src,
   },
   {
     variant: "yellow",
@@ -22,7 +25,7 @@ export const slides = [
     description:
       "Enable seamless operations across security, utilities, complaints, and facility management through a unified smart platform.",
     type: "ipad",
-    image: "/Ipad2.svg",
+    image: ipad2.src,
   },
   {
     variant: "purple",
@@ -30,6 +33,6 @@ export const slides = [
     description:
       "Handle attendance, payroll, performance, and employee lifecycle with a structured system built for growing teams.",
     type: "ipad",
-    image: "/Ipad.svg",
+    image: ipad.src,
   },
 ] as const;

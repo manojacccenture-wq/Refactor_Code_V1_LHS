@@ -1,4 +1,5 @@
 import Image from "next/image";
+import janakaiRamana from "@/app/components/shared/assets/Janakai_Ramana.png";
 
 type Props = {
   name: string;
@@ -72,7 +73,7 @@ export default function Testimonial() {
       <TestimonialCard
         name="Jankiraman"
         role="Managing Director at Livelihood System"
-        image="/Janakai_Ramana.png"
+        image={janakaiRamana.src}
         quote={`"Technology is easy. Making it work consistently on the field is the real problem we solve."`}
       />
     </section>

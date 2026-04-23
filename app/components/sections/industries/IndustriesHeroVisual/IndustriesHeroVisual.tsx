@@ -1,6 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import avatarImage3 from "@/app/components/sections/industries/assets/Avatar Image3.svg";
+import avatarImageIcon2 from "@/app/components/sections/industries/assets/AvatarImage_Icon_2.svg";
+import avatarImageIcon from "@/app/components/sections/industries/assets/AvatarImage_Icon.svg";
+import proccessor from "@/app/components/sections/industries/assets/proccessor.svg";
+import shield from "@/app/components/sections/industries/assets/shield.svg";
 
 export default function IndustriesHeroVisual() {
   return (
@@ -51,7 +56,7 @@ export default function IndustriesHeroVisual() {
         {/* Top */}
         <div className="absolute left-1/2 top-[8%] -translate-x-1/2">
           <Image
-            src="/Industries/Avatar Image3.svg"
+            src={avatarImage3}
             alt=""
             width={48}
             height={48}
@@ -63,7 +68,7 @@ export default function IndustriesHeroVisual() {
         {/* Left */}
         <div className="absolute left-[12%] top-[35%]">
           <Image
-            src="/Industries/AvatarImage_Icon_2.svg"
+            src={avatarImageIcon2}
             alt=""
             width={48}
             height={48}
@@ -75,7 +80,7 @@ export default function IndustriesHeroVisual() {
         {/* Right */}
         <div className="absolute right-[12%] top-[35%]">
           <Image
-            src="/Industries/AvatarImage_Icon.svg"
+            src={avatarImageIcon}
             alt=""
             width={48}
             height={48}
@@ -94,7 +99,7 @@ export default function IndustriesHeroVisual() {
           }}
         >
           <Image
-            src="/Industries/proccessor.svg"
+            src={proccessor}
             alt=""
             width={48}
             height={48}
@@ -109,7 +114,7 @@ export default function IndustriesHeroVisual() {
           }}
         >
           <Image
-            src="/Industries/shield.svg"
+            src={shield}
             alt=""
             width={48}
             height={48}
@@ -126,7 +131,7 @@ export default function IndustriesHeroVisual() {
           }}
         >
           <Image
-            src="/Industries/shield.svg"
+            src={shield}
             alt=""
             width={48}
             height={48}

@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Button from '@/app/components/ui/Button';
 import Image from 'next/image';
 import clsx from 'clsx';
+import enterprisePosIcon from "@/app/components/sections/products/assets/Enterpise_POS_Icon.svg";
+import enterprisePosImg from "@/app/components/sections/products/assets/Enterprise POS.svg";
 
 interface Tab {
   id: string;
@@ -19,43 +21,43 @@ interface TabContent {
 }
 
 const tabs: Tab[] = [
-  { id: 'enterprise-pos', label: 'Enterprise POS', icon: '/products/Enterpise_POS_Icon.svg' },
-  { id: 'franchise-mgmt', label: 'franchise management', icon: '/products/Enterpise_POS_Icon.svg' },
-  { id: 'central-kitchen', label: 'central kitchen', icon: '/products/Enterpise_POS_Icon.svg' },
-  { id: 'vendor-settlement', label: 'vendor settlement', icon: '/products/Enterpise_POS_Icon.svg' },
-  { id: 'bi-reporting', label: 'BI reporting', icon: '/products/Enterpise_POS_Icon.svg' },
+  { id: 'enterprise-pos', label: 'Enterprise POS', icon: enterprisePosIcon.src },
+  { id: 'franchise-mgmt', label: 'franchise management', icon: enterprisePosIcon.src },
+  { id: 'central-kitchen', label: 'central kitchen', icon: enterprisePosIcon.src },
+  { id: 'vendor-settlement', label: 'vendor settlement', icon: enterprisePosIcon.src },
+  { id: 'bi-reporting', label: 'BI reporting', icon: enterprisePosIcon.src },
 ];
 
 const tabContents: Record<string, TabContent> = {
   'enterprise-pos': {
     title: 'Enterprise POS',
-    icon: '/products/Enterpise_POS_Icon.svg',
+    icon: enterprisePosIcon.src,
     description: 'Real-time order management',
-    image: '/products/Enterprise POS.svg',
+    image: enterprisePosImg.src,
   },
   'franchise-mgmt': {
     title: 'Franchise Management',
-    icon: '/products/Enterpise_POS_Icon.svg',
+    icon: enterprisePosIcon.src,
     description: 'Centralized control',
-    image: '/products/Enterprise POS.svg',
+    image: enterprisePosImg.src,
   },
   'central-kitchen': {
     title: 'Central Kitchen Operations',
-    icon: '/products/Enterpise_POS_Icon.svg',
+    icon: enterprisePosIcon.src,
     description: 'Production planning and ingredient management at scale',
-    image: '/products/Enterprise POS.svg',
+    image: enterprisePosImg.src,
   },
   'vendor-settlement': {
     title: 'Vendor Settlement',
-    icon: '/products/Enterpise_POS_Icon.svg',
+    icon: enterprisePosIcon.src,
     description: 'Automated accounting for supplier payments',
-    image: '/products/Enterprise POS.svg',
+    image: enterprisePosImg.src,
   },
   'bi-reporting': {
     title: 'BI & Analytics',
-    icon: '/products/Enterpise_POS_Icon.svg',
+    icon: enterprisePosIcon.src,
     description: 'Executive dashboards with insights',
-    image: '/products/Enterprise POS.svg',
+    image: enterprisePosImg.src,
   },
 };
 

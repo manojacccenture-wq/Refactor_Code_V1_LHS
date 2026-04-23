@@ -1,20 +1,22 @@
 import { Tab, TabContent } from "@/app/components/sections/services/PowerfulFeatures/PowerfulFeatures.types";
+import codePc from "@/app/components/sections/services/assets/code-pc.svg";
+import realtimeAnalytics from "@/app/components/sections/services/assets/Realtime_Analytics.svg";
 
 export const tabs: Tab[] = [
   {
     id: "software-development",
     label: "SOFTWARE DEVELOPMENT & MAINTENANCE",
-    icon: "/services/code-pc.svg",
+    icon: codePc.src,
   },
   {
     id: "turnkey-projects",
     label: "TURNKEY PROJECT DEVELOPMENT",
-    icon: "/services/Realtime_Analytics.svg",
+    icon: realtimeAnalytics.src,
   },
   {
     id: "process-automation",
     label: "PROCESS AUTOMATION",
-    icon: "/services/Realtime_Analytics.svg",
+    icon: realtimeAnalytics.src,
   },
 ];
 

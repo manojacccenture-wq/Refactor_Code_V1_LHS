@@ -93,8 +93,8 @@
   inset: 0;
 
   background:
-    url("/BG Details.png") top left no-repeat,
-    url("/BG Details.png") top right no-repeat;
+    url("../../components/sections/home/assets/BG Details.png") top left no-repeat,
+    url("../../components/sections/home/assets/BG Details.png") top right no-repeat;
 
   mix-blend-mode: multiply;
   pointer-events: none;

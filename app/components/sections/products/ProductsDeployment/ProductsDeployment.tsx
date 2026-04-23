@@ -1,8 +1,9 @@
 'use client';
 
 import Image from "next/image";
+import terminalPc from "@/app/components/sections/products/assets/terminal-pc.svg";
 
-const deploymentIcon = "/products/terminal-pc.svg";
+const deploymentIcon = terminalPc.src;
 
 const deploymentOptions = [
   { id: 'on-premise', label: 'On-Premise' },

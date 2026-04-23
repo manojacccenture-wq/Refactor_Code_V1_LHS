@@ -1,10 +1,13 @@
 'use client';
 
 import IndustryCard from "@/app/components/shared/ui/IndustryCard";
+import image1 from "@/app/components/sections/industries/assets/Image_1.svg";
+import image2 from "@/app/components/sections/industries/assets/Image_2.svg";
+import image3 from "@/app/components/sections/industries/assets/Image_3.svg";
 
-const manufacturingImage = "/Industries/Image_1.svg";
-const utilitiesImage = "/Industries/Image_2.svg";
-const commercialFoodImage = "/Industries/Image_3.svg";
+const manufacturingImage = image1.src;
+const utilitiesImage = image2.src;
+const commercialFoodImage = image3.src;
 
 const industries = [
     {

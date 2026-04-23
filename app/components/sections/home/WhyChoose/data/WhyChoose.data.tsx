@@ -1,7 +1,14 @@
+import whyChoose1 from "@/app/components/sections/home/assets/WhyChooseUs_1.svg";
+import insightsTwo from "@/app/components/sections/home/assets/Insights_Two.svg";
+import whyChoose3 from "@/app/components/sections/home/assets/WhyChooseUs_3.svg";
+import whyChoose4 from "@/app/components/sections/home/assets/WhyChooseUs_4.svg";
+import whyChoose5 from "@/app/components/sections/home/assets/WhyChooseUs_5.svg";
+import whyChoose6 from "@/app/components/sections/home/assets/WhyChooseUs_6.svg";
+
 export const whyChooseItems= [
   {
     title: "Client-First Approach",
-    icon: "/WhyChooseUs_1.svg",
+    icon: whyChoose1.src,
     content: (
       <>
         <h5 className="text-primary font-medium">
@@ -23,7 +30,7 @@ export const whyChooseItems= [
   },
   {
     title: "Skilled & Passionate Team",
-    icon: "/Insights_Two.svg",
+    icon: insightsTwo.src,
     content: (
       <>
         <h5 className="text-primary font-medium">
@@ -46,7 +53,7 @@ export const whyChooseItems= [
   },
   {
     title: "Transparent Communication",
-    icon: "/WhyChooseUs_3.svg",
+    icon: whyChoose3.src,
     content: (
       <>
         <h5 className="text-primary font-medium">
@@ -69,7 +76,7 @@ export const whyChooseItems= [
   },
   {
     title: "Cost-Effective Solutions",
-    icon: "/WhyChooseUs_4.svg",
+    icon: whyChoose4.src,
     content: (
       <>
         <h5 className="text-primary font-medium">
@@ -93,7 +100,7 @@ export const whyChooseItems= [
   },
   {
     title: "Timely Delivery, Every Time",
-    icon: "/WhyChooseUs_5.svg",
+    icon: whyChoose5.src,
     content: (
       <>
         <h5 className="text-primary font-medium">
@@ -114,7 +121,7 @@ export const whyChooseItems= [
   },
   {
     title: "End-to-End IT Solutions",
-    icon: "/WhyChooseUs_6.svg",
+    icon: whyChoose6.src,
     content: (
       <>
         <h5 className="text-primary font-medium">
