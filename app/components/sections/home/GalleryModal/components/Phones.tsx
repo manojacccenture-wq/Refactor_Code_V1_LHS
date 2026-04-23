@@ -14,6 +14,7 @@ export const Phones = () => (
           alt="phone"
           width={180}
           height={360}
+          loading="eager"
           className="h-[260px] w-auto object-contain"
           style={{ height: "260px", width: "auto" }} // ✅ FIX
         />

@@ -26,6 +26,7 @@ function renderVisual(slide: (typeof slides)[number]) {
             alt="ipad"
             width={200}
             height={400}
+            loading="eager"
             className="h-[300px] w-auto object-contain"
           />
         </VisualWrapper>
