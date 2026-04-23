@@ -96,14 +96,9 @@
     url("/bg-details.png") top left no-repeat,
     url("/bg-details.png") top right no-repeat;
 
-  /* Change to auto or a specific size so it doesn't stretch over the whole screen */
-  background-size: auto, auto; 
-  /* Or try something like: background-size: 300px, 300px; */
-
-  /* Temporarily removed multiply so it doesn't vanish against the white background */
-  /* mix-blend-mode: multiply; */ 
-  
+  mix-blend-mode: multiply;
   pointer-events: none;
+  background-size: cover, cover;
   z-index: 2;
 }
 /* ================= FLOATING BLOCKS ================= */
