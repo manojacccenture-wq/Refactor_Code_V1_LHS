@@ -15,14 +15,14 @@ export default function ProductsHero() {
               className="text-primary uppercase mx-auto tracking-widest font-semibold-token"
 
             >
-             From Concept to Scalable Code
+              From Concept to Scalable Code
             </p>
- 
+
           </div>
 
           {/* Main Title */}
           <h1
-            
+
           >
             The Only ERP Built for How Indian Food Operations Actually Work
           </h1>
@@ -36,15 +36,13 @@ export default function ProductsHero() {
 
           {/* Buttons */}
           <div className="flex items-center justify-center gap-3 sm:gap-6 flex-wrap">
-            <Button variant="primary">
-              Get started
-            </Button>
-            <button
-              className="font-semibold transition-opacity hover:opacity-70 flex items-center gap-2"
-              style={{ color: "var(--color-neutral-800)" }}
+            <Button variant="primary" href="/contact">Let’s Discuss</Button>
+            <Button
+              variant="outline"
+            // className="font-semibold transition-opacity hover:opacity-70 flex items-center gap-2"
             >
               Learn more →
-            </button>
+            </Button>
           </div>
         </div>
       </div>

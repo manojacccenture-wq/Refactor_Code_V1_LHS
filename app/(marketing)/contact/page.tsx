@@ -1,7 +1,7 @@
 
 
-import ContactHero from "@/app/components/sections/contact/ContactHero";
-import ContactLayout from "@/app/components/sections/contact/ContactLayout";
+import ContactHero from "@/app/components/sections/contact/ContactHero/ContactHero";
+import ContactLayout from "@/app/components/sections/contact/ContactLayout/ContactLayout";
 
 export const metadata = {
   title: "Contact Us | LHS",

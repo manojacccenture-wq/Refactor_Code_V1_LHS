@@ -5,6 +5,8 @@
 
   /* BACKGROUNDS */
   --color-bg-page: var(--color-neutral-200);
+  --color-bg-primary: var(--color-primary-1);
+  
   --color-bg-card: var(--color-white);
 
   /* BORDER */
@@ -65,6 +67,16 @@
     color: var(--color-neutral-600);
   }
 
+    .text-neutral-100-token {
+    color: var(--color-neutral-100);
+  }
+
+
+
+  /* BACKGROUNDS page colors */
+  .bg-color-bg-primary{
+    background-color: var(--color-bg-primary);
+  }
 
   .text-neutral-200 {
     color: var(--color-neutral-200);
@@ -100,11 +112,13 @@
   }
 
 
-  .bg-primary-gradient {
-    background: linear-gradient(to right,
-        rgb(var(--color-primary-rgb) / 0.99),
-        rgb(var(--color-primary-rgb) / 0.99));
-  }
+.bg-primary-gradient {
+  background: linear-gradient(
+    to bottom, 
+    var(--color-primary-1) 0%, 
+    var(--color-primary-dark) 100%
+  );
+}
 
   .timeline-line {
     background: linear-gradient(to bottom,

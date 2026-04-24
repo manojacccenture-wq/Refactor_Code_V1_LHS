@@ -42,12 +42,12 @@ export default function Header() {
           {/* LOGO */}
           <Link href="/" className="nav-logo flex items-center">
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="LHS Logo"
               width={80}
               height={40}
               priority
-              className="h-12 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+              className="h-7 sm:h-12 md:h-14 lg:h-14 w-auto object-contain"
             />
           </Link>
 
@@ -121,7 +121,7 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button variant="primary" size="sm">
+            <Button variant="primary" size="sm" href="http://103.61.225.80/LHSWebPortal/login">
               Log In
             </Button>
           </div>

@@ -1,81 +1,76 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import janakaiRamana from "@/app/components/shared/assets/Janakai_Ramana.png";
-
-type Props = {
-  name: string;
-  role: string;
-  image: string;
-  quote: string;
-};
-
-function TestimonialCard({
-  name,
-  role,
-  image,
-  quote,
-}: Props) {
-  return (
-    <div
-      className="
-        card
-        bg-primary-soft-gradient
-        relative
-        p-0 md:p-36
-        rounded-[32px]
-
-      "
-    // style={{
-    //   background:
-    //     "linear-gradient(135deg, rgba(0,194,168,0.08), rgba(0,194,168,0.02))",
-    // }}
-    >
-      {/* TOP PROFILE */}
-      <div className="flex items-center gap-4 mb-8">
-        <div className="w-12 h-12 rounded-full overflow-hidden">
-          <Image
-            src={image}
-            alt={name}
-            width={48}
-            height={48}
-            className="object-cover w-auto h-10"
-          />
-        </div>
-
-        <div className="text-left">
-          {/* ✅ NAME */}
-          <h6 className="text-heading-sm text-neutral-800">
-            {name}
-          </h6>
-
-          {/* ✅ ROLE */}
-          <p className="text-body-sm text-neutral-500">
-            {role}
-          </p>
-        </div>
-      </div>
-
-      {/* QUOTE ICON */}
-      <div className="absolute right-10 top-10 text-[120px] text-neutral-200 opacity-40 pointer-events-none">
-        “
-      </div>
-
-      {/* ✅ QUOTE */}
-      <h3 className="text-quote text-neutral-500">
-        {quote}
-      </h3>
-    </div>
-  );
-}
 
 export default function Testimonial() {
   return (
-    <section className="max-w-6xl mx-auto px-4 md:px-6 py-0 md:py-20">
-      <TestimonialCard
-        name="Jankiraman"
-        role="Managing Director at Livelihood System"
-        image={janakaiRamana.src}
-        quote={`"Technology is easy. Making it work consistently on the field is the real problem we solve."`}
-      />
+    <section className="py-12 md:py-20 px-4 md:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Outer Border Layer (NEW) */}
+        <div className="relative rounded-[24px] border-t border-neutral-200 p-[6px]">
+
+          {/* Inner Card (EXISTING - DO NOT CHANGE STYLES INSIDE) */}
+          <div className="relative overflow-hidden rounded-[20px] bg-(--color-bg-card) border border-neutral-200 shadow-(--shadow-card-sm) px-8 md:px-20 py-10 md:py-16">
+            {/* Left teal gradient fade */}
+            <div
+              className="absolute inset-y-0 left-0 w-1/4 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to right, rgb(var(--color-primary-rgb) / 0.09) 13.5%, transparent)",
+              }}
+            />
+
+            {/* Right teal gradient fade (mirrored) */}
+            <div
+              className="absolute inset-y-0 right-0 w-1/4 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(to left, rgb(var(--color-primary-rgb) / 0.09) 13.5%, transparent)",
+              }}
+            />
+
+            {/* Decorative double-quote marks */}
+            <div
+              aria-hidden="true"
+              className="absolute left-[55%] top-1/2 -translate-y-1/2 pointer-events-none select-none leading-none opacity-50"
+              style={{
+                fontSize: "clamp(80px, 12vw, 180px)",
+                color: "var(--color-neutral-300)",
+                letterSpacing: "-0.15em",
+              }}
+            >
+              ❝
+            </div>
+
+            {/* Content */}
+            <div className="relative flex flex-col gap-12">
+              {/* Person profile */}
+              <div className="flex items-center gap-4">
+                <div className="w-24 h-24 overflow-hidden shrink-0 rounded-full">
+                  <Image
+                    src={janakaiRamana}
+                    alt="Jankiraman"
+                    width={80}
+                    height={112}
+                    className="object-cover object-top w-full h-full"
+                  />
+                </div>
+                <div className="flex flex-col pb-1">
+                  <p className="text-body-lg text-neutral-800">Jankiraman</p>
+                  <p className="text-body-md text-neutral-600">
+                    Managing Director at livelihood System
+                  </p>
+                </div>
+              </div>
+
+              {/* Quote */}
+              <p className="text-quote font-bold-token text-neutral-500">
+                {"\u201C"}Technology is easy. Making it work consistently on the field is the real problem we solve.{"\u201D"}
+              </p>
+            </div> {/* Inner Card */}
+          </div> {/* Outer Border */}
+        </div>
+      </div>
     </section>
   );
 }
+

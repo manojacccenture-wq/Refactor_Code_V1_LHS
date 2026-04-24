@@ -9,68 +9,9 @@
     background-color: var(--color-neutral-200);
   }
 
-  .bg-primary-gradient {
-    background: linear-gradient(to right,
-        var(--color-primary-1),
-        #005c50);
-  }
-
-  .bg-primary-vertical-gradient {
-    background: linear-gradient(to bottom,
-        var(--color-primary-1),
-        var(--color-primary-1),
-        transparent);
-  }
-
-  .bg-neutral-vertical-gradient {
-  background: linear-gradient(
-    to bottom,
-    var(--color-neutral-300),
-    var(--color-neutral-300),
-    transparent
-  );
-}
-
   /* OPTIONAL (future-safe) */
   .bg-neutral-300 {
     background-color: var(--color-neutral-300);
   }
 
-  .text-neutral-800 {
-    color: var(--color-neutral-800);
-  }
-
-  .border-primary {
-    border-color: var(--color-primary-1);
-  }
-
-   /* BUTTON / BADGE GRADIENT */
-  .bg-primary-gradient {
-    background: linear-gradient(
-      135deg,
-      var(--color-primary-1),
-      #005c50
-    );
-  }
-
-  /* DOT GLOW BACKGROUND */
-  .bg-primary-soft {
-    background: radial-gradient(
-      circle,
-      rgba(var(--color-primary-rgb), 0.2) 0%,
-      rgba(var(--color-primary-rgb), 0.05) 60%,
-      transparent 100%
-    );
-  }
-
-  /* TEXT GRADIENT (YEAR like 2006) */
-  .text-primary-gradient {
-    background: linear-gradient(
-      135deg,
-      var(--color-primary-1),
-      #0f766e
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 }

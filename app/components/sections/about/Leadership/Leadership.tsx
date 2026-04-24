@@ -38,7 +38,7 @@ export default function Leadership() {
               {/* Name & Title */}
               <div className="mb-6">
                 <h2>
-                  Janaki Raman
+                  Jankiraman
                 </h2>
                 <p >
                   Managing Director, Livelihood system.

@@ -11,7 +11,7 @@ export const insights = [
     label: "Avg. Team Age",
     value: "35 Years",
     description:
-      "Experienced workforce with deep understanding of field operations, Latest Technology, and long-term project execution.",
+      "Experienced workforce with deep understanding of field operations, Latest technology, and long-term project execution.",
   },
   {
     icon: insightsTwo.src,
@@ -37,9 +37,9 @@ export const insights = [
   {
     icon: insightsFive.src,
     label: "Industry Verticals Served",
-    value: "“10+”",
+    value: "10+",
     description:
-      "Experience across diverse sectors, enabling adaptable solutions for complex operational environments like Latest Technology.",
+      "Experience across diverse sectors, enabling adaptable solutions for complex operational environments like Latest technology.",
   },
   {
     icon: insightsSix.src,

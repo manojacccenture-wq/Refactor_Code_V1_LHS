@@ -48,7 +48,7 @@ export default function ProductsSplitSection() {
               {/* Circle Chart Placeholder */}
               <div className="w-32 sm:w-40 h-32 sm:h-40 rounded-full mx-auto mb-6 sm:mb-8 flex items-center justify-center border-6 sm:border-8"
                 style={{ borderColor: "var(--color-primary-1)", backgroundColor: "var(--color-neutral-300)" }}
-                >
+              >
                 <div className="text-center">
                   <p className="font-bold-token" >$85k</p>
                   <p >Total Spend</p>
@@ -86,19 +86,19 @@ export default function ProductsSplitSection() {
             <div>
               <p
                 className="uppercase font-semibold-token tracking-wide"
-                
+
               >
                 IMPROVE PRODUCTIVITY
               </p>
               <h3
                 className="font-bold-token mt-3 sm:mt-4 mb-3 sm:mb-4"
-                
+
               >
                 Proof statement
               </h3>
               <p
                 className="leading-relaxed"
-                
+
               >
                 Get rid of endless spreadsheets and binders collecting dust, or hours wasted on searching and emailing.
               </p>
@@ -126,7 +126,7 @@ export default function ProductsSplitSection() {
                   </div>
                   <p
                     className="font-normal-token leading-relaxed"
-                    
+
                   >
                     {item}
                   </p>
@@ -136,9 +136,7 @@ export default function ProductsSplitSection() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <Button variant="primary">
-                Get started
-              </Button>
+              <Button variant="primary" href="/contact">Let’s Discuss</Button>
             </div>
           </div>
         </div>

@@ -3,39 +3,47 @@ import { useState } from "react";
 import Button from "@/app/components/ui/Button";
 import { Card } from "@/app/components/sections/home/GalleryModal/components/Card";
 import { slides } from "@/app/components/sections/home/GalleryModal/data/slides.data";
-import { Phones } from "@/app/components/sections/home/GalleryModal/components/Phones";
+import phoneImage from "@/app/components/sections/home/assets/Phone_Group.svg";
 import { VisualWrapper } from "@/app/components/sections/home/GalleryModal/components/VisualWrapper";
 import Image from "next/image";
 
 export default function GalleryModal() {
   const [index, setIndex] = useState(0);
-
   const prevIndex = (index - 1 + slides.length) % slides.length;
   const nextIndex = (index + 1) % slides.length;
 
-function renderVisual(slide: (typeof slides)[number]) {
-  switch (slide.type) {
-    case "phones":
-      return <Phones />;
-
-    case "ipad":
-      return (
-        <VisualWrapper>
+  function renderVisual(slide: (typeof slides)[number]) {
+    switch (slide.type) {
+      case "phones":
+        return <VisualWrapper>
           <Image
-            src={slide.image}
+            src={phoneImage}
             alt="ipad"
             width={200}
             height={400}
             loading="eager"
             className="h-[300px] w-auto object-contain"
           />
-        </VisualWrapper>
-      );
+        </VisualWrapper>;
 
-    default:
-      return null;
+      case "ipad":
+        return (
+          <VisualWrapper>
+            <Image
+              src={slide.image}
+              alt="ipad"
+              width={200}
+              height={400}
+              loading="eager"
+              className="h-[300px] w-auto object-contain"
+            />
+          </VisualWrapper>
+        );
+
+      default:
+        return null;
+    }
   }
-}
 
   return (
     <>
@@ -44,9 +52,8 @@ function renderVisual(slide: (typeof slides)[number]) {
 
         {/* LEFT */}
         <div className="hidden md:block absolute left-[10%] lg:left-[15%] scale-90 opacity-50 blur-[1px]">
-          <Card slide={slides[prevIndex]}>
-            {renderVisual(slides[prevIndex])}
-          </Card>
+          {/* 🔥 FIX: Removed renderVisual so the image doesn't show */}
+          <Card slide={slides[prevIndex]}  />
         </div>
 
         {/* CENTER */}
@@ -54,6 +61,7 @@ function renderVisual(slide: (typeof slides)[number]) {
           key={index}
           className="z-10 animate-[fade_0.6s_ease] w-full md:w-auto px-2 md:px-0"
         >
+          {/* 🔥 KEEP: Render the image ONLY on the active center card */}
           <Card slide={slides[index]}>
             {renderVisual(slides[index])}
           </Card>
@@ -61,14 +69,13 @@ function renderVisual(slide: (typeof slides)[number]) {
 
         {/* RIGHT */}
         <div className="hidden md:block absolute right-[10%] lg:right-[15%] scale-90 opacity-50 blur-[1px]">
-          <Card slide={slides[nextIndex]}>
-            {renderVisual(slides[nextIndex])}
-          </Card>
+           {/* 🔥 FIX: Removed renderVisual so the image doesn't show */}
+          <Card slide={slides[nextIndex]} />
         </div>
 
       </div>
 
-      {/* NAVIGATION (unchanged) */}
+      {/* NAVIGATION */}
       <div className="mt-6 md:mt-10 flex justify-center gap-3 md:gap-4">
         {[
           { dir: -1, path: "M15 19l-7-7 7-7" },

@@ -11,6 +11,7 @@ const afacad = Afacad({
   variable: "--font-afacad",
 });
 
+
 export const metadata = {
   title: {
     template: 'LHS', // Template for page titles

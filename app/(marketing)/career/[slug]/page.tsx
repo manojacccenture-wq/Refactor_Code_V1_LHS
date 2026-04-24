@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import ApplyForm from "@/app/components/sections/career/ApplyForm";
+import ApplyForm from "@/app/components/sections/career/ApplyForm/ApplyForm";
 import Button from "@/app/components/ui/Button";
 
 interface JobDetailsData {

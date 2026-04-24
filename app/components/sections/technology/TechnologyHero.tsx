@@ -23,11 +23,7 @@ export default function TechnologyHero() {
               Our four-stage process keeps you informed and engaged at every step, ensuring the final result meets your goals and exceeds with your audience.
             </p>
 
-            <Button
-              className="ml-auto"
-            >
-              Get started
-            </Button>
+           <Button className="ml-auto" variant="primary" href="/contact">Let’s Discuss</Button>
           </div>
         </div>
 

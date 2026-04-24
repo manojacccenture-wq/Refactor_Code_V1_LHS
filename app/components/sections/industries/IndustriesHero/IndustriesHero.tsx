@@ -28,7 +28,7 @@ export default function IndustriesHero() {
 
         {/* CTA */}
         <div className="flex justify-center">
-          <Button variant="primary">Get started</Button>
+            <Button variant="primary" href="/contact">Let’s Discuss</Button>
         </div>
       </div>
 

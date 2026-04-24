@@ -9,7 +9,7 @@ export default function HeroWrapper({ children }: { children: React.ReactNode })
       {/* 🔥 ADD THIS */}
       <div className="hero-fade" />
 
-<div className="relative z-10 w-full max-w-7xl  text-center pt-[var(--hero-offset)] pb-16 md:pb-24">
+<div className="relative z-10 w-full max-w-7xl  text-center pt-[var(--hero-offset)] pb-16 md:pb-24 mt-[2%]">
   {children}
 </div>
 

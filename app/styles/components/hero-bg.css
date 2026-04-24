@@ -101,16 +101,3 @@
   background-size: cover, cover;
   z-index: 2;
 }
-/* ================= FLOATING BLOCKS ================= */
-
-.hero-block {
-  position: absolute;
-  background: rgb(var(--color-neutral-300-rgb), 0.6);
-  /* soft grey */
-  border-radius: var(--radius-md);
-  z-index: 2;
-}
-
-
-
- 

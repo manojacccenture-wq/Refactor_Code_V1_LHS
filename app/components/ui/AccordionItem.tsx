@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import clsx from "clsx";
+import Chevron_Down from "@/app/components/sections/home/assets/Chevron_Down.png";
 
 type Props = {
   title: string;
@@ -26,11 +27,10 @@ export default function AccordionItem({
         isOpen ? "btn-accordion-active" : "btn-accordion"
       )}
     >
-
       {/* HEADER */}
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between  py-7 px-3  md:py-7 md:px-6  text-left bg-transparent border-none cursor-pointer outline-none"
+        className="w-full flex items-center justify-between py-7 px-3 md:py-7 md:px-6 text-left bg-transparent border-none cursor-pointer outline-none"
       >
         <div className="flex items-center gap-2 md:gap-4">
           <div className="w-10 md:w-12 h-10 md:h-12 rounded-lg md:rounded-xl bg-neutral-200 flex items-center justify-center flex-shrink-0">
@@ -42,15 +42,21 @@ export default function AccordionItem({
           </h4>
         </div>
 
-        {/* ARROW */}
-        <span
+        {/* 🔥 ARROW WITH IMAGE 🔥 */}
+        <div
           className={clsx(
-            "transition-transform duration-300 text-neutral-600 flex-shrink-0",
-            isOpen && "rotate-180 text-primary"
+            "transition-transform duration-300 flex-shrink-0 flex items-center justify-center",
+            isOpen && "rotate-90"
           )}
         >
-          ▼
-        </span>
+          <Image 
+            src={Chevron_Down} 
+            alt="Toggle accordion" 
+            width={24} 
+            height={24} 
+            className="w-5 h-5 md:w-6 md:h-6 object-contain"
+          />
+        </div>
       </button>
 
       {/* CONTENT */}

@@ -1,5 +1,5 @@
-import DeliveryHero from "@/app/components/sections/delivery-framework/DeliveryHero";
-import DeliveryTimeline from "@/app/components/sections/delivery-framework/DeliveryTimeline";
+import DeliveryHero from "@/app/components/sections/delivery-framework/DeliveryHero/DeliveryHero";
+import DeliveryTimeline from "@/app/components/sections/delivery-framework/DeliveryTimeline/DeliveryTimeline";
 
 
 export const metadata = {

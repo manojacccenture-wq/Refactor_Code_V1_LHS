@@ -91,9 +91,7 @@ export default function ProductsDifferentiators() {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <Button variant="primary">
-                Get started
-              </Button>
+            <Button variant="primary" href="/contact">Let’s Discuss</Button>
             </div>
           </div>
 
