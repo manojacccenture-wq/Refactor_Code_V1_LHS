@@ -9,9 +9,9 @@ export default function Leadership() {
 
   return (
     <section className="py-16 md:py-20 px-4 md:px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto ">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-12 md:mb-16 ">
           <p className="text-primary uppercase mx-auto font-bold tracking-widest">
             {`"Built on Execution, Not Assumptions"`}
           </p>
@@ -21,7 +21,7 @@ export default function Leadership() {
         </div>
 
         {/* Leadership Card */}
-        <div className="bg-white rounded-xl overflow-hidden shadow-md border" style={{ borderColor: "var(--color-neutral-300)" }}>
+        <div className=" rounded-xl overflow-hidden shadow-md border" style={{ borderColor: "var(--color-neutral-300)" }}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0">
             {/* Image */}
             <div className="relative h-64 md:h-auto md:col-span-1 overflow-hidden rounded-xl md:rounded-none">

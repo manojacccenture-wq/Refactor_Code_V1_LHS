@@ -22,7 +22,7 @@ export default function CTASection({
         className="
           max-w-6xl mx-auto
           rounded-2xl md:rounded-3xl
-          px-4 py-8 md:px-12 md:py-14
+          px-4 py-8 md:px-12 md:py-28
           flex flex-col md:flex-row
           items-start md:items-center
           justify-between gap-6

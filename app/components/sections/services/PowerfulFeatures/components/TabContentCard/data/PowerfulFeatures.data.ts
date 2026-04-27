@@ -1,6 +1,9 @@
 import { Tab, TabContent } from "@/app/components/sections/services/PowerfulFeatures/PowerfulFeatures.types";
 import codePc from "@/app/components/sections/services/assets/code-pc.svg";
 import realtimeAnalytics from "@/app/components/sections/services/assets/Realtime_Analytics.svg";
+import firstPng from "@/app/components/sections/services/assets/1st.png";
+import secondPng from "@/app/components/sections/services/assets/2nd.png";
+import thirdPng from "@/app/components/sections/services/assets/3rd.png";
 
 export const tabs: Tab[] = [
   {
@@ -49,14 +52,17 @@ export const tabContentMap: Record<string, TabContent> = {
     ],
     features: [
       {
+        image:firstPng.src,
         title: "Application development",
         description: "Custom-built systems aligned to operational workflows",
       },
       {
+        image:secondPng.src,
         title: "Maintenance & support",
         description: "Ongoing monitoring, bug fixes, performance tuning",
       },
       {
+        image:thirdPng.src,
         title: "System upgrades",
         description: "Modernization without disrupting existing operations",
       },
@@ -89,14 +95,17 @@ export const tabContentMap: Record<string, TabContent> = {
     ],
     features: [
       {
+        image:firstPng.src,
         title: "Requirement to rollout",
         description: "Complete lifecycle execution under one team",
       },
       {
+        image:secondPng.src,
         title: "Multi-system integration",
         description: "Hardware, software, and operations aligned",
       },
       {
+        image:thirdPng.src,
         title: "Deployment & stabilization",
         description: "On-ground support until system runs smoothly",
       },
@@ -130,14 +139,17 @@ export const tabContentMap: Record<string, TabContent> = {
     ],
     features: [
       {
+        image:firstPng.src,
         title: "Workflow automation",
         description: "Approvals, task routing, and process tracking",
       },
       {
+        image:secondPng.src,
         title: "Data automation",
         description: "Eliminating manual entry and duplication",
       },
       {
+        image:thirdPng.src,
         title: "Operational efficiency",
         description: "Reduced errors, faster turnaround time",
       },

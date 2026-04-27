@@ -31,7 +31,7 @@ export default function AboutHero() {
             </Button>
           </div>
         </div>
-        <AboutCards />
+        {/* <AboutCards /> */}
       </section>
     </HeroWrapper>
   );

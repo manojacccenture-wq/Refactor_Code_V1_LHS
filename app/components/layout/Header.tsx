@@ -150,7 +150,7 @@ export default function Header() {
 
         {/* MOBILE NAV */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-[80px] left-0 right-0 mx-4 bg-[var(--color-bg-card)] rounded-2xl shadow-lg p-6 space-y-4 z-50">
+          <div className="md:hidden absolute top-[40px] left-0 right-0 mx-4 bg-[var(--color-bg-card)] rounded-2xl shadow-lg p-6 space-y-4 z-50">
 
             {nav
             .filter((item): item is { name: string; href: string } => !("type" in item))

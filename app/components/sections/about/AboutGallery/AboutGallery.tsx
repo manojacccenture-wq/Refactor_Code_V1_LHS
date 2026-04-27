@@ -13,15 +13,21 @@ const galleryImages = [
   { src: galleryLeft, alt: "LHS team collaboration" },
   { src: galleryCenter, alt: "LHS professionals at work" },
   { src: galleryRight, alt: "LHS office environment" },
-    { src: galleryRight, alt: "LHS office environment" },
+  { src: galleryRight, alt: "LHS office environment" },
 ];
 
+/**
+ * MODIFIED: Replaced 'rounded-2xl' with 'rounded-none'
+ */
 const CARD_BASE =
-  "group relative overflow-hidden rounded-2xl cursor-pointer border-0 p-0 bg-transparent " +
+  "group relative overflow-hidden rounded-none cursor-pointer border-0 p-0 bg-transparent " +
   "transition-transform duration-300 ease-out hover:scale-[1.025] hover:shadow-[0_12px_36px_rgba(0,0,0,0.14)]";
 
+/**
+ * MODIFIED: Replaced 'rounded-2xl' with 'rounded-none' to match the image shape
+ */
 const CARD_OVERLAY =
-  "absolute inset-0 rounded-2xl bg-[rgba(0,194,168,0)] " +
+  "absolute inset-0 rounded-none bg-[rgba(0,194,168,0)] " +
   "transition-colors duration-300 group-hover:bg-[rgba(0,194,168,0.06)] pointer-events-none";
 
 const NAV_BTN =
@@ -49,9 +55,9 @@ export default function AboutGallery() {
     <>
       <section className="py-16 md:py-24 px-4 md:px-6 bg-white">
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16 max-w-5xl mx-auto">
+        <div className="text-center mb-12 md:mb-16 max-w-full mx-auto">
           <p
-            className="uppercase font-bold-token tracking-[0.14em]  mb-3 text-primary"
+            className="uppercase font-bold-token tracking-[0.14em]  mb-3 text-primary"
             
           >
             {`"Built on Execution, Not Assumptions"`}
@@ -65,7 +71,7 @@ export default function AboutGallery() {
         </div>
 
         {/* Gallery Grid — Desktop */}
-        <div className="max-w-347.5 mx-auto">
+        <div className="max-w-full.5 mx-auto">
           <div className="hidden md:grid md:grid-cols-3 md:gap-18 md:items-start">
             {/* Left image — offset 48px from top */}
             <Button
@@ -138,11 +144,12 @@ export default function AboutGallery() {
           </div>
         </div>
 
+
         {/* Navigation Arrows */}
         <div className="flex gap-3 items-center justify-center mt-10">
           {/* Prev */}
           <Button
-            className={NAV_BTN}
+            className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-105 transition active:scale-95"
             onClick={() =>
               setModalIndex((i) =>
                 i !== null
@@ -178,7 +185,7 @@ export default function AboutGallery() {
 
           {/* Next */}
           <Button
-            className={NAV_BTN}
+            className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-105 transition active:scale-95"
             onClick={() =>
               setModalIndex((i) =>
                 i !== null ? (i + 1) % galleryImages.length : 0

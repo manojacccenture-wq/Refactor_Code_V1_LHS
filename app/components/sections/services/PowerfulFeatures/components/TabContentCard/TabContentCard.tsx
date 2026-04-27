@@ -1,4 +1,5 @@
 import { Props } from "@/app/components/sections/services/PowerfulFeatures/PowerfulFeatures.types";
+import Image from "next/image";
 
 export function TabContentCard({
   badge,
@@ -17,10 +18,10 @@ export function TabContentCard({
           {/* Badge */}
           <div
             className="inline-block px-4 py-2 rounded-2xl font-regular-token tracking-wider text-neutral-200  bg-primary-gradient"
-            // style={{
-            //   backgroundColor: "var(--color-primary-1)",
-            //   color: "white",
-            // }}
+          // style={{
+          //   backgroundColor: "var(--color-primary-1)",
+          //   color: "white",
+          // }}
           >
             {badge}
           </div>
@@ -28,7 +29,7 @@ export function TabContentCard({
           {/* Title */}
           <h3
             className="font-bold-token"
-            // style={{ color: "var(--color-text-title)" }}
+          // style={{ color: "var(--color-text-title)" }}
           >
             {title}
           </h3>
@@ -36,7 +37,7 @@ export function TabContentCard({
           {/* Description */}
           <p
             className=" leading-relaxed"
-            // style={{ color: "var(--color-text-subtitle)" }}
+          // style={{ color: "var(--color-text-subtitle)" }}
           >
             {description}
           </p>
@@ -45,7 +46,7 @@ export function TabContentCard({
           <div className="pt-4">
             <h4
               className="text-primary font-bold-token mb-4"
-              
+
             >
               What makes us different
             </h4>
@@ -55,7 +56,7 @@ export function TabContentCard({
                 <div key={idx} className="flex gap-4">
                   <h4
                     className=" text-primary"
-                    // style={{ color: "var(--color-primary-1)" }}
+                  // style={{ color: "var(--color-primary-1)" }}
                   >
                     {point.number}
                   </h4>
@@ -63,13 +64,13 @@ export function TabContentCard({
                   <div>
                     <p
                       className=""
-                      
+
                     >
                       {point.title}
                     </p>
                     <p
-                      // className="text-sm"
-                      
+                    // className="text-sm"
+
                     >
                       {point.description}
                     </p>
@@ -88,12 +89,12 @@ export function TabContentCard({
               className="bg-white border border-neutral-300 rounded-2xl p-6 shadow-sm"
             >
               <div className="flex items-start gap-4">
-                <div
-                  className="w-10 h-10 rounded-xl shrink-0"
-                  style={{
-                    backgroundColor: "var(--color-primary-1)",
-                    opacity: 0.1,
-                  }}
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  width={40}
+                  height={40}
+                  className="shrink-0 object-contain"
                 />
 
                 <div>

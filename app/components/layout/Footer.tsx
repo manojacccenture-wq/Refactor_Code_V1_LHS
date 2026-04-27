@@ -15,7 +15,7 @@ export default function Footer() {
             {/* Logo Section */}
             <Link href="/" className="w-fit">
          <Image
-                src="/logo.png"
+                src="/Logo_Footer.png"
                 alt="LHS Logo"
                 width={180} // Increased base width
                 height={60}

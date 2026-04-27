@@ -104,7 +104,7 @@ export default function WhyChooseUs() {
                         {item.period}
                       </p>
                     ) : (
-                      <h3 className="font-bold text-primary" >{item.year}</h3>
+                      <h2 className="font-bold-token text-primary" >{item.year}</h2>
                     )}
                   </div>
 
@@ -114,7 +114,7 @@ export default function WhyChooseUs() {
                       }`}
                   >
                     {isLeft ? (
-                      <h3 className="font-bold text-primary" >{item.year}</h3>
+                      <h2 className="font-bold-token text-primary" >{item.year}</h2>
                     ) : (
                       <p className="px-4 py-2 rounded-md  font-bold text-white bg-primary-gradient">
                         {item.period}

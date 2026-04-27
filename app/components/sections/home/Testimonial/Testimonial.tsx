@@ -45,7 +45,7 @@ export default function Testimonial() {
             <div className="relative flex flex-col gap-12">
               {/* Person profile */}
               <div className="flex items-center gap-4">
-                <div className="w-24 h-24 overflow-hidden shrink-0 rounded-full">
+                <div className="w-20 h-20 overflow-hidden shrink-0 rounded-full">
                   <Image
                     src={janakaiRamana}
                     alt="Jankiraman"

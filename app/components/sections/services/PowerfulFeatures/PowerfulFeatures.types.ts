@@ -11,6 +11,7 @@ export interface TabContent {
   description: string;
   differencePoints: DifferencePoint[];
   features: {
+    image: string;
     title: string;
     description: string;
   }[];
@@ -25,6 +26,7 @@ type DifferencePoint = {
 };
 
 export interface Feature {
+  image: string;
   title: string;
   description: string;
 };

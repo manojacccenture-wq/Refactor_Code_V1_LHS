@@ -14,7 +14,7 @@ export default function WhatSetsUsApart() {
             className=" text-primary tracking-widest mb-[2%]"
             
           >
-        WE EXCEED THEM. HERE'S WHAT SETS US APART:"
+        WE EXCEED THEM. HERE&apos;S WHAT SETS US APART:&quot;
           </h6>
           <h2 >
             What Sets us apart

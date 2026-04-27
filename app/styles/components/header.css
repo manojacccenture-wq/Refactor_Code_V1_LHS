@@ -26,7 +26,7 @@
 
   /* 🔥 RESPONSIVE TYPOGRAPHY (CORRECT WAY) */
   .nav-link {
-    font-size: var(--font-body-sm);
+    font-size: var(--font-body-lg);
     line-height: var(--leading-body-sm);
     font-weight: var(--font-medium);
 
@@ -47,7 +47,7 @@
   /* ✅ Large screens (optional upgrade) */
   @media (min-width: 1024px) {
     .nav-link {
-      font-size: var(--font-body-md);
+      font-size: var(--font-body-lg);
       line-height: var(--leading-body-md);
     }
   }

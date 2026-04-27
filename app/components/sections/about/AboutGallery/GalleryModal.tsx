@@ -54,8 +54,11 @@ export default function GalleryModal({
       aria-modal="true"
       aria-label="Gallery lightbox"
     >
+      {/**
+       * MODIFIED: Replaced 'rounded-2xl' with 'rounded-none'
+       */}
       <div
-        className="relative w-full max-w-225 rounded-2xl overflow-hidden bg-black animate-[scaleIn_0.3s_cubic-bezier(0.34,1.36,0.64,1)_forwards]"
+        className="relative w-full max-w-225 rounded-none overflow-hidden bg-black animate-[scaleIn_0.3s_cubic-bezier(0.34,1.36,0.64,1)_forwards]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -85,6 +88,7 @@ export default function GalleryModal({
             priority
           />
         </div>
+
 
         {/* Prev */}
         <Button
@@ -144,6 +148,8 @@ export default function GalleryModal({
             />
           </svg>
         </Button>
+
+        
 
         {/* Counter */}
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[rgba(0,0,0,0.5)] text-white text-[14px] whitespace-nowrap select-none">
