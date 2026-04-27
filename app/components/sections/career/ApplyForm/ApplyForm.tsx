@@ -77,7 +77,7 @@ export default function ApplyForm({ jobTitle = "Position" }: ApplyFormProps) {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-6 md:p-8 lg:p-10 w-full max-w-3xl mx-auto transition-all px-2">
+<div className="bg-white rounded-2xl shadow-sm p-6 md:p-8 lg:p-10 w-full max-w-5xl">
       <h2 >
         Apply Here
       </h2>
@@ -85,7 +85,7 @@ export default function ApplyForm({ jobTitle = "Position" }: ApplyFormProps) {
         Discover top remote tech opportunities and land your next role with ease, through our streamlined process.
       </p>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 md:space-y-6">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 md:space-y-6 w-full">
         {/* Name */}
         <Input
           label="Name"
@@ -99,7 +99,7 @@ export default function ApplyForm({ jobTitle = "Position" }: ApplyFormProps) {
         <Input
           label="Email"
           type="email"
-          placeholder="John Carter"
+          placeholder="johncarter@email.cm"
           error={errors.email?.message as string}
           {...register("email")}
         />
@@ -108,7 +108,7 @@ export default function ApplyForm({ jobTitle = "Position" }: ApplyFormProps) {
         <Input
           label="Phone Number"
           type="tel"
-          placeholder="John Carter"
+          placeholder="+91 9876543210"
           error={errors.phone?.message as string}
           {...register("phone")}
         />
@@ -117,7 +117,7 @@ export default function ApplyForm({ jobTitle = "Position" }: ApplyFormProps) {
         <Input
           label="Address"
           type="text"
-          placeholder="Your address"
+          placeholder="123 Main St, City, Country"
           error={errors.address?.message as string}
           {...register("address")}
         />

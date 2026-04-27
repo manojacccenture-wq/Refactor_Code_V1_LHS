@@ -55,7 +55,7 @@ export default function ContactHero() {
   };
 
   return (
-    <section className="w-full pb-20 px-6 py-28 relative bg-gradient-to-b from-primary/5 to-transparent ">
+    <section className="w-full pb-20 py-20  px-6 md:py-52 relative bg-gradient-to-b from-primary/5 to-transparent ">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 

@@ -42,17 +42,17 @@ export default function Header() {
           {/* LOGO */}
           <Link href="/" className="nav-logo flex items-center">
             <Image
-              src="/logo.png"
+              src="/logolhs.svg"
               alt="LHS Logo"
               width={80}
               height={40}
               priority
-              className="h-7 sm:h-12 md:h-14 lg:h-14 w-auto object-contain"
+              className="h-7 sm:h-8 md:h-7 lg:h-12 w-auto object-contain"
             />
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center md:gap-3 lg:gap-8 ">
             {nav.map((item) => {
 
               // ✅ HANDLE DROPDOWN FIRST

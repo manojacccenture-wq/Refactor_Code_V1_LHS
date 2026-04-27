@@ -28,7 +28,7 @@ export const testimonials: Testimonial[] = [
   {
     name: 'Priya Nair',
     title: 'Head of Operations, NexGen Startups',
-    quote: 'The platform made finding talented professionals easy, and the results were fantastic!',
+    quote: 'The platform made finding talented.',
     image: 'https://randomuser.me/api/portraits/women/90.jpg',
   },
   {

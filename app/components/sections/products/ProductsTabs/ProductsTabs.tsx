@@ -5,7 +5,11 @@ import Button from '@/app/components/ui/Button';
 import Image from 'next/image';
 import clsx from 'clsx';
 import enterprisePosIcon from "@/app/components/sections/products/assets/Enterpise_POS_Icon.svg";
-import enterprisePosImg from "@/app/components/sections/products/assets/Enterprise POS.svg";
+import screen1 from "@/app/components/sections/products/assets/screen_1.png";
+import screen2 from "@/app/components/sections/products/assets/screen_2.png";
+import screen3 from "@/app/components/sections/products/assets/screen_3.png";
+import screen4 from "@/app/components/sections/products/assets/screen_4.png";
+import screen5 from "@/app/components/sections/products/assets/screen_5.png";
 
 interface Tab {
   id: string;
@@ -33,31 +37,31 @@ const tabContents: Record<string, TabContent> = {
     title: 'Enterprise POS',
     icon: enterprisePosIcon.src,
     description: 'Real-time order management',
-    image: enterprisePosImg.src,
+    image: screen1.src,
   },
   'franchise-mgmt': {
     title: 'Franchise Management',
     icon: enterprisePosIcon.src,
     description: 'Centralized control',
-    image: enterprisePosImg.src,
+    image: screen2.src,
   },
   'central-kitchen': {
     title: 'Central Kitchen Operations',
     icon: enterprisePosIcon.src,
     description: 'Production planning and ingredient management at scale',
-    image: enterprisePosImg.src,
+    image: screen3.src,
   },
   'vendor-settlement': {
     title: 'Vendor Settlement',
     icon: enterprisePosIcon.src,
     description: 'Automated accounting for supplier payments',
-    image: enterprisePosImg.src,
+    image: screen4.src,
   },
   'bi-reporting': {
     title: 'BI & Analytics',
     icon: enterprisePosIcon.src,
     description: 'Executive dashboards with insights',
-    image: enterprisePosImg.src,
+    image: screen5.src,
   },
 };
 
@@ -65,7 +69,7 @@ export default function ProductsTabs() {
   const [activeTab, setActiveTab] = useState<string>('enterprise-pos');
   const content = tabContents[activeTab];
 
-return (
+  return (
     <section className="py-10 sm:py-16 md:py-0 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 sm:gap-8 md:gap-12 items-start">
@@ -92,7 +96,7 @@ return (
                     alt={tab.label}
                     width={24}
                     height={24}
-                    className="object-contain"
+                    className="object-none"
                   />
                 </div>
 
@@ -104,14 +108,14 @@ return (
           </div>
 
           {/* RIGHT COLUMN - Image Content */}
-          <div className="w-full h-full flex flex-col pt-2 md:pt-0">
-            <div className="relative w-full aspect-[4/3] md:aspect-[15/9] rounded-2xl overflow-hidden bg-neutral-50 border border-neutral-100">
+          <div className="w-full h-full flex flex-col  ">
+            <div className="w-full rounded-2xl overflow-hidden">
               <Image
                 src={content.image}
                 alt={content.title}
-                fill
-                // 🔥 CRITICAL FIX: Changed object-none to object-contain so it fits the mobile screen
-                className="object-contain p-4 md:p-8"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
                 priority
               />
             </div>
