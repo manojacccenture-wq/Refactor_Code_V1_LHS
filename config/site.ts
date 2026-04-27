@@ -21,7 +21,7 @@ export const SITE_TITLE_DEFAULT = "LHS — Livelihood System";
 export const SITE_DESCRIPTION =
   "LHS builds smart, scalable software that transforms ideas into real-world solutions. Enterprise-grade technology services for startups and growing businesses.";
 
-export const SITE_OG_IMAGE = `${SITE_URL}/og-image.png`;
+export const SITE_OG_IMAGE = `${SITE_URL}/og-image.svg`;
 
 export const SITE_LOGO = `${SITE_URL}/logolhs.svg`;
 
