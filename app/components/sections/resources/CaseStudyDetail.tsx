@@ -13,7 +13,7 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-3 to-white py-16 md:py-24 px-6">
+      <section className="bg-gradient-to-br from-primary-3 to-white py-16 md:py-32 px-6">
         <div className="max-w-7xl mx-auto text-center">
           {/* Back Button */}
           <Link

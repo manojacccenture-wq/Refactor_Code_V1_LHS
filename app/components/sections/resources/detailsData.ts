@@ -1,5 +1,7 @@
 import janakaiRamana from "@/app/components/shared/assets/Janakai_Ramana.png";
-import leaderImage from "@/app/components/sections/about/assets/Leader_Image.svg";
+import leaderImage from "@/app/components/shared/assets/Janakai_Ramana.png";
+import coverImg1 from "@/app/components/sections/resources/assets/Image_1.svg";
+import coverImg2 from "@/app/components/sections/resources/assets/Image_2.svg";
 
 export interface DetailContent {
   id: string;
@@ -9,6 +11,8 @@ export interface DetailContent {
   author: string;
   authorTitle: string;
   authorImage: string;
+  /** Cover image shown on resource cards — MUST match what ResourcesCards renders */
+  coverImage?: string;
   client?: string;
   challenge?: string;
   objective?: string;
@@ -26,6 +30,7 @@ export const resourcesData: DetailContent[] = [
     author: "Jankiraman",
     authorTitle: "Head of Operations, Livelihood systems",
     authorImage: janakaiRamana.src,
+    coverImage: coverImg1.src,
     client: "Mid-sized Integrated Steel Manufacturing Unit",
     challenge: "Disconnected production systems, manual reporting, and lack of real-time visibility across blast furnace, rolling mill, and logistics operations.",
     objective: "Build a centralized monitoring and analytics platform to reduce downtime and improve production efficiency.",
@@ -56,6 +61,7 @@ export const resourcesData: DetailContent[] = [
     author: "Jankiraman",
     authorTitle: "Head of Operations, Livelihood systems",
     authorImage: leaderImage.src,
+    coverImage: coverImg2.src,
     client: "Manufacturing Corporation",
     challenge: "Complex product communication and unclear value proposition.",
     objective: "Develop compelling visual narratives for product features.",
@@ -83,6 +89,7 @@ export const resourcesData: DetailContent[] = [
     author: "Jankiraman",
     authorTitle: "Head of Operations, Livelihood systems",
     authorImage: leaderImage.src,
+    coverImage: coverImg1.src,
   },
   {
     id: "4",
@@ -92,6 +99,7 @@ export const resourcesData: DetailContent[] = [
     author: "Jankiraman",
     authorTitle: "Head of Operations, Livelihood systems",
     authorImage: leaderImage.src,
+    coverImage: coverImg2.src,
     client: "Enterprise Software Company",
     challenge: "Slow application performance and accessibility concerns.",
     objective: "Optimize performance metrics and ensure WCAG compliance.",
@@ -119,6 +127,7 @@ export const resourcesData: DetailContent[] = [
     author: "Jankiraman",
     authorTitle: "Head of Operations, Livelihood systems",
     authorImage: leaderImage.src,
+    coverImage: coverImg1.src,
   },
   {
     id: "6",
@@ -128,6 +137,7 @@ export const resourcesData: DetailContent[] = [
     author: "Jankiraman",
     authorTitle: "Head of Operations, Livelihood systems",
     authorImage: leaderImage.src,
+    coverImage: coverImg2.src,
     client: "SaaS Startup",
     challenge: "High bounce rates and low conversion on signup flow.",
     objective: "Simplify and streamline user registration process.",

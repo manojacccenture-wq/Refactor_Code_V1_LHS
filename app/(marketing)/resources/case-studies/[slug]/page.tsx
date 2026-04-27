@@ -5,6 +5,17 @@ import { getResourceById, resourcesData } from "@/app/components/sections/resour
 import { generateMetadata as genMeta } from "@/lib/seo";
 import { SITE_URL, SITE_NAME } from "@/config/site";
 
+/**
+ * Returns an absolute OG-safe image URL.
+ * SVG paths are rejected (not supported by social platforms) — returns undefined,
+ * which causes generateMetadata to fall back to the site default OG image.
+ */
+function toOgImage(path: string | undefined): string | undefined {
+  if (!path || /\.svg$/i.test(path)) return undefined;
+  const abs = `${SITE_URL}${path.startsWith("/") ? path : "/" + path}`;
+  return abs;
+}
+
 interface CaseStudyDetailPageProps {
   params: Promise<{ slug: string }>;
 }
@@ -28,11 +39,15 @@ export async function generateMetadata(
     });
   }
 
+  // Only use cover image for OG if it's a raster format (PNG/JPG).
+  // SVGs are not supported by most social platforms and are skipped.
+  const ogImage = toOgImage(caseStudy.coverImage);
+
   return genMeta({
     title: caseStudy.title,
     description: caseStudy.description,
     path: `/resources/case-studies/${slug}`,
-    image: caseStudy.authorImage ? `${SITE_URL}${caseStudy.authorImage.startsWith("/") ? caseStudy.authorImage : "/" + caseStudy.authorImage}` : undefined,
+    image: ogImage,
     keywords: [caseStudy.category, "LHS case study", "enterprise IT solution"],
   });
 }
@@ -47,12 +62,15 @@ export default async function CaseStudyDetailPage({
     notFound();
   }
 
+  const ogImage = toOgImage(caseStudy.coverImage);
+
   // CreativeWork JSON-LD
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     name: caseStudy.title,
     description: caseStudy.description,
+    ...(ogImage ? { image: ogImage } : {}),
     author: {
       "@type": "Person",
       name: caseStudy.author,
