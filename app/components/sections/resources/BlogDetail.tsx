@@ -9,32 +9,33 @@ interface BlogDetailProps {
 }
 
 export default function BlogDetail({ data }: BlogDetailProps) {
+  console.log('data: ', data)
 
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-3 to-white py-16 md:py-24 px-6">
-        <div className="max-w-3xl mx-auto">
+      <section className="bg-gradient-to-br from-primary-3 to-white py-16 md:py-32 px-6">
+        <div className="max-w-7xl mx-auto">
           {/* Back Button */}
           <Link
             href="/resources/blogs"
-            className="text-primary-1 font-medium text-base mb-8 flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="text-primary font-medium-token  mb-8 flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             ← Go back
           </Link>
 
           {/* Category */}
-          <p className="text-primary-1 font-semibold text-base tracking-[2.24px] uppercase mb-7">
+          <p className="text-primary font-semibold-token  tracking-[2.24px] uppercase mb-7">
             {data.category}
           </p>
 
           {/* Title */}
-          <h1 className="text-neutral-800 text-4xl md:text-[42px] font-bold leading-tight mb-7">
+          <h1 className="text-neutral-800   font-bold-token leading-tight mb-7">
             {data.title}
           </h1>
 
           {/* Description */}
-          <p className="text-neutral-600 text-lg leading-relaxed mb-12">
+          <p className="text-neutral-600  leading-relaxed mb-12">
             {data.description}
           </p>
 
@@ -51,10 +52,10 @@ export default function BlogDetail({ data }: BlogDetailProps) {
               </div>
             )}
             <div>
-              <p className="font-bold text-primary-1 text-sm">
+              <p className="font-bold-token text-primary ">
                 {data.author}
               </p>
-              <p className="text-neutral-600 text-base">
+              <p className="text-neutral-600 ">
                 {data.authorTitle}
               </p>
             </div>
@@ -63,17 +64,17 @@ export default function BlogDetail({ data }: BlogDetailProps) {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-24 px-6">
-        <div className="max-w-3xl mx-auto">
+      <section className="py-16 md:py-0 px-6  mb-[4%]">
+        <div className="max-w-7xl mx-auto">
           <div className="bg-white rounded-[25px] shadow-[0px_4px_30px_0px_rgba(45,30,133,0.1)] p-8 md:p-12">
             <div className="space-y-8 text-neutral-600">
-              <p className="text-base leading-relaxed">
+              <p className=" leading-relaxed">
                 This is a blog post about "{data.title}". Content would be
                 displayed here with rich formatting, images, and interactive
                 elements.
               </p>
 
-              <p className="text-base leading-relaxed">
+              <p className=" leading-relaxed">
                 Blog posts provide in-depth insights and practical guidance on
                 topics relevant to our industry and expertise. Each post is
                 carefully crafted to deliver value to our readers.

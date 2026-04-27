@@ -18,7 +18,7 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
           {/* Back Button */}
           <Link
             href="/resources/case-studies"
-            className="text-primary-1 font-medium text-base mb-8 flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="text-primary font-medium-token  mb-8 flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
             ← Go back
           </Link>
@@ -70,10 +70,10 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
               {/* Client */}
               {data.client && (
                 <div>
-                  <h3 className="text-neutral-800 text-2xl font-bold leading-[35px] mb-3">
+                  <h3 className="text-neutral-800  font-bold-token leading-[35px] mb-3">
                     Client
                   </h3>
-                  <p className="text-neutral-600 text-base leading-[24px]">
+                  <p className="text-neutral-600  leading-[24px]">
                     {data.client}
                   </p>
                 </div>
@@ -82,10 +82,10 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
               {/* Challenge */}
               {data.challenge && (
                 <div>
-                  <h3 className="text-neutral-800 text-2xl font-bold leading-[35px] mb-3">
+                  <h3 className="text-neutral-800  font-bold-token leading-[35px] mb-3">
                     Challenge
                   </h3>
-                  <p className="text-neutral-600 text-base leading-[24px]">
+                  <p className="text-neutral-600  leading-[24px]">
                     {data.challenge}
                   </p>
                 </div>
@@ -94,10 +94,10 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
               {/* Objective */}
               {data.objective && (
                 <div>
-                  <h3 className="text-neutral-800 text-2xl font-bold leading-[35px] mb-3">
+                  <h3 className="text-neutral-800  font-bold-token leading-[35px] mb-3">
                     Objective
                   </h3>
-                  <p className="text-neutral-600 text-base leading-[24px]">
+                  <p className="text-neutral-600  leading-[24px]">
                     {data.objective}
                   </p>
                 </div>
@@ -106,14 +106,14 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
               {/* Solution */}
               {data.solution && data.solution.length > 0 && (
                 <div>
-                  <h3 className="text-neutral-800 text-2xl font-bold leading-[35px] mb-3">
+                  <h3 className="text-neutral-800  font-bold-token leading-[35px] mb-3">
                     Solution
                   </h3>
                   <ul className="list-disc space-y-2 ml-5">
                     {data.solution.map((item, idx) => (
                       <li
                         key={idx}
-                        className="text-neutral-600 text-base leading-[24px]"
+                        className="text-neutral-600  font-medium-token leading-[24px]"
                       >
                         {item}
                       </li>
@@ -125,14 +125,14 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
               {/* Results */}
               {data.results && data.results.length > 0 && (
                 <div>
-                  <h3 className="text-neutral-800 text-2xl font-bold leading-[35px] mb-3">
+                  <h3 className="text-neutral-800  font-bold-token leading-[35px] mb-3">
                     Results
                   </h3>
                   <ul className="list-disc space-y-2 ml-5">
                     {data.results.map((item, idx) => (
                       <li
                         key={idx}
-                        className="text-neutral-600 text-base leading-[24px]"
+                        className="text-neutral-600  font-medium-token leading-[24px]"
                       >
                         {item}
                       </li>
@@ -144,14 +144,14 @@ export default function CaseStudyDetail({ data }: CaseStudyDetailProps) {
               {/* Key Deliverables */}
               {data.keyDeliverables && data.keyDeliverables.length > 0 && (
                 <div>
-                  <h3 className="text-neutral-800 text-2xl font-bold leading-[35px] mb-3">
+                  <h3 className="text-neutral-800  font-bold-token leading-[35px] mb-3">
                     Key Deliverables
                   </h3>
                   <ul className="list-disc space-y-2 ml-5">
                     {data.keyDeliverables.map((item, idx) => (
                       <li
                         key={idx}
-                        className="text-neutral-600 text-base leading-[24px]"
+                        className="text-neutral-600  font-medium-token leading-[24px]"
                       >
                         {item}
                       </li>

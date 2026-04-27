@@ -9,9 +9,10 @@ import { SITE_URL, SITE_NAME } from "@/config/site";
  * Returns an absolute OG-safe image URL.
  * SVG paths are rejected — returns undefined so generateMetadata falls back
  * to the site default OG image.
- */
+*/
 function toOgImage(path: string | undefined): string | undefined {
-  if (!path || /\.svg$/i.test(path)) return undefined;
+  if (!path) return undefined;
+
   const abs = `${SITE_URL}${path.startsWith("/") ? path : "/" + path}`;
   return abs;
 }
@@ -30,7 +31,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { slug } = await params;
   const blog = getResourceById(slug);
-
+  
   if (!blog) {
     return genMeta({
       title: "Blog Post Not Found",
@@ -38,10 +39,13 @@ export async function generateMetadata(
       path: "/resources/blogs",
     });
   }
-
+  
   // Only use cover image for OG if it's a raster format (PNG/JPG).
+  
+  
   const ogImage = toOgImage(blog.coverImage);
 
+  
   return genMeta({
     title: blog.title,
     description: blog.description,
@@ -54,13 +58,13 @@ export async function generateMetadata(
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const { slug } = await params;
   const blog = getResourceById(slug);
-
+  
   if (!blog) {
     notFound();
   }
-
+  
   const ogImage = toOgImage(blog.coverImage);
-
+  
   // Article JSON-LD
   const jsonLd = {
     "@context": "https://schema.org",
@@ -81,13 +85,13 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
     url: `${SITE_URL}/resources/blogs/${slug}`,
     articleSection: blog.category,
   };
-
+  
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+        />
       <BlogDetail data={blog} />
     </>
   );
