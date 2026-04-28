@@ -9,8 +9,8 @@ function AboutCard({ title, description, image, icon, index }: AboutCardProps) {
     <div
       className={`
         shrink-0
-        min-w-[260px] md:min-w-[280px] lg:min-w-md        
-        rounded-2xl overflow-hidden bg-white border shadow-sm hover:shadow-md transition
+        w-[266.76px] h-[324.25px]
+        rounded-[24px] overflow-hidden bg-white border shadow-sm hover:shadow-md transition
         ${index !== undefined && index % 2 !== 0 ? "lg:mt-8" : "lg:-mt-0"}
       `}
       style={{
@@ -56,7 +56,7 @@ function AboutCard({ title, description, image, icon, index }: AboutCardProps) {
 export default function AboutCards() {
   return (
     <section className="w-full overflow-hidden"> {/* <--- ADD w-full and overflow-hidden here */}
-      <div className="max-w-full mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* MOBILE & DESKTOP: Horizontal Scroll with Stacking */}
         {/* ADD flex-nowrap, pb-4 (for shadow visibility), and px-4 here ---> */}
         <div className="flex flex-nowrap gap-6 md:gap-9 overflow-x-auto scrollbar-hide pb-4 px-4">
