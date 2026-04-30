@@ -12,25 +12,25 @@ import titleIcon4 from "@/app/components/sections/about/assets/bot.png";
 export const cards: AboutCardProps[] = [
   {
     title: "Built on Experience",
-    description: "20 years shaping how we solve problems.",
+    description: "20 years solving problems",
     image: title1.src,
     icon: titleIcon1.src
   },
   {
     title: "People Who Execute",
-    description: "A team focused on delivering real results.",
+    description: "Team delivering real results",
     image: title2.src,
     icon: titleIcon2.src
   },
   {
     title: "Clarity Through Data",
-    description: "Measure, track, and improve what matters.",
+    description: "Measure Track Improve",
     image: title4.src,
     icon: titleIcon3.src
   },
   {
     title: "Designed to Scale",
-    description: "Built to grow with users and complexity.",
+    description: "Built for growth complexity",
     image: title3.src,
     icon: titleIcon4.src
   },

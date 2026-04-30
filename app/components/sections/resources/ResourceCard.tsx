@@ -49,12 +49,12 @@ export default function ResourceCard({
           alt={title}
           width={400}
           height={227}
-          className="w-full h-full object-cover"
+          className="w-[97%] h-full object-cover rounded-2xl"
         />
         {type === "video" && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
+          <div className="absolute inset-0 flex items-center justify-center  transition-colors">
             <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-              <span className="text-primary-1 text-3xl ml-1">▶</span>
+              <span className="text-primary text-3xl ml-1">▶</span>
             </div>
           </div>
         )}
@@ -63,18 +63,18 @@ export default function ResourceCard({
       {/* Content */}
       <div className="px-6 pb-6 pt-4 flex flex-col flex-1">
         {/* Date */}
-        <p className="text-neutral-500 text-base font-medium leading-[22px] mb-2">
+        <p className="text-neutral-500  font-medium-token leading-[22px] mb-2">
           {date}
         </p>
 
         {/* Title */}
-        <h3 className="font-bold text-[22px] leading-[28px] text-neutral-800 mb-3 text-left md:text-justify">
+        <h3 className="font-bold-token text-[22px] leading-[28px] text-neutral-800 mb-3 text-left ">
           {title}
         </h3>
 
         {/* Description (if present) */}
         {description && (
-          <p className="text-neutral-600 text-sm leading-[20px]">
+          <p className="text-neutral-600  ">
             {description}
           </p>
         )}

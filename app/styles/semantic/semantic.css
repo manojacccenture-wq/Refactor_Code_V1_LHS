@@ -87,6 +87,11 @@
   }
 
 
+  .bg-color-200 {
+    background-color: var(--color-neutral-200);
+  }
+
+
   .font-semibold-token {
     font-weight: var(--font-semi-bold);
   }

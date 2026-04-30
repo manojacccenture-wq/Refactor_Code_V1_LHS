@@ -1,80 +1,77 @@
 "use client";
 
-interface Testimonial {
-  id: string;
-  header: string;
-  quote: string;
-  role: string;
-  name: string;
-}
+import { Testimonial } from "../../services/ServicesTestimonials/components/ServicesTestimonials.types";
+import { TestimonialCard } from "../../services/ServicesTestimonials/components/TestimonialCard";
+
+
 
 const testimonials: Testimonial[] = [
+
   {
-    id: "testimonial1",
-    header: `Speedy Developer Turnaround`,
-    quote: "I found the perfect developer in hours, and the turnaround was fast and exceeded expectations!",
-    role: "UI/UX Designer",
+    // id: "testimonial2",
     name: "Sakthi Narayanan K",
+    title: "UI/UX Designer",
+    titleContent: "Speedy Developer Turnaround",
+    quote: "I found the perfect developer in hours, and the turnaround was fast and exceeded expectations!",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
-    id: "testimonial2",
-    header: "Scaling with Top Talent",
-    quote: "We scaled quickly with exceptional talent and seamless, top-notch work!",
-    role: "Full stack developer",
+    // id: "testimonial3",
     name: "Manoj kumar",
+    title: "Full stack developer",
+    titleContent: "Scaling with Top Talent",
+    quote: "We scaled quickly with exceptional talent and seamless, top-notch work!",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
   },
   {
-    id: "testimonial3",
-    header: "Effortless Design Solutions",
-    quote: "Finding the perfect graphic designer was effortless, and the results were on-point!",
-    role: "Senior-lead",
+    // id: "testimonial4",
     name: "Raj kachapp",
+    title: "Senior-lead",
+    titleContent: "Effortless Design Solutions",
+    quote: "Finding the perfect graphic designer was effortless, and the results were on-point!",
+    image: "https://randomuser.me/api/portraits/men/67.jpg",
   },
   {
-    id: "testimonial4",
-    header: "Speedy Developer Turnaround",
+    // id: "testimonial5",
+    name: "Jankiraman",
+    title: "Founder",
+    titleContent: "Exceeded Expectations",
     quote: "I connected with talented developers who delivered faster than expected!",
-    role: "Founder, InnovateCo",
-    name: "Mike Warren",
+    image: "https://randomuser.me/api/portraits/men/22.jpg",
   },
 ];
 
 export default function CareerTestimonials() {
+  // Duplicating the array multiple times so the infinite scroll doesn't run out of screen space
+  const row1 = [...testimonials, ...testimonials, ...testimonials];
+  // const row2 = [...testimonials.slice().reverse(), ...testimonials.slice().reverse(), ...testimonials.slice().reverse()];
+
   return (
-    <section className="py-12 px-4 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="bg-white border border-neutral-300 rounded-2xl shadow-sm p-6 flex flex-col justify-between h-80"
-            >
-              {/* Quote Preview */}
-              <h4 className="font-bold-token   mb-4">
-                &quot;{testimonial.header}&quot;
-              </h4>
+    <section className="  px-4 md:px-6">
+      <div className="mx-auto max-w-[100vw]">
 
-              {/* Full Quote */}
-              <p className=" font-normal-token mb-6 line-clamp-3">
-                {testimonial.quote}
-              </p>
+        {/* RESPONSIVE MASK (copied exactly from your previous component) */}
+        <div className="space-y-4 md:space-y-6 overflow-hidden pause-on-hover py-4 md:py-8 
+          [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] 
+          [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] 
+          md:[mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] 
+          md:[-webkit-mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]"
+        >
 
-              {/* Author Info */}
-              <div className="flex items-center gap-3 pt-2">
-                <div className="w-12 h-12 rounded-full bg-linear-to-br from-primary to-blue-400 shrink-0" />
-                <div className="flex-1 min-w-0">
-                  <p className="text-primary  font-bold truncate">
-                    {testimonial.name}
-                  </p>
-                  <p className=" font-normal-token truncate">
-                    {testimonial.role}
-                  </p>
-
+          {/* ROW 1 → RIGHT */}
+          <div className="overflow-hidden">
+            <div className="flex gap-4 md:gap-6 w-max scroll-left">
+              {row1.map((t, i) => (
+                // Adjusted card width: 280px on mobile, 320px on desktop
+                <div key={i} className="w-[280px] md:w-[320px] shrink-0">
+                  <TestimonialCard {...t} />
                 </div>
-              </div>
+              ))}
+
+
             </div>
-          ))}
+          </div>
+
         </div>
       </div>
     </section>

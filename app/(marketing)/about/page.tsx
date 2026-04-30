@@ -74,7 +74,7 @@ export default function AboutPage() {
 
       <section className="relative w-full min-h-screen ">
         <AboutHero />
-        <AboutCards/>
+        <AboutCards />
         <WhyChooseUs />
         <WhatSetsUsApart />
         <Leadership />

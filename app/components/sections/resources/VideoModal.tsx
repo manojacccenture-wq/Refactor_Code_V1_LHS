@@ -36,10 +36,10 @@ export default function VideoModal({
 
   if (!isOpen) return null;
 
-  // Extract video ID from YouTube URL
+  // Extract video ID from YouTube URL (Now includes /shorts/)
   const getYouTubeEmbedUrl = (url: string) => {
     const videoIdMatch = url.match(
-      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([^&\n?#]+)/
     );
     return videoIdMatch
       ? `https://www.youtube.com/embed/${videoIdMatch[1]}?autoplay=1`
@@ -80,7 +80,7 @@ export default function VideoModal({
           {/* Video Container */}
           <div className="aspect-video w-full bg-black">
             <iframe
-              src={embedUrl}
+              src={embedUrl} /* FIX: Changed from videoUrl to embedUrl */
               title={title || "Video player"}
               className="w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

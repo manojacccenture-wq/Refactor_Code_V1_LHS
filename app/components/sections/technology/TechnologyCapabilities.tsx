@@ -8,7 +8,7 @@ import platforms from "@/app/components/sections/technology/assets/Platforms.svg
 interface CapabilityCard {
   title: string;
   description: string;
-  image:string;
+  image: string;
 }
 
 const capabilities: CapabilityCard[] = [
@@ -44,7 +44,7 @@ const capabilities: CapabilityCard[] = [
   },
 ];
 
-function CapabilityCard({ title, description,image }: CapabilityCard) {
+function CapabilityCard({ title, description, image }: CapabilityCard) {
   return (
     <div className="bg-white border border-neutral-300 rounded-3xl p-8 shadow-sm flex flex-col gap-8 h-full">
       <div className="flex flex-col gap-3">
@@ -66,7 +66,23 @@ function CapabilityCard({ title, description,image }: CapabilityCard) {
 
 export default function TechnologyCapabilities() {
   return (
-    <section className="w-full py-24 px-6 relative bg-white">
+    <section className="w-full  px-6 relative bg-white">
+
+      <div
+        className="absolute top-[0%] -left-[10%] w-[300px] md:w-[300px] h-[300px] md:h-[500px] rounded-full bg-[var(--color-primary-1)] blur-[100px] md:blur-[140px] opacity-[0.15] pointer-events-none z-0"
+      />
+
+      {/* Right Glow */}
+      <div
+        className="absolute top-[30%] -right-[15%] w-[350px] md:w-[600px] h-[350px] md:h-[600px] rounded-full bg-[var(--color-primary-1)] blur-[100px] md:blur-[160px] opacity-[0.15] pointer-events-none z-0"
+      />
+
+
+
+      {/* BOTTOM FADE OUT: Smoothly blends the glows into the white background before the footer */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[100px] md:h-[150px] bg-gradient-to-t from-white to-transparent pointer-events-none z-[1]"
+      />
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">

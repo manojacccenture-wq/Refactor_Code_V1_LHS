@@ -83,7 +83,7 @@ export default function IndustriesPage() {
 
       <section className="relative w-full min-h-screen">
         <IndustriesHero />
-        <IndustriesHeroVisual />
+        {/* <IndustriesHeroVisual /> */}
         <IndustriesContent />
       </section>
     </>

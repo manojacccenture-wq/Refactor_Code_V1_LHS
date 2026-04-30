@@ -3,6 +3,7 @@
 import Button from '@/app/components/ui/Button';
 import LogoMarquee from '@/app/components/shared/ui/LogoMarquee/LogoMarquee';
 import { logos } from '../../home/Trusted/data/Trusted.data';
+import IndustriesHeroVisual from '../IndustriesHeroVisual';
 
 
 export default function IndustriesHero() {
@@ -28,7 +29,7 @@ export default function IndustriesHero() {
 
         {/* CTA */}
         <div className="flex justify-center">
-            <Button variant="primary" href="/contact">Let’s Discuss</Button>
+          <Button variant="primary" href="/contact">Let’s Discuss</Button>
         </div>
       </div>
 
@@ -41,7 +42,7 @@ export default function IndustriesHero() {
         marqueeClassName="mt-0"
       />
 
-  
+      <IndustriesHeroVisual />
     </section>
   );
 }

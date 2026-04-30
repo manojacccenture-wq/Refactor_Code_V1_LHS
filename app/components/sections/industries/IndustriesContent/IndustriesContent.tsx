@@ -36,7 +36,7 @@ const industries = [
             "Full mobile app ecosystem",
             "Executive dashboards that surface operational exceptions in real time.",
         ],
-        imagePosition: "left" as const,
+        imagePosition: "right" as const,
     },
     {
         id: 3,
@@ -50,7 +50,7 @@ const industries = [
             "IT manpower under SLA governance",
             "Executive dashboards that surface operational exceptions in real time.",
         ],
-        imagePosition: "right" as const,
+        imagePosition: "left" as const,
     },
 ];
 
@@ -58,7 +58,7 @@ export default function IndustriesContent() {
     return (
         <section className="w-full py-12 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
-                
+
                 <div className="space-y-24">
                     {industries.map((industry) => (
                         <IndustryCard key={industry.id} industry={industry} />

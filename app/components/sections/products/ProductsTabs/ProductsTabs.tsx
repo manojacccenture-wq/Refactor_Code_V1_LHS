@@ -115,7 +115,7 @@ export default function ProductsTabs() {
                 alt={content.title}
                 width={1200}
                 height={800}
-                className="w-full h-auto"
+                className="w-full h-auto object-none"
                 priority
               />
             </div>

@@ -44,7 +44,7 @@ export default function CareerCard({
         >
           Apply now
         </Button>
-        <p className="text-neutral-600 text-sm font-normal text-center">
+        <p className="text-neutral-600  font-regular-token text-center">
           Posted on {postedDate}
         </p>
       </div>

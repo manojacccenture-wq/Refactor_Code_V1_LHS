@@ -17,7 +17,7 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <section className={clsx("w-full px-4 py-8 md:px-6", className)}>
-      
+
       <div
         className="
           max-w-6xl mx-auto
@@ -39,8 +39,9 @@ export default function CTASection({
         {/* BUTTON */}
         <Button
           variant="secondary"
+          className="text-primary"
           onClick={onClick}
-     
+
         >
           {buttonText}
         </Button>

@@ -40,9 +40,9 @@ export default function CareerProcess() {
           <h2 className="mb-4">
             How to apply ?
           </h2>
-          <p className=" mx-auto ">
+          <h5 className="text-neutral-600 font-regular-token">
             Discover top remote tech opportunities and land your next role with ease, through our streamlined process.
-          </p>
+          </h5>
         </div>
 
         {/* Steps Grid */}
@@ -55,12 +55,12 @@ export default function CareerProcess() {
               <h6 className="text-primary uppercase  font-semibold-token tracking-widest">
                 {step.stepNumber}
               </h6>
-              <h3 className=" font-bold-token">
+              <h3 className=" font-bold-token ">
                 {step.title}
               </h3>
-              <p >
+              <h5 className="text-neutral-600 font-regular-token">
                 {step.description}
-              </p>
+              </h5>
             </div>
           ))}
         </div>

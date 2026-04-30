@@ -25,13 +25,15 @@ export default function AboutHero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
-              <Button variant="primary" href="/contact">Let’s Discuss</Button>
+            <Button variant="primary" href="/contact">Let’s Discuss</Button>
             <Button variant="outline" href="/services">
               Learn more →
             </Button>
           </div>
         </div>
-        {/* <AboutCards /> */}
+        {/* <div className="mt-[8%]">
+          <AboutCards />
+        </div> */}
       </section>
     </HeroWrapper>
   );

@@ -11,7 +11,7 @@ import { TabContentCard } from "@/app/components/sections/services/PowerfulFeatu
 
 
 export default function PowerfulFeatures() {
- const [activeTab, setActiveTab] = useState("software-development");
+  const [activeTab, setActiveTab] = useState("software-development");
 
   const activeContent = tabContentMap[activeTab];
 
@@ -43,10 +43,10 @@ export default function PowerfulFeatures() {
               <Button
                 key={tab.id}
                 variant="outline"
-                size="md"
+                size="lg"
                 onClick={() => setActiveTab(tab.id)}
                 className={`
-          !rounded-2xl !px-7 !py-4 !font-bold-token !text-sm
+          !rounded-2xl !px-[28px] !py-[18px] !font-bold-token 
           flex items-center gap-3 transition-all
           ${isActive ? "btn-tab-active" : "btn-tab"}
         `}
@@ -54,8 +54,8 @@ export default function PowerfulFeatures() {
                   <Image
                     src={tab.icon}
                     alt={tab.label}
-                    width={20}
-                    height={20}
+                    width={28}
+                    height={28}
                   />
                 }
               >

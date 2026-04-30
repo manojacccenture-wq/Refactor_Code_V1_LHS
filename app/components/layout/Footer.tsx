@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-gradient border-t border-neutral-300 py-20 px-6 text-neutral-100-token">
+    <footer className="bg-primary-gradient border-t border-neutral-300 py-20 px-6 text-neutral-100-token mt-[6%]">
       <div className="max-w-7xl text-left mx-auto">
         {/* MAIN FOOTER GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16 lg:gap-12">
@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="flex flex-col gap-6">
             {/* Logo Section */}
             <Link href="/" className="w-fit">
-         <Image
+              <Image
                 src="/Logo_Footer.png"
                 alt="LHS Logo"
                 width={180} // Increased base width
@@ -146,7 +146,7 @@ export default function Footer() {
                 <p className="text-lg leading-relaxed text-neutral-100-token">
                   NO-12, Ranapratap Path, Behind ICICI Bank, Kadma, Jamshedpur, Jharkhand, 831005
                 </p>
-                
+
               </div>
 
               <div className="flex gap-3 items-start text-neutral-100-token">
@@ -157,7 +157,7 @@ export default function Footer() {
                 <p className="text-lg leading-relaxed text-neutral-100-token">
                   W/15, N Main Rd, C-Sector, Anna Nagar West Extension, Chennai, Tamil Nadu 600101
                 </p>
-                
+
               </div>
             </div>
           </div>
@@ -182,39 +182,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* <style jsx>{`
-        :root {
-          --primary: #00c2a8;
-          --neutral-600: #6f6c90;
-          --neutral-800: #170f49;
-          --neutral-300: #eff0f6;
-        }
 
-        .text-primary {
-          color: var(--color-primary-1, #00c2a8);
-        }
-
-        .text-neutral-100-token {
-          color: var(--color-neutral-600, #6f6c90);
-        }
-
-        .text-neutral-100-token {
-          color: var(--color-neutral-800, #170f49);
-        }
-
-        .border-neutral-300 {
-          border-color: var(--color-neutral-300, #eff0f6);
-        }
-
-        .font-afacad {
-          font-family: "Afacad", sans-serif;
-          letter-spacing: 0.28px;
-        }
-
-        .hover\:text-primary:hover {
-          color: var(--color-primary-1, #00c2a8);
-        }
-      `}</style> */}
     </footer>
   );
 }

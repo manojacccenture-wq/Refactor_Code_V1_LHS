@@ -8,80 +8,76 @@ import galleryCenter from "@/app/components/sections/about/assets/diwali3.webp";
 import galleryRight from "@/app/components/sections/about/assets/lunch.webp";
 import Button from "@/app/components/ui/Button";
 
-
 const galleryImages = [
   { src: galleryLeft, alt: "LHS team collaboration" },
   { src: galleryCenter, alt: "LHS professionals at work" },
   { src: galleryRight, alt: "LHS office environment" },
-  { src: galleryRight, alt: "LHS office environment" },
+  // { src: galleryRight, alt: "LHS office environment 2" }, // Updated alt text to distinguish
 ];
 
-/**
- * MODIFIED: Replaced 'rounded-2xl' with 'rounded-none'
- */
 const CARD_BASE =
   "group relative overflow-hidden rounded-none cursor-pointer border-0 p-0 bg-transparent " +
   "transition-transform duration-300 ease-out hover:scale-[1.025] hover:shadow-[0_12px_36px_rgba(0,0,0,0.14)]";
 
-/**
- * MODIFIED: Replaced 'rounded-2xl' with 'rounded-none' to match the image shape
- */
 const CARD_OVERLAY =
   "absolute inset-0 rounded-none bg-[rgba(0,194,168,0)] " +
   "transition-colors duration-300 group-hover:bg-[rgba(0,194,168,0.06)] pointer-events-none";
 
-const NAV_BTN =
-  "w-10 h-10 rounded-full flex items-center justify-center shrink-0 " +
-  "bg-(--color-primary-1) border-0 cursor-pointer " +
-  "transition-all duration-200 hover:opacity-85 hover:scale-105";
-
 export default function AboutGallery() {
+  // 1. State for the on-page carousel/gallery navigation
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // 2. State for the popup Modal
   const [modalIndex, setModalIndex] = useState<number | null>(null);
 
+  // Modal Handlers
   const openModal = (index: number) => setModalIndex(index);
   const closeModal = () => setModalIndex(null);
-  const prevImage = () =>
+  const prevImageModal = () =>
     setModalIndex((i) =>
       i !== null
         ? (i - 1 + galleryImages.length) % galleryImages.length
         : galleryImages.length - 1
     );
-  const nextImage = () =>
-    setModalIndex((i) =>
-      i !== null ? (i + 1) % galleryImages.length : 0
-    );
+  const nextImageModal = () =>
+    setModalIndex((i) => (i !== null ? (i + 1) % galleryImages.length : 0));
+
+  // On-Page Gallery Nav Handlers
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  // Calculate indices for the 3 visible desktop cards
+  const leftIndex = currentIndex;
+  const centerIndex = (currentIndex + 1) % galleryImages.length;
+  const rightIndex = (currentIndex + 2) % galleryImages.length;
 
   return (
     <>
       <section className="py-16 md:py-24 px-4 md:px-6 bg-white">
         {/* Section Header */}
         <div className="text-center mb-12 md:mb-16 max-w-full mx-auto">
-          <p
-            className="uppercase font-bold-token tracking-[0.14em]  mb-3 text-primary"
-            
-          >
+          <p className="uppercase font-bold-token tracking-[0.14em]  mb-3 text-primary">
             {`"Built on Execution, Not Assumptions"`}
           </p>
-          <h2
-            className="font-bold-token"
-            
-          >
-            Our gallery
-          </h2>
+          <h2 className="font-bold-token">Our gallery</h2>
         </div>
 
         {/* Gallery Grid — Desktop */}
-        <div className="max-w-full.5 mx-auto">
+        <div className="max-w-full mx-auto">
           <div className="hidden md:grid md:grid-cols-3 md:gap-18 md:items-start">
-            {/* Left image — offset 48px from top */}
+            {/* Left image */}
             <Button
               className={`${CARD_BASE} mt-12 aspect-458/234 w-full`}
-              onClick={() => openModal(0)}
-              aria-label="Open image 1"
+              onClick={() => openModal(leftIndex)}
+              aria-label="Open left image"
             >
               <Image
-                src={galleryImages[0].src}
-                alt={galleryImages[0].alt}
+                src={galleryImages[leftIndex].src}
+                alt={galleryImages[leftIndex].alt}
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 33vw, 100vw"
@@ -89,15 +85,15 @@ export default function AboutGallery() {
               <div className={CARD_OVERLAY} />
             </Button>
 
-            {/* Center image — tallest, starts at top */}
+            {/* Center image */}
             <Button
               className={`${CARD_BASE} aspect-419/347 w-full`}
-              onClick={() => openModal(1)}
-              aria-label="Open image 2"
+              onClick={() => openModal(centerIndex)}
+              aria-label="Open center image"
             >
               <Image
-                src={galleryImages[1].src}
-                alt={galleryImages[1].alt}
+                src={galleryImages[centerIndex].src}
+                alt={galleryImages[centerIndex].alt}
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 33vw, 100vw"
@@ -105,15 +101,15 @@ export default function AboutGallery() {
               <div className={CARD_OVERLAY} />
             </Button>
 
-            {/* Right image — offset 48px from top */}
+            {/* Right image */}
             <Button
               className={`${CARD_BASE} mt-12 aspect-440/234 w-full`}
-              onClick={() => openModal(2)}
-              aria-label="Open image 3"
+              onClick={() => openModal(rightIndex)}
+              aria-label="Open right image"
             >
               <Image
-                src={galleryImages[2].src}
-                alt={galleryImages[2].alt}
+                src={galleryImages[rightIndex].src}
+                alt={galleryImages[rightIndex].alt}
                 fill
                 className="object-cover"
                 sizes="(min-width: 768px) 33vw, 100vw"
@@ -122,41 +118,31 @@ export default function AboutGallery() {
             </Button>
           </div>
 
-          {/* Gallery Grid — Mobile: single column */}
+          {/* Gallery Grid — Mobile: single column carousel */}
           <div className="flex flex-col gap-4 md:hidden">
-            {galleryImages.map((img, i) => (
-              <Button
-                key={i}
-                className={`${CARD_BASE} aspect-video w-full`}
-                onClick={() => openModal(i)}
-                aria-label={`Open image ${i + 1}`}
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover"
-                  sizes="100vw"
-                />
-                <div className={CARD_OVERLAY} />
-              </Button>
-            ))}
+            <Button
+              className={`${CARD_BASE} aspect-video w-full`}
+              onClick={() => openModal(currentIndex)}
+              aria-label={`Open image`}
+            >
+              <Image
+                src={galleryImages[currentIndex].src}
+                alt={galleryImages[currentIndex].alt}
+                fill
+                className="object-cover"
+                sizes="100vw"
+              />
+              <div className={CARD_OVERLAY} />
+            </Button>
           </div>
         </div>
-
 
         {/* Navigation Arrows */}
         <div className="flex gap-3 items-center justify-center mt-10">
           {/* Prev */}
           <Button
             className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-105 transition active:scale-95"
-            onClick={() =>
-              setModalIndex((i) =>
-                i !== null
-                  ? (i - 1 + galleryImages.length) % galleryImages.length
-                  : galleryImages.length - 1
-              )
-            }
+            onClick={prevSlide}
             aria-label="Previous gallery image"
           >
             <svg
@@ -186,11 +172,7 @@ export default function AboutGallery() {
           {/* Next */}
           <Button
             className="w-10 md:w-12 h-10 md:h-12 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-105 transition active:scale-95"
-            onClick={() =>
-              setModalIndex((i) =>
-                i !== null ? (i + 1) % galleryImages.length : 0
-              )
-            }
+            onClick={nextSlide}
             aria-label="Next gallery image"
           >
             <svg
@@ -224,8 +206,8 @@ export default function AboutGallery() {
           images={galleryImages}
           currentIndex={modalIndex}
           onClose={closeModal}
-          onPrev={prevImage}
-          onNext={nextImage}
+          onPrev={prevImageModal}
+          onNext={nextImageModal}
         />
       )}
     </>

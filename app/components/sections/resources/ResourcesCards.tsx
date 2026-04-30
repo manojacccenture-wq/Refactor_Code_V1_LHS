@@ -53,7 +53,7 @@ const mockResources = [
     id: "6",
     title: "Simplifying user journeys for more signups",
     image: caseStudyImg2.src,
-        coverImage: caseStudyImg2.src,
+    coverImage: caseStudyImg2.src,
     date: "Oct 13, 2025",
     type: "video" as const,
     videoUrl: "https://youtube.com/shorts/5a-3YjpvHvc?si=zCdNOu2eE545jiSv",
@@ -75,7 +75,7 @@ export default function ResourcesCards({ type }: ResourcesCardsProps) {
   };
 
   return (
-    <section className="py-16 md:py-0 px-6 max-w-7xl mx-auto">
+    <section className="py-16 md:py-5 px-6 max-w-7xl mx-auto">
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
         {visibleResources.map((resource) => (

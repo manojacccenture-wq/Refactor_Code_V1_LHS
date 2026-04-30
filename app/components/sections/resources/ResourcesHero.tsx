@@ -20,6 +20,7 @@ export default function ResourcesHero() {
           </p>
         </div>
       </section>
+
     </HeroWrapper>
   );
 }

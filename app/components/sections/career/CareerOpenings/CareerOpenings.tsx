@@ -40,8 +40,26 @@ const jobOpenings: JobOpening[] = [
 
 export default function CareerOpenings() {
   return (
-    <section className="py-0 px-4 md:px-8 mb-[2%]">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-0 px-4 md:px-8 mb-[2%] overflow-hidden">
+
+      {/* ================= BACKGROUND GLOWS ================= */}
+      {/* Left Glow */}
+      <div
+        className="absolute top-[10%] -left-[10%] w-[300px] md:w-[300px] h-[300px] md:h-[500px] rounded-full bg-[var(--color-primary-1)] blur-[100px] md:blur-[140px] opacity-[0.30] pointer-events-none z-0"
+      />
+
+      {/* Right Glow */}
+      <div
+        className="absolute top-[30%] -right-[15%] w-[350px] md:w-[600px] h-[350px] md:h-[600px] rounded-full bg-[var(--color-primary-1)] blur-[100px] md:blur-[160px] opacity-[0.30] pointer-events-none z-0"
+      />
+
+      {/* BOTTOM FADE OUT: Smoothly blends the glows into the white background before the footer */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[100px] md:h-[150px] bg-gradient-to-t from-white to-transparent pointer-events-none z-[1]"
+      />
+      {/* ================================================== */}
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h4 className="text-primary uppercase  font-semibold-token tracking-widest mb-2">

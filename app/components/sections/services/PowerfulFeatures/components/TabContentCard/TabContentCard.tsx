@@ -16,20 +16,17 @@ export function TabContentCard({
         <div className="space-y-8">
 
           {/* Badge */}
-          <div
-            className="inline-block px-4 py-2 rounded-2xl font-regular-token tracking-wider text-neutral-200  bg-primary-gradient"
-          // style={{
-          //   backgroundColor: "var(--color-primary-1)",
-          //   color: "white",
-          // }}
+          <h6
+            className="inline-block px-[20px] py-[2.5px] rounded-2xl font-regular-token tracking-wider text-neutral-200  bg-primary-gradient"
+
           >
             {badge}
-          </div>
+          </h6>
 
           {/* Title */}
           <h3
             className="font-bold-token"
-          // style={{ color: "var(--color-text-title)" }}
+
           >
             {title}
           </h3>
@@ -37,7 +34,7 @@ export function TabContentCard({
           {/* Description */}
           <p
             className=" leading-relaxed"
-          // style={{ color: "var(--color-text-subtitle)" }}
+
           >
             {description}
           </p>
@@ -82,13 +79,13 @@ export function TabContentCard({
         </div>
 
         {/* Right Column - Feature Cards */}
-        <div className="space-y-6">
+        <div className="space-y-6 lg:mt-[11%]">
           {features.map((feature, idx) => (
             <div
               key={idx}
               className="bg-white border border-neutral-300 rounded-2xl p-6 shadow-sm"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col items-start gap-4">
                 <Image
                   src={feature.image}
                   alt={feature.title}
@@ -114,6 +111,6 @@ export function TabContentCard({
         </div>
 
       </div>
-    </div>
+    </div >
   );
 }
