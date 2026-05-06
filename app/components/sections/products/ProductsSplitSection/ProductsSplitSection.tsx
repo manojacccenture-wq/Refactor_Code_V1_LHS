@@ -97,7 +97,7 @@ export default function ProductsSplitSection() {
                 </div>
               </div>
 
-              <Button variant="outline" className="w-full mt-6 sm:mt-8 py-2 font-semibold-token hover:text-neutral-500 transition " >
+              <Button variant="product-ghost" className="w-full mt-6 sm:mt-8 py-2 font-semibold-token hover:text-neutral-500 transition " >
                 Download Category Report
               </Button>
             </div>

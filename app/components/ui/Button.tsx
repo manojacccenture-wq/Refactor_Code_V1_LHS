@@ -3,7 +3,7 @@ import Link from "next/link";
 
 type ButtonProps = {
     children: React.ReactNode;
-    variant?: "primary" | "secondary" | "outline" | "ghost";
+    variant?: "primary" | "secondary" | "outline" | "ghost" | "product-ghost";
     size?: "sm" | "md" | "lg";
     disabled?: boolean;
     className?: string;

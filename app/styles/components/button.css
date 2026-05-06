@@ -30,6 +30,12 @@
     color: var(--btn-ghost-text);
   }
 
+  .btn-product-ghost {
+
+    color: var(--btn-outline-text);
+    background: var(--btn-product-bg);
+  }
+
   /* ================= SIZES (FLUID 🔥) ================= */
 
   .btn-sm {

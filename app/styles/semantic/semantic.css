@@ -25,6 +25,9 @@
   --btn-outline-border: var(--color-neutral-400);
   --btn-outline-text: var(--color-neutral-800);
 
+
+  --btn-product-bg: var(--color-ghost-product);
+
   --btn-ghost-text: var(--color-neutral-800);
 
   /* STATES */
