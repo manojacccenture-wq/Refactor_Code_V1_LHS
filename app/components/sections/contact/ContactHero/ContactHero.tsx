@@ -26,7 +26,7 @@ function ContactInfoCard({ title, description }: ContactInfoCardProps) {
   return (
     <div className="flex flex-col gap-3 w-full max-w-xs">
       <h3 className=" leading-[35px]">{title}</h3>
-          <h5 className="text-neutral-600 leading-7 max-w-md">
+      <h5 className="text-neutral-600 leading-7 max-w-md">
         {description}</h5>
     </div>
   );
@@ -55,8 +55,21 @@ export default function ContactHero() {
   };
 
   return (
-    <section className="w-full pb-20 py-20  px-6 md:py-52 relative bg-gradient-to-b from-primary/5 to-transparent ">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full pb-20 py-44 px-6  relative bg-gradient-to-b from-primary/5 to-transparent overflow-hidden">
+
+      {/* ================= BACKGROUND GLOWS ================= */}
+      {/* Bottom Left Glow (behind Reach out / Needs assistance) */}
+      <div
+        className="absolute bottom-[10%] -left-[10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full bg-[var(--color-primary-1)] blur-[100px] md:blur-[140px] opacity-20 pointer-events-none z-0"
+      />
+
+      {/* Right Glow (behind the form card) */}
+      <div
+        className="absolute top-[30%] -right-[15%] w-[350px] md:w-[600px] h-[350px] md:h-[600px] rounded-full bg-[var(--color-primary-1)] blur-[100px] md:blur-[160px] opacity-[0.15] pointer-events-none z-0"
+      />
+      {/* ================================================== */}
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* LEFT COLUMN */}
@@ -102,8 +115,8 @@ export default function ContactHero() {
           {/* RIGHT COLUMN */}
           <div className="bg-white rounded-3xl border border-neutral-300 p-8 shadow-sm h-fit sticky top-20">
             <div className="mb-8">
-              <h2 className="text-primary text-2xl font-bold leading-[35px] mb-2">Get in touch here</h2>
-              <p className="text-neutral-600 text-lg leading-7">You can reach us any time</p>
+              <h2 className="text-primary  font-bold-token leading-[35px] mb-2">Get in touch here</h2>
+              <p className="text-neutral-600  leading-7">You can reach us any time</p>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

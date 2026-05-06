@@ -3,16 +3,31 @@
 import { useState } from "react";
 import Image from "next/image";
 import GalleryModal from "./GalleryModal";
-import galleryLeft from "@/app/components/sections/about/assets/jsk1.webp";
-import galleryCenter from "@/app/components/sections/about/assets/diwali3.webp";
-import galleryRight from "@/app/components/sections/about/assets/lunch.webp";
+import img1 from "@/app/components/sections/about/assets/snap_photos/1.jpg";
+import img2 from "@/app/components/sections/about/assets/snap_photos/2.jpg";
+import img3 from "@/app/components/sections/about/assets/snap_photos/3.jpg";
+import img4 from "@/app/components/sections/about/assets/snap_photos/4.jpg";
+import img5 from "@/app/components/sections/about/assets/snap_photos/5.jpg";
+import img6 from "@/app/components/sections/about/assets/snap_photos/6.jpg";
+import img7 from "@/app/components/sections/about/assets/snap_photos/7.jpg";
+import img8 from "@/app/components/sections/about/assets/snap_photos/8.jpg";
+import img9 from "@/app/components/sections/about/assets/snap_photos/9.jpg";
+import img10 from "@/app/components/sections/about/assets/snap_photos/10.jpg";
+import img11 from "@/app/components/sections/about/assets/snap_photos/11.jpg";
 import Button from "@/app/components/ui/Button";
 
 const galleryImages = [
-  { src: galleryLeft, alt: "LHS team collaboration" },
-  { src: galleryCenter, alt: "LHS professionals at work" },
-  { src: galleryRight, alt: "LHS office environment" },
-  // { src: galleryRight, alt: "LHS office environment 2" }, // Updated alt text to distinguish
+  { src: img1, alt: "Gallery image 1" },
+  { src: img2, alt: "Gallery image 2" },
+  { src: img3, alt: "Gallery image 3" },
+  { src: img4, alt: "Gallery image 4" },
+  { src: img5, alt: "Gallery image 5" },
+  { src: img6, alt: "Gallery image 6" },
+  { src: img7, alt: "Gallery image 7" },
+  { src: img8, alt: "Gallery image 8" },
+  { src: img9, alt: "Gallery image 9" },
+  { src: img10, alt: "Gallery image 10" },
+  { src: img11, alt: "Gallery image 11" },
 ];
 
 const CARD_BASE =
@@ -79,7 +94,7 @@ export default function AboutGallery() {
                 src={galleryImages[leftIndex].src}
                 alt={galleryImages[leftIndex].alt}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(min-width: 768px) 33vw, 100vw"
               />
               <div className={CARD_OVERLAY} />
@@ -95,7 +110,7 @@ export default function AboutGallery() {
                 src={galleryImages[centerIndex].src}
                 alt={galleryImages[centerIndex].alt}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(min-width: 768px) 33vw, 100vw"
               />
               <div className={CARD_OVERLAY} />
@@ -111,7 +126,7 @@ export default function AboutGallery() {
                 src={galleryImages[rightIndex].src}
                 alt={galleryImages[rightIndex].alt}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(min-width: 768px) 33vw, 100vw"
               />
               <div className={CARD_OVERLAY} />

@@ -9,7 +9,11 @@ export function TabContentCard({
   features,
 }: Props) {
   return (
-    <div className="bg-white rounded-3xl border border-neutral-300 p-8 md:p-12">
+    <div className="relative bg-white rounded-3xl border border-neutral-300 p-8 md:p-12">
+      {/* GLOW (Positioned on the far right edge of the main card) */}
+      <div
+        className="absolute top-1/2 -translate-y-1/2 -right-[150px] md:-right-[100px] w-[300px] md:w-[400px] h-[600px] md:h-[800px] rounded-full bg-[var(--color-primary-1)] blur-[80px] md:blur-[120px] opacity-[0.10] pointer-events-none z-0"
+      />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
         {/* Left Column - Text Content */}
@@ -79,13 +83,18 @@ export function TabContentCard({
         </div>
 
         {/* Right Column - Feature Cards */}
-        <div className="space-y-6 lg:mt-[11%]">
+        <div className="realtive space-y-6 lg:mt-[11%]">
+
+
+
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white border border-neutral-300 rounded-2xl p-6 shadow-sm"
+              className="relative bg-white border border-neutral-300 rounded-2xl p-6 shadow-sm overflow-hidden"
             >
-              <div className="flex flex-col items-start gap-4">
+              {/* GLOW (Positioned inside each individual card) */}
+
+              <div className="relative z-10 flex flex-col items-start gap-4">
                 <Image
                   src={feature.image}
                   alt={feature.title}

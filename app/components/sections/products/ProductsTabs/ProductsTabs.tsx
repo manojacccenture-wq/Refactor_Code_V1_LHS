@@ -5,11 +5,12 @@ import Button from '@/app/components/ui/Button';
 import Image from 'next/image';
 import clsx from 'clsx';
 import enterprisePosIcon from "@/app/components/sections/products/assets/Enterpise_POS_Icon.svg";
-import screen1 from "@/app/components/sections/products/assets/screen_1.png";
-import screen2 from "@/app/components/sections/products/assets/screen_2.png";
-import screen3 from "@/app/components/sections/products/assets/screen_3.png";
-import screen4 from "@/app/components/sections/products/assets/screen_4.png";
-import screen5 from "@/app/components/sections/products/assets/screen_5.png";
+
+import screen1 from "@/app/components/sections/products/assets/screen_1.svg";
+import screen2 from "@/app/components/sections/products/assets/screen_2.svg";
+import screen3 from "@/app/components/sections/products/assets/screen_3.svg";
+import screen4 from "@/app/components/sections/products/assets/screen_4.svg";
+import screen5 from "@/app/components/sections/products/assets/screen_5.svg";
 
 interface Tab {
   id: string;
@@ -72,50 +73,70 @@ export default function ProductsTabs() {
   return (
     <section className="py-10 sm:py-16 md:py-0 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 sm:gap-8 md:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[260px_minmax(0,1fr)] gap-6 sm:gap-8 md:gap-12 items-start">
 
           {/* LEFT COLUMN - Horizontal Scroll on Mobile, Vertical on Desktop */}
           {/* 🔥 ADDED: flex-row, overflow-x-auto, and hidden scrollbars for mobile */}
-          <div className="flex flex-row md:flex-col gap-3 sm:gap-4 w-full md:w-64 shrink-0 overflow-x-auto pb-4 md:pb-0 scrollbar-hide snap-x">
+          <div className="flex flex-row lg:flex-col gap-6 w-full lg:w-[208px] shrink-0 overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 scrollbar-hide snap-x">
+
             {tabs.map((tab) => (
               <Button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 variant="ghost"
                 className={clsx(
-                  // 🔥 ADDED: whitespace-nowrap and w-auto for mobile, w-full for desktop
-                  "px-4 sm:px-6 py-3 sm:py-4 rounded-2xl text-left justify-start flex-shrink-0 w-auto md:w-full snap-start flex items-center gap-3 transition-colors",
+                  `
+        w-[208px]
+        h-[114px]
+        rounded-[24px]
+        px-6
+        py-5
+        flex
+        flex-col
+        items-start
+        justify-center
+        gap-4
+        shrink-0
+        transition-colors
+        `,
                   activeTab === tab.id
                     ? "border-2 bg-white border-[var(--color-primary-1)] text-primary shadow-sm"
                     : "border border-neutral-300 bg-white text-[var(--color-text-subtitle)] hover:bg-neutral-50"
                 )}
               >
-                <div className="relative w-6 h-6 sm:w-8 sm:h-8 rounded-lg shrink-0 flex items-center justify-center">
+                <div className="relative w-8 h-8 shrink-0 flex items-center justify-center">
                   <Image
                     src={tab.icon}
                     alt={tab.label}
-                    width={24}
-                    height={24}
-                    className="object-none"
+                    width={32}
+                    height={32}
                   />
                 </div>
 
-                <h6 className="font-semibold-token   capitalize">
+                <h6 className="font-semibold-token capitalize leading-none text-left mt-[20%]">
                   {tab.label}
                 </h6>
               </Button>
             ))}
+
           </div>
 
           {/* RIGHT COLUMN - Image Content */}
-          <div className="w-full h-full flex flex-col  ">
-            <div className="w-full rounded-2xl overflow-hidden">
+          <div className="w-full h-full flex flex-col min-w-0">
+            <div
+              className="
+      w-full
+      rounded-2xl
+      overflow-hidden
+   shadow-[0_-12px_90px_rgba(74,58,255,0.08)]
+    "
+            >
               <Image
                 src={content.image}
                 alt={content.title}
                 width={1200}
                 height={800}
-                className="w-full h-auto object-none"
+                className="w-full h-auto"
                 priority
               />
             </div>
