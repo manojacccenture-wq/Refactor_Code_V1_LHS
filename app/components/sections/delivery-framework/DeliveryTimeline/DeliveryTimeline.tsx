@@ -71,8 +71,8 @@ function StepCard({ step, isActive }: StepCardProps) {
   return (
     <div
       className={`rounded-3xl p-6 md:p-8 transition-all duration-300 backdrop-blur-sm w-full ${isActive
-          ? "bg-white/90 shadow-xl shadow-neutral-200/60 border border-neutral-200"
-          : "bg-white/70 border border-neutral-200"
+        ? "bg-white/90 shadow-xl shadow-neutral-200/60 border border-neutral-200"
+        : "bg-white/70 border border-neutral-200"
         }`}
     >
       {/* HEADER */}
@@ -145,10 +145,42 @@ const StepRow = React.forwardRef<HTMLDivElement, StepRowProps>(
               ? "opacity-100 translate-y-0"
               : "opacity-60 translate-y-5"
               }`}>
-              {/* Phase number */}
-              
-              <h1 className={` font-bold-token leading-none mb-4 transition-colors duration-300  ${isActive ? "text-neutral-200" : "text-neutral-300"
-                }`}>
+
+
+              <h1
+                className="
+block
+
+mb-4
+text-center
+
+lg:text-left
+lg:mb-0
+
+lg:absolute
+lg:top-1/2
+lg:-translate-y-1/2
+
+lg:right-full
+lg:mr-16
+xl:lg:mr-24
+2xl:lg:mr-32
+
+font-bold-token
+leading-none
+
+text-[32px]
+sm:text-[40px]
+md:text-[48px]
+xl:text-[72px]
+2xl:text-[96px]
+
+text-neutral-400
+whitespace-nowrap
+pointer-events-none
+select-none
+"
+              >
                 Phase {String(step.phase).padStart(2, "0")}
               </h1>
 
@@ -156,6 +188,7 @@ const StepRow = React.forwardRef<HTMLDivElement, StepRowProps>(
               <StepCard step={step} isActive={isActive} />
             </div>
           </div>
+
         </div>
       );
     }
@@ -170,8 +203,40 @@ const StepRow = React.forwardRef<HTMLDivElement, StepRowProps>(
             : "opacity-60 translate-y-5"
             }`}>
             {/* Phase number */}
-            <h1 className={`font-bold-token leading-none mb-4 transition-colors duration-300 ${isActive ? "text-neutral-200" : "text-neutral-300"
-              }`}>
+            <h1
+              className="
+block
+
+mb-4
+text-center
+
+lg:text-right
+lg:mb-0
+
+lg:absolute
+lg:top-1/2
+lg:-translate-y-1/2
+
+lg:left-full
+lg:ml-16
+xl:lg:ml-24
+2xl:lg:ml-32
+
+font-bold-token
+leading-none
+
+text-[32px]
+sm:text-[40px]
+md:text-[48px]
+xl:text-[72px]
+2xl:text-[96px]
+
+text-neutral-400
+whitespace-nowrap
+pointer-events-none
+select-none
+"
+            >
               Phase {String(step.phase).padStart(2, "0")}
             </h1>
 
@@ -206,38 +271,38 @@ export default function DeliveryTimeline() {
   const containerRef = useRef<HTMLDivElement>(null);
   const stepsRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-const updateProgress = useCallback(() => {
-  if (!containerRef.current) return;
+  const updateProgress = useCallback(() => {
+    if (!containerRef.current) return;
 
-  const rect = containerRef.current.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
+    const rect = containerRef.current.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
 
-  const totalHeight = rect.height;
+    const totalHeight = rect.height;
 
-  // Start when top hits bottom of viewport
-  const start = windowHeight;
+    // Start when top hits bottom of viewport
+    const start = windowHeight;
 
-  // End when bottom hits top of viewport
-  const end = -totalHeight;
+    // End when bottom hits top of viewport
+    const end = -totalHeight;
 
-  // Current position
-  const current = rect.top;
+    // Current position
+    const current = rect.top;
 
-  const progress = (start - current) / (start - end);
+    const progress = (start - current) / (start - end);
 
-  const clampedProgress = Math.max(0, Math.min(1, progress));
+    const clampedProgress = Math.max(0, Math.min(1, progress));
 
-  setFillPercentage(clampedProgress * 100);
+    setFillPercentage(clampedProgress * 100);
 
-  // ✅ Active steps (this part is fine, just slightly improved)
-  const newActiveSteps = stepsRefs.current.map((ref) => {
-    if (!ref) return false;
-    const stepRect = ref.getBoundingClientRect();
-    return stepRect.top < windowHeight * 0.6 && stepRect.bottom > 0;
-  });
+    // ✅ Active steps (this part is fine, just slightly improved)
+    const newActiveSteps = stepsRefs.current.map((ref) => {
+      if (!ref) return false;
+      const stepRect = ref.getBoundingClientRect();
+      return stepRect.top < windowHeight * 0.6 && stepRect.bottom > 0;
+    });
 
-  setActiveSteps(newActiveSteps);
-}, []);
+    setActiveSteps(newActiveSteps);
+  }, []);
 
   useEffect(() => {
     // Initial update
@@ -265,7 +330,86 @@ const updateProgress = useCallback(() => {
   }, [updateProgress]);
 
   return (
-    <section id="timeline" className="w-full py-24 px-6 relative bg-white">
+    <section
+      id="timeline"
+      className="w-full py-24 px-6 relative bg-white overflow-hidden"
+    >
+      <div
+        className="
+    absolute
+    top-[12%]
+    -left-[12%]
+
+    w-[280px]
+    md:w-[380px]
+    xl:w-[520px]
+
+    h-[280px]
+    md:h-[380px]
+    xl:h-[520px]
+
+    rounded-full
+    bg-[var(--color-primary-1)]
+
+    blur-[110px]
+    md:blur-[150px]
+    xl:blur-[180px]
+
+    opacity-[0.16]
+
+    pointer-events-none
+    z-0
+  "
+      />
+
+      {/* Right Glow */}
+      <div
+        className="
+    absolute
+    top-[45%]
+    -right-[14%]
+
+    w-[320px]
+    md:w-[460px]
+    xl:w-[650px]
+
+    h-[320px]
+    md:h-[460px]
+    xl:h-[650px]
+
+    rounded-full
+    bg-[var(--color-primary-1)]
+
+    blur-[120px]
+    md:blur-[170px]
+    xl:blur-[220px]
+
+    opacity-[0.18]
+
+    pointer-events-none
+    z-0
+  "
+      />
+
+      {/* Bottom Fade */}
+      <div
+        className="
+    absolute
+    bottom-0
+    left-0
+    right-0
+
+    h-[120px]
+    md:h-[180px]
+
+    bg-gradient-to-t
+    from-white
+    to-transparent
+
+    pointer-events-none
+    z-[1]
+  "
+      />
       <div className="max-w-7xl mx-auto" ref={containerRef}>
         {/* Timeline Container */}
         <div className="relative">

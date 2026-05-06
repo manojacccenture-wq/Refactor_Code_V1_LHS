@@ -73,7 +73,7 @@ export default function ProductsTabs() {
   return (
     <section className="py-10 sm:py-16 md:py-0 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[260px_minmax(0,1fr)] gap-6 sm:gap-8 md:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[260px_minmax(0,1fr)] gap-6 sm:gap-8 md:gap-5 items-start">
 
           {/* LEFT COLUMN - Horizontal Scroll on Mobile, Vertical on Desktop */}
           {/* 🔥 ADDED: flex-row, overflow-x-auto, and hidden scrollbars for mobile */}
@@ -100,7 +100,7 @@ export default function ProductsTabs() {
         transition-colors
         `,
                   activeTab === tab.id
-                    ? "border-2 bg-white border-[var(--color-primary-1)] text-primary shadow-sm"
+                    ? "border-[3.0px] bg-white border-[var(--color-primary-1)] text-primary shadow-sm"
                     : "border border-neutral-300 bg-white text-[var(--color-text-subtitle)] hover:bg-neutral-50"
                 )}
               >
